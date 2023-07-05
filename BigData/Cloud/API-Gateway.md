@@ -1,0 +1,23 @@
+---
+title: API Gateway
+description: 
+published: true
+date: 2023-05-30T00:20:22.303Z
+tags: 
+editor: markdown
+dateCreated: 2023-05-18T07:19:40.997Z
+---
+
+# API Gateway
+- [ ] [What does API gateway do?](https://blog.bytebytego.com/p/ep23-how-to-choose-the-right-database?utm_source=profile&utm_medium=reader2)
+- [ ] [AWS Serverless 學習筆記 - API Gateway](https://godleon.github.io/blog/Serverless/AWS-Serverless_API-Gateway/)
+- [ ] [What does API gateway do?](https://www.youtube.com/watch?time_continue=1&v=6ULyxuHKxg8&embeds_referring_euri=https%3A%2F%2Fblog.bytebytego.com%2F&feature=emb_logo&ab_channel=ByteByteGo)
+- [ ] [Evolution of Uber’s API layer](https://blog.bytebytego.com/p/ep-39-accounting-101-in-payment-systems?utm_source=profile&utm_medium=reader2)
+- [ ] [API Gateway vs Load Balancer — Ultimate Guide](https://awstip.com/api-gateway-vs-load-balancer-the-ultimate-guide-3810dddacfa1)
+- [ ] [System Design Interview Basics: Difference Between API Gateway and Load Balancer](https://levelup.gitconnected.com/system-design-interview-basics-difference-between-api-gateway-and-load-balancer-60260b568121)
+
+
+![Uber’s API gateway.png](http://192.168.25.60:8000/files/file_storage/8f385f7e.png)
+
+
+![API Gateway DesignGurus Org.png](http://192.168.25.60:8000/files/file_storage/8063cb91.png)

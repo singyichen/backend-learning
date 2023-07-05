@@ -1,0 +1,604 @@
+<!--
+title: COPTN 出貨派車單頭資料檔
+description: 訂單管理系統
+published: true
+date: 2023-05-26T01:34:31.444Z
+tags: 
+editor: ckeditor
+dateCreated: 2023-05-16T02:29:28.199Z
+-->
+
+<figure class="table" style="text-align:center;">
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>檔案編號</strong></td>
+        <td>COPTN</td>
+        <td><strong>檔案名稱</strong></td>
+        <td>出貨派車單頭資料檔</td>
+        <td><strong>檔案長度</strong></td>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><strong>檔案說明</strong></td>
+        <td colspan="5">&nbsp;</td>
+      </tr>
+      <tr>
+        <td><strong>類 型</strong></td>
+        <td colspan="5">3.交易單頭</td>
+      </tr>
+      <tr>
+        <td><strong>索引檔名</strong></td>
+        <td><strong>唯一性</strong></td>
+        <td colspan="4"><strong>鍵值欄位</strong></td>
+      </tr>
+      <tr>
+        <td>
+          <p>PRIMARY</p>
+          <p>INDEX01</p>
+        </td>
+        <td>&nbsp;</td>
+        <td colspan="4">
+          <p style="text-align:justify;">TN001+TN002</p>
+          <p style="text-align:justify;">TN003+TN001+TN002</p>
+        </td>
+      </tr>
+      <tr>
+        <td><strong>欄位編號</strong></td>
+        <td><strong>欄位名稱</strong></td>
+        <td><strong>型態</strong></td>
+        <td><strong>長度</strong></td>
+        <td><strong>欄位說明</strong></td>
+        <td><strong>範例&nbsp;</strong></td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;"><strong>*TN001</strong></p>
+        </td>
+        <td>
+          <p style="text-align:justify;">單別</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">C</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">04</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">單別</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">&nbsp;2A11</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;"><strong>*TN002</strong></p>
+        </td>
+        <td>
+          <p style="text-align:justify;">單號</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">C</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">11</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">單號</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">&nbsp;0980101001&nbsp;</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN003</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">單據日期</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">C</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">08</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">單據日期[FORMATE:YMD]</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">&nbsp;20090101</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN004</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">運送方式</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">C</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">01</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">5.陸運<br>7.自送<br>8.快遞</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">7&nbsp;</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN005</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">車號</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">C</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">10</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">車號</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">YS--4379</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN006</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">車次</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">C</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">04</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">車次</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">&nbsp;</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN007</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">送貨者</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">C</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">10</p>
+        </td>
+        <td style="background-color:transparent;border-bottom:1pt solid rgb(211, 211, 211);border-left:1pt solid rgb(211, 211, 211);border-right:1pt solid rgb(211, 211, 211);border-top:1pt solid rgb(211, 211, 211);padding:2pt;vertical-align:top;">
+          <p style="text-align:justify;">送貨者</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">71404</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN008</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">送貨者名稱</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">C</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">10</p>
+        </td>
+        <td style="background-color:transparent;border-bottom:1pt solid rgb(211, 211, 211);border-left:1pt solid rgb(211, 211, 211);border-right:1pt solid rgb(211, 211, 211);border-top:1pt solid rgb(211, 211, 211);padding:2pt;vertical-align:top;">
+          <p style="text-align:justify;">送貨者名稱</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">陳龍慶</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN009</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">主要路線</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">C</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">06</p>
+        </td>
+        <td style="background-color:transparent;border-bottom:1pt solid rgb(211, 211, 211);border-left:1pt solid rgb(211, 211, 211);border-right:1pt solid rgb(211, 211, 211);border-top:1pt solid rgb(211, 211, 211);padding:2pt;vertical-align:top;">
+          <p style="text-align:justify;">主要路線</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">&nbsp;</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN010</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">廠別</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">C</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">06</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">出貨廠別</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">AA01</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN011</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">發票聯數</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">C</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">01</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">1.二聯式<br>2.三聯式<br>3.二聯式收銀機發票<br>4.三聯式收銀機發票<br>5.電子計算機發票<br>6.免用統一發票<br>A.增值稅專用發票<br>B.普通發票<br>C.免用發票</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">2</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN012</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">課稅別</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">N</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">01</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">1.應稅內含<br>2.應稅外加<br>3.零稅率<br>4.免稅<br>9.不計稅</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">2</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN013</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">營業稅率</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">N</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">05.4</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">營業稅率(%)</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">0.0500</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN014</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">本幣運費金額</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">N</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">14.2</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">本幣未稅運費金額</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">0.00</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN015</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">本幣運費稅額</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">N</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">14.2</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">本幣運費稅額</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">0.00</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN016</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">付款條件代號</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">C</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">06</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">付款條件代號</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">&nbsp;</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN017</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">總件數</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">N</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">5</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">總件數</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">0</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN018</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">累積材積</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">N</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">12.3</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">累積材積</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">0.000</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN019</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">累積重量</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">N</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">12.3</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">累積重量</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">0.000</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN020</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">備註</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">V</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">255</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">備註</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">&nbsp;</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN021</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">確認碼</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">C</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">01</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">Y:已確認<br>N:未確認<br>V:作廢</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">Y</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN022</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">列印次數</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">N</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">01</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">列印次數</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">0</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN023</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">派車日期</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">C</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">08</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">出貨派車日期[FORMATE:YMD]</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">20090101</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN024</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">確認者</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">C</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">10</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">確認者</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">71416</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN025</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">簽核狀態碼</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">C</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">1</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">0.待處理<br>1.簽核中<br>2.退件<br>3.已核准<br>4.取消確認中<br>5.作廢中<br>6.取消作廢中<br>N.不執行電子簽核</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">N</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN026</p>
+          <p style="text-align:justify;">&nbsp;</p>
+          <p style="text-align:justify;">&nbsp;</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">傳送次數</p>
+          <p style="text-align:justify;">&nbsp;</p>
+          <p style="text-align:justify;">&nbsp;</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">N</p>
+          <p style="text-align:justify;">&nbsp;</p>
+          <p style="text-align:justify;">&nbsp;</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">1</p>
+          <p style="text-align:justify;">&nbsp;</p>
+          <p style="text-align:justify;">&nbsp;</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">傳送次數</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">0</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;">TN027</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">材積單位</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">C</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">1</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">1.英制<br>2.公制[DEF:1]</p>
+        </td>
+        <td>
+          <p style="text-align:justify;">1</p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>

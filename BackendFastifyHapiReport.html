@@ -1,0 +1,168 @@
+<!--
+title: Backend Fastify and Hapi Report
+description: 
+published: true
+date: 2022-08-05T00:21:05.973Z
+tags: 
+editor: ckeditor
+dateCreated: 2022-08-01T02:06:03.813Z
+-->
+
+<p>&nbsp;</p>
+<figure class="table" style="text-align:center;">
+  <table>
+    <tbody>
+      <tr>
+        <td><strong>評估項目&nbsp;</strong></td>
+        <td>&nbsp;<strong>Fastify</strong></td>
+        <td><strong>Hapi</strong></td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;"><strong>1. 初始化專案是否有 cli</strong></p>
+        </td>
+        <td style="text-align:center;">有</td>
+        <td style="text-align:center;">無</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;"><strong>2. 是否還有在維護</strong></p>
+        </td>
+        <td><a href="https://www.npmjs.com/package/fastify">v4.3.0</a></td>
+        <td><a href="https://www.npmjs.com/package/@hapi/hapi">v20.2.2</a>&nbsp;</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;"><strong>3. 適用幾版 node</strong></p>
+        </td>
+        <td>v14 以上</td>
+        <td>v14 以上</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;"><strong>4. 文件是否支援多語系</strong></p>
+        </td>
+        <td><a href="https://github.com/fastify/docs-chinese">是</a></td>
+        <td>&nbsp;<a href="https://hapi.dev/tutorials/gettingstarted/?lang=zh_CN">是</a></td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;"><strong>5. 文件是否夠詳細</strong></p>
+        </td>
+        <td>詳細</td>
+        <td>詳細</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;"><strong>6. 官方套件、插件</strong></p>
+        </td>
+        <td>
+          <p><a href="https://www.fastify.io/ecosystem/">fastify </a><a href="https://hapi.dev/plugins/">Plugins</a></p>
+          <p>( <strong>48</strong> core plugins、<strong>172</strong> community plugins )</p>
+        </td>
+        <td>
+          <p><a href="https://hapi.dev/module/?sort=name">hapi Modules</a>、<a href="https://hapi.dev/plugins/">hapi Plugins</a></p>
+          <p>( <strong>48</strong> &nbsp;Modules、<strong>144</strong> &nbsp;Plugins )</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;"><strong>7. 其他教學文章數量&nbsp;</strong></p>
+        </td>
+        <td>較多</td>
+        <td>較少</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;"><strong>8. 使用 docker </strong>佈署<strong>是否可正常運行&nbsp;</strong></p>
+        </td>
+        <td>&nbsp; 可起服務，正常運作 ( port 10001 )</td>
+        <td>&nbsp;可起服務，正常運作 ( port 10002 )</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;"><strong>9. 是否可使用 swagger 產製 API 文件</strong></p>
+        </td>
+        <td>
+          <p>套件 (a month ago)：<a href="https://github.com/fastify/fastify-swagger">@fastify/swagger</a></p>
+          <p>&nbsp;(可用 yaml 串接，佈署到 docker 上會有 https 的問題)</p>
+        </td>
+        <td>
+          <p>套件 (a month ago)：<a href="https://github.com/hapi-swagger/hapi-swagger">hapi-swagger</a></p>
+          <p>(無法用 yaml 串接，需再重寫在程式裡面)</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;"><strong>10. 是否可使用 ORM Prisma&nbsp;</strong></p>
+        </td>
+        <td>是，可正常撈取資料庫資料</td>
+        <td>是，可正常撈取資料庫資料</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;"><strong>11. router 是否可進行拆分</strong></p>
+        </td>
+        <td>是，重構 app.js，分別 import 與 register 各 router 即可</td>
+        <td>是，router 在各檔分別 export，在 app.js 中 import 與 route 各 router 即可</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;"><strong>12. router、controller 、service 是否可串接</strong></p>
+        </td>
+        <td>是</td>
+        <td>是</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;"><strong>13.&nbsp;log 日誌</strong></p>
+        </td>
+        <td>套件 (7 days ago)：<a href="https://github.com/pinojs/pino">pino</a> (尚未實作)</td>
+        <td>套件 (a year ago)：<a href="https://github.com/hapijs/log">@hapi/log</a> (尚未實作)</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;"><strong>14. 跨網域設置</strong></p>
+        </td>
+        <td>套件 (6 hours ago)：<a href="https://github.com/fastify/fastify-cors">@fastify/cors</a></td>
+        <td>&nbsp;hapi 內建在 init server 時可設定</td>
+      </tr>
+      <tr>
+        <td style="text-align:justify;">
+          <p style="text-align:justify;"><strong>15. 取得 .env 檔案</strong></p>
+        </td>
+        <td>套件 (3 months ago)： <a href="https://github.com/fastify/fastify-env">@fastify/env</a> (尚未實作)</td>
+        <td>套件 (3 months ago)：<a href="https://github.com/motdotla/dotenv">dotenv</a></td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;"><strong>16. jwt 驗證</strong></p>
+        </td>
+        <td>套件 (2 days ago)：<a href="https://github.com/fastify/fastify-jwt">@fastify/jwt</a> (尚未實作)</td>
+        <td>
+          <p>套件 (4 months ago)：<a href="https://hapi.dev/module/jwt/">@hapi/jwt</a> (尚未實作)</p>
+          <p>套件 (4 years ago)：<a href="https://github.com/odorisioe/hapi-jsonwebtoken">hapi-jsonwebtoken</a> (尚未實作)</p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;"><strong>17. AD 驗證</strong></p>
+        </td>
+        <td>套件 (2 months ago)：<a href="https://github.com/ldapjs/node-ldapjs">ldapjs</a> (尚未實作)</td>
+        <td>套件 (2 months ago)：<a href="https://github.com/ldapjs/node-ldapjs">ldapjs</a> (尚未實作)</td>
+      </tr>
+      <tr>
+        <td>
+          <p style="text-align:justify;"><strong>18. RBAC 權限</strong></p>
+        </td>
+        <td>套件 (a month ago)：<a href="https://github.com/nearform/fastify-casbin">fastify-casbin</a> (尚未實作)</td>
+        <td>套件 (3 years ago)：<a href="https://github.com/franciscogouveia/hapi-rbac">hapi-rbac</a> (尚未實作)</td>
+      </tr>
+      <tr>
+        <td><strong>評估結果</strong></td>
+        <td colspan="2">選用 <strong>Fastify</strong>，除了官方以外其他的教學資源較多，官方維護的套件也都有持續在更新。</td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+<p>&nbsp;</p>
