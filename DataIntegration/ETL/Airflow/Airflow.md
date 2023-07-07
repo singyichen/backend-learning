@@ -1,8 +1,8 @@
 ---
 title: Airflow
-description: 
+description: Airflow 介紹
 published: true
-date: 2023-07-05T00:44:39.912Z
+date: 2023-07-07T02:31:59.181Z
 tags: airflow
 editor: markdown
 dateCreated: 2023-05-23T07:49:41.975Z
@@ -89,7 +89,7 @@ Airflow 使用者介面提供了一個便捷的方式來與工作流程進行交
 # 元件
 > 一個 DAG 是由多個 Tasks 組成，每個 Task 是分開執行的，Task 是 Airflow 執行基礎單位。
 ## DAG
-> DAG（有向無環圖）是 Airflow 的核心概念，將任務集合在一起，按照依賴關係和關聯性組織起來，以指定它們的運行方式。
+> DAG（Directed Acyclic Graph，有向無環圖）是 Airflow 的核心概念，將任務集合在一起，按照依賴關係和關聯性組織起來，以指定它們的運行方式。
 
 在 Graph View 頁面，可以看到每個 DAG 都是由多個 Tasks 組成，所以代表我們待會在寫 DAG 時，除了宣告 DAG 物件代表不同的 DAG，同時也會宣告很多 Task 物件來組成 DAG 要執行的內容。
 
@@ -122,6 +122,18 @@ Airflow 使用者介面提供了一個便捷的方式來與工作流程進行交
 
 
 ## Operators
-> 運算子（Operator）在概念上是預定義任務的模板，可以在 DAG 內聲明式地定義
+> 運算子（Operator）在概念上是預定義任務的模板，可以在 DAG 內聲明式地定義，底層對應 python class。不同的 Operator 實現了不同的功能
 
+Airflow提供了非常豐富的運算子（Operator）集合，其中一些是內建在核心或預安裝的提供者中的。一些常用的核心運算子包括：
 
+### BashOperator
+執行 Bash 命令
+
+### PythonOperator
+調用任意的 Python 函數
+
+### EmailOperator
+使用者發送郵件
+
+### HttpOperators
+使用者傳送HTTP請求

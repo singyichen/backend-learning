@@ -2,7 +2,7 @@
 title: MongoDB
 description: 
 published: true
-date: 2023-05-29T00:35:11.567Z
+date: 2023-07-07T01:50:14.951Z
 tags: nosql, mongodb
 editor: markdown
 dateCreated: 2023-05-18T06:05:19.280Z
@@ -14,7 +14,7 @@ dateCreated: 2023-05-18T06:05:19.280Z
 - [ ] [MongoDB是什麼?MongoDB介紹及應用、架構、優點](https://www.webcomm.com.tw/blog/mongodb/)
 - [ ] [MongoDB – 最受歡迎的 NOSQL 資料庫](https://www.omniwaresoft.com.tw/mongodb/)
 - [ ] [使用Docker建立Mongodb加上Mongo Express](https://104.es/2022/07/05/docker-compose-mongodb-mongo-express/)
-
+- [ ] [Preventing MongoDB NoSQL Injection Attacks: Securing Your Node.js Express Application with Code Examples](https://ritikchourasiya.medium.com/preventing-mongodb-nosql-injection-attacks-securing-your-node-js-56215ef7455)
 
 
 # 安裝
@@ -27,6 +27,7 @@ dateCreated: 2023-05-18T06:05:19.280Z
 	- `ME_CONFIG_MONGODB_ADMINPASSWORD=root`
 
 ## 新增 `docker-compose.yaml`
+- ME_CONFIG_MONGODB_URL：`mongodb://<USERNAME>:<PASSWORD>@<MONGO-SERVICE-NAME>:<PORT>`
 ```yaml
 version: "3.9"
 services:

@@ -2,7 +2,7 @@
 title: API
 description: 
 published: true
-date: 2023-07-03T06:29:04.107Z
+date: 2023-07-07T00:43:49.571Z
 tags: api
 editor: markdown
 dateCreated: 2022-11-17T05:44:26.014Z
@@ -18,15 +18,7 @@ dateCreated: 2022-11-17T05:44:26.014Z
 - [ ] [The 2022 API Platform Landscape: Trends and Challenges by Postman](https://blog.postman.com/2022-api-platform-landscape-trends-and-challenges/)
 - [ ] [Code First v.s. API First - A change of software development philosophy](https://blog.bytebytego.com/p/twitter-architecture-2022-vs-2012?utm_source=profile&utm_medium=reader2)
 - [ ] [What are the API architectural styles?](https://blog.bytebytego.com/p/ep49-api-architectural-styles?utm_source=profile&utm_medium=reader2)
-- [ ] [EP56: System Design Blueprint: The Ultimate Guide](https://blog.bytebytego.com/p/ep56-system-design-blueprint-the?utm_source=profile&utm_medium=reader2)
-- [ ] [Mastering the Art of API Design](https://blog.bytebytego.com/p/api-design?utm_source=profile&utm_medium=reader2)
-- [ ] [API Design Practice](https://medium.com/api-center/api-design-practice-7fce69e6336c)
-- [ ] [API redesign: shopping cart and Stripe payment](https://blog.bytebytego.com/p/api-redesign-shopping-cart-and-stripe?utm_source=profile&utm_medium=reader2)
 - [ ] [Top 6 Most Popular API Architecture Styles](https://www.youtube.com/watch?v=4vLxWqE94l4&ab_channel=ByteByteGo&loop=0)
-- [ ] [Why Your Backend in Node.JS Needs an API Layer and How to Build It](https://semaphoreci.medium.com/why-your-backend-in-node-js-needs-an-api-layer-and-how-to-build-it-3e4e4c262a2a)
-- [ ] [How to improve API performance](https://blog.bytebytego.com/p/ep64-how-to-improve-api-performance?utm_source=profile&utm_medium=reader2)
-- [ ] [API Lifecycle Explained API](https://medium.com/@shubhadeepchat/api-lifecycle-explained-8c3d1aca7316)
-- [ ] [10 Must-Follow Best Practices for API Creation](https://sandydev.medium.com/10-must-follow-best-practices-for-api-creation-3434cd5dc098)
 
 # API ( Application Programming Interface ) 應用程式介面
 > - API（應用程式設計介面）是一種軟體介面，允許兩個不相關的應用程式相互通訊，它充當橋樑，從一個程式取得請求或訊息後，將其傳遞給另一個程式、翻譯訊息，及根據 API 程式設定的協議來執行指定動作
@@ -158,13 +150,3 @@ SOAP stands for Simple Object Access Protocol. Its payload is XML only, suitable
 
 ![2022-postman-api-platform-landscape-pm.png](http://192.168.25.60:8000/files/file_storage/d7b47252.png)
 
-# API designs
-
-![design effective and safe APIs.png](http://192.168.25.60:8000/files/file_storage/63a3df66.png)
-
-# Code First vs API First Development
-
-![Code First vs API First Development.png](http://192.168.25.60:8000/files/file_storage/fc7c2199.png)
-
-# How to improve API performance
-![How to improve API performance.png](http://192.168.25.60:8000/files/file_storage/c6f0c599.png)

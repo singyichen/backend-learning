@@ -2,7 +2,7 @@
 title: Authentication
 description: 
 published: true
-date: 2023-06-07T23:45:40.565Z
+date: 2023-07-06T02:37:19.210Z
 tags: authentication, 認證
 editor: markdown
 dateCreated: 2023-05-18T03:22:11.625Z
@@ -28,6 +28,7 @@ dateCreated: 2023-05-18T03:22:11.625Z
 - [ ] [EP34: Session, cookie, JWT, token, SSO, and OAuth](https://blog.bytebytego.com/p/ep34-session-cookie-jwt-token-sso?utm_source=profile&utm_medium=reader2)
 - [ ] [Authentication in Computer Network](https://www.geeksforgeeks.org/authentication-in-computer-network/)
 - [ ] [How to Build Secure and Scalable Authentication System with Node.js and MongoDB](https://sandydev.medium.com/how-to-build-secure-and-scalable-authentication-system-with-node-js-and-mongodb-c50bf51c06b0)
+- [ ] [什麼是多重要素驗證 (MFA)？](https://aws.amazon.com/tw/what-is/mfa/)
 
 # Basics of Authentication
 
@@ -60,3 +61,6 @@ dateCreated: 2023-05-18T03:22:11.625Z
 ## OTP
 
 ## Two-factor authentication (2FA)
+
+## MFA - Multi-factor Authentication
+

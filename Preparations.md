@@ -2,7 +2,7 @@
 title: Preparations
 description: 準備事項(技能樹、軟體安裝、環境建置)
 published: true
-date: 2023-07-03T06:05:38.407Z
+date: 2023-07-07T03:27:01.472Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-28T00:51:37.605Z
@@ -14,7 +14,7 @@ dateCreated: 2022-04-28T00:51:37.605Z
 - [ ] [developer-roadmap-chinese](https://github.com/goodjack/developer-roadmap-chinese)
 - [ ] [backend](http://192.168.25.60:8000/files/file_storage/210d883f.pdf)
 - [ ] [ExplainThis](https://www.explainthis.io/zh-hant/about)
-
+- [ ] [IT-Tools](https://it.jason.tools/)
 
 ## 簡介 intro
 
@@ -72,6 +72,9 @@ eslint --init
 > [usage info](https://codeium.com/vscode_tutorial)
 {.is-info}
 - code runner
+- AWS Toolkit
+> [usage info](https://aws.amazon.com/tw/codewhisperer/)
+{.is-info}
 
 ## [Postman](https://www.postman.com/)
 ### Set Environment
@@ -113,6 +116,9 @@ eslint --init
 
 ### Login Account
 https://dashboard.ngrok.com/get-started/setup
+
+### Usage
+location：`C:\Program Files (x86)\ngrok-v3-stable-windows-amd64\ngrok.exe`
 
 ### Connect your account
 ```shell

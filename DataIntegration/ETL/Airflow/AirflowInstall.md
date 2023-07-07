@@ -2,7 +2,7 @@
 title: Airflow Install
 description: Airflow 安裝
 published: true
-date: 2023-06-28T01:42:07.463Z
+date: 2023-07-07T02:49:58.645Z
 tags: airflow
 editor: markdown
 dateCreated: 2023-05-23T09:18:19.253Z
@@ -82,7 +82,7 @@ apache-airflow-providers-jdbc
 - 安裝 OpenJDK-11：`openjdk-11-jdk`
 - 加載 JDBC Driver：`jtds-1.3.1.jar`
 	- 路徑：`/usr/local/airflow/jars/jtds-1.3.1.jar`
-  - 為到時候資料庫連線使用的 `Driver Path`
+  - `CLASSPATH` 為到時候資料庫連線使用的 `Driver Path`
   
 ```dockerfile
 FROM apache/airflow:2.6.1
@@ -191,7 +191,7 @@ d43b48c2da80   redis:latest                "docker-entrypoint.s…"   About a mi
 - 點選 `Save` 儲存連線資訊
 
 ## airflow_postgres_conn
-- Postgres 為 Airflow 預設資料庫
+- 連接 Airflow 預設資料庫 Postgres
 - 連線資訊
 	- Connection Id：`airflow_postgres_conn`
   - Connection Type：選取 `Postgres`
@@ -206,7 +206,7 @@ d43b48c2da80   redis:latest                "docker-entrypoint.s…"   About a mi
 ![airflow add db connection success.png](http://192.168.25.60:8000/files/file_storage/13a96d77.png)
 
 ## local_sql_server_conn
-- SQL Server
+- 連接資料庫 SQL Server
 - 連線資訊
 	- Connection Id：`local_sql_server_conn`
   - Connection Type：選取 `JDBC Connection`
@@ -220,7 +220,7 @@ d43b48c2da80   redis:latest                "docker-entrypoint.s…"   About a mi
 ![airflow add db JDBC connection success.png](http://192.168.25.60:8000/files/file_storage/971beaeb.png)
 
 ## local_postgres_conn
-- Postgres
+- 連接資料庫 Postgres
 - 連線資訊
 	- Connection Id：`local_postgres_conn`
   - Connection Type：選取 `Postgres`
