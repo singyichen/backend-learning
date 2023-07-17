@@ -2,7 +2,7 @@
 title: SymmetricDS Usage
 description: 
 published: true
-date: 2023-07-05T00:40:17.395Z
+date: 2023-07-11T07:41:57.720Z
 tags: symmetricds
 editor: markdown
 dateCreated: 2023-06-14T05:33:55.689Z
@@ -266,6 +266,9 @@ copy /a *.sql migration.sql
 ```shell
 .\dbimport -e server-000 ACRTC.sql
 ```
+
+## 使用工作排程器執行資料庫資料同步作業
+參閱文件 [Task Scheduler](/軟體開發/學習心得/11542/DataIntegration/SymmetricDS/TaskScheduler)
 
 # 資料驗證
 - 將屬性檔案(`client-001.properties`、`server-000.properties`)複製一份到資料夾 `bin` 中

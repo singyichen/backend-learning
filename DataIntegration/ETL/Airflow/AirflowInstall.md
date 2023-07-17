@@ -2,7 +2,7 @@
 title: Airflow Install
 description: Airflow 安裝
 published: true
-date: 2023-07-07T02:49:58.645Z
+date: 2023-07-12T06:48:19.380Z
 tags: airflow
 editor: markdown
 dateCreated: 2023-05-23T09:18:19.253Z
@@ -36,11 +36,13 @@ Airflow 有本地部署（Running Airflow locally）和 Docker 部署（Running 
 # 安裝
 ## 專案資料夾
 - 路徑：`D:\mandy\Project\ETL\airflow`
+- git：`http://192.168.25.60:9001/11542/airflow`
 
 ## 初始化專案
 - 建立一個虛擬環境 venv
 - `.gitignore`：參閱 [toptal](https://www.toptal.com/developers/gitignore/api/python)，並新增 `logs`、`*.log`
-- `.env`：新增 `AIRFLOW_UID=50000`
+- `.env`：
+	- `AIRFLOW_UID=50000`
 
 ## 建立四個目錄，將會進行容器掛載以同步資料
 ```bash
@@ -123,6 +125,7 @@ RUN pip install --trusted-host pypi.python.org -r requirements.txt
 ## 資料夾結構
 ```
 │  .env                  # 環境變數檔
+│  .env.example          # 環境變數範例檔
 │  .gitignore            # git 忽略檔案
 │  docker-compose.yaml   # docker compose 設定檔
 │  dockerfile            # dockerfile

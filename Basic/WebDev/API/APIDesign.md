@@ -2,7 +2,7 @@
 title: API Design
 description: 
 published: true
-date: 2023-07-07T00:43:03.191Z
+date: 2023-07-10T01:11:50.703Z
 tags: api
 editor: markdown
 dateCreated: 2023-07-07T00:43:03.191Z
@@ -18,8 +18,8 @@ dateCreated: 2023-07-07T00:43:03.191Z
 - [ ] [API Lifecycle Explained API](https://medium.com/@shubhadeepchat/api-lifecycle-explained-8c3d1aca7316)
 - [ ] [10 Must-Follow Best Practices for API Creation](https://sandydev.medium.com/10-must-follow-best-practices-for-api-creation-3434cd5dc098)
 - [ ] [The Complete Guide to Grokking the API Design Interview](https://grokkingtechinterview.com/the-complete-guide-to-grokking-the-api-design-interview-9219c0bec786)
-
-
+- [ ] [Demystifying the Unusual Evolution of the Netflix API Architecture](https://www.youtube.com/watch?v=Uu32ggF-DWg&ab_channel=ByteByteGo&loop=0)
+- [ ] [How to handle multiple API requests in your NodeJS Application](https://medium.com/@abhinavcv007/how-to-handle-multiple-api-requests-in-your-nodejs-application-cfa298e11b28)
 
 # API designs
 

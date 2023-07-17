@@ -2,7 +2,7 @@
 title: Clean Architecture
 description: 
 published: true
-date: 2023-06-15T23:56:32.002Z
+date: 2023-07-10T01:38:20.141Z
 tags: nodejs
 editor: markdown
 dateCreated: 2023-05-17T01:12:49.376Z
@@ -24,3 +24,7 @@ dateCreated: 2023-05-17T01:12:49.376Z
 - [ ] [DDD and Clean Architecture — part 1](https://medium.com/@eng.hibrahem/ddd-and-clean-architecture-part-1-9a514b964395)
 - [ ] [Node.js Developers: Unleashing the Power of Architecting with Node.js!](https://medium.com/@rafaellevissa/node-js-developers-unleashing-the-power-of-architecting-with-node-js-fb867cf072a6)
 - [ ] [Go Backend Clean Architecture](https://medium.com/@amitshekhar/go-backend-clean-architecture-fa3eb19d217)
+- [ ] [Resource optimization in Node.js](https://medium.com/pipedrive-engineering/resource-optimization-in-node-js-c90c731f9df4)
+- [ ] [Microservices Architecture with Node.js: Building Scalable and Robust Applications](https://medium.com/@adarsh_d/microservices-architecture-with-node-js-building-scalable-and-robust-applications-de278a090c39)
+
+![Microservices Architecture with NodeJs.png](http://192.168.25.60:8000/files/file_storage/b189c4af.png)

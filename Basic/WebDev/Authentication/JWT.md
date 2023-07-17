@@ -2,7 +2,7 @@
 title: JWT
 description: 
 published: true
-date: 2023-05-24T01:16:24.381Z
+date: 2023-07-10T00:08:35.992Z
 tags: jwt, 驗證, authentication
 editor: markdown
 dateCreated: 2022-06-01T07:27:37.054Z
@@ -28,7 +28,7 @@ dateCreated: 2022-06-01T07:27:37.054Z
 - [ ] [How to use JSON web tokens with Node.js ?](https://www.geeksforgeeks.org/how-to-use-json-web-tokens-with-node-js/?ref=gcse)
 - [ ] [Secure User Authentication in Node.js using JSON Web Tokens (JWT)](https://singh-sandeep.medium.com/secure-user-authentication-in-node-js-using-json-web-tokens-jwt-271cd0599df)
 - [ ] [How to Use JWT and Node.js for Better App Security](https://www.toptal.com/json/jwt-nodejs-security)
-
+- [ ] [React and NodeJS Authentication with Refresh & Access Tokens: A Step-by-Step Guide](https://medium.com/@Sukhjinder/react-and-nodejs-authentication-with-refresh-access-tokens-a-step-by-step-guide-343c7a722aec)
 # 源起
 
 ![JWT slogan.png](http://192.168.25.60:8000/files/file_storage/9b0855d6.png)

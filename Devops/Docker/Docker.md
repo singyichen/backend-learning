@@ -2,7 +2,7 @@
 title: Docker
 description: Docker學習筆記
 published: true
-date: 2023-06-19T00:31:27.423Z
+date: 2023-07-14T00:16:22.382Z
 tags: docker, devops
 editor: markdown
 dateCreated: 2022-07-19T06:36:20.283Z
@@ -24,6 +24,9 @@ dateCreated: 2022-07-19T06:36:20.283Z
 - [ ] [What are the differences between Virtualization (VMware) and Containerization (Docker)?](https://blog.bytebytego.com/p/what-are-the-differences-between?utm_source=profile&utm_medium=reader2)
 - [ ] [How does Docker work](https://blog.bytebytego.com/p/ep57-how-chatgpt-works-technically?utm_source=profile&utm_medium=reader2)
 - [ ] [Docker Network in Depth](https://towardsdev.com/docker-network-in-depth-2387a3508926)
+- [ ] [Docker 是什麼？Docker 基本觀念介紹與容器和虛擬機的比較](https://www.omniwaresoft.com.tw/product-news/docker-news/docker-introduction/)
+- [ ] [Docker — What it is, How Images are structured, Docker vs. VM and some tips (part 1)](https://ragin.medium.com/docker-what-it-is-how-images-are-structured-docker-vs-vm-and-some-tips-part-1-d9686303590f)
+- [ ] [Streamline Application Shipping with Docker: Linux and Windows Made Easy!](https://medium.com/@adarsh_d/streamline-application-shipping-with-docker-linux-and-windows-made-easy-78195361887)
 
 # Docker 簡介
 > 2013 年，dotCloud 公司將內部開發的 Docker 開源，基於上面提到的 LXC 技術基礎，將系統設計容器轉為微服務（Micro-service）的容器！因為很火熱，dotCloud 後來索性改名叫做 Docker Inc 現在成熟的 Docker 已經不是以 LXC 為架構，而是自己開發的 Libcontainer 作為底層的技術。
@@ -57,12 +60,14 @@ Docker 是個輕量級的虛擬化技術，可以把你的應用程式連同環�
  
 ![docker 怎麼做到的.png](http://192.168.25.60:8000/files/file_storage/59b94750.png)
  
+![docker 怎麼做到的.png](http://192.168.25.60:8000/files/file_storage/59b94750.png) 
+ 
 ## Docker 最重要的觀念
 用一個簡單的比喻來解釋，如果映像檔是一個做蛋糕的模具，容器則是用該模具烤出來的蛋糕，而倉庫是用來集中放置模具們的收納櫃。接下來讓我們搭配這個比喻深入一點解釋這三個概念
 
 ![docker Docker Life Circle.png](http://192.168.25.60:8000/files/file_storage/c646d4c8.png)
 
-![docker 容器基礎架構.png](http://192.168.25.60:8000/files/file_storage/cf462f81.png)
+![docker example.png](http://192.168.25.60:8000/files/file_storage/ed4a9423.png)
 
 執行 Docker 的主機，稱為 Host。
 

@@ -2,7 +2,7 @@
 title: CORS
 description: 
 published: true
-date: 2023-07-03T05:39:17.027Z
+date: 2023-07-10T01:29:52.541Z
 tags: cors, cross-origin resource sharing, same-origin policy, 同源策略
 editor: markdown
 dateCreated: 2022-06-20T07:12:01.931Z
@@ -17,6 +17,8 @@ dateCreated: 2022-06-20T07:12:01.931Z
 - [ ] https://www.youtube.com/watch?v=PNtFSVU-YTI&t=360s
 - [ ] https://blog.kennycoder.io/2019/12/08/%E5%90%8C%E6%BA%90%E6%94%BF%E7%AD%96-Same-Origin-Policy-%E5%8E%9F%E7%90%86%E4%BB%8B%E7%B4%B9/
 - [ ] https://medium.com/willhanchen/web%E4%B8%96%E7%95%8C%E7%9A%84%E9%82%A6%E4%BA%A4%E5%9C%8B%E6%94%BF%E7%AD%96-%E8%B7%A8%E4%BE%86%E6%BA%90%E8%B3%87%E6%BA%90%E5%85%B1%E7%94%A8-cross-origin-resource-sharing-cors-90edf1bf170e
+- [ ] [What is CORS (Cross-Origin Resource Sharing)?](https://learningdaily.dev/what-is-cors-cross-origin-resource-sharing-1eb657354296)
+- [ ] [Microservices with CQRS and Event Sourcing in TypeScript with NestJS](https://blog.bitsrc.io/microservices-with-cqrs-and-event-sourcing-in-typescript-with-nestjs-831fba1e068b)
 
 # 網站資源
 
@@ -231,6 +233,8 @@ Access-Control-Allow-Headers： 伺服器允許存取的標頭
 ### 預檢請求 ( Preflight Request )
 > - 預檢請求和簡單請求有一點不同，如果是簡單請求而被 CORS 攔下來的話，實際上請求已經發送出去，只是被瀏覽器擋下來不給你；但若是預檢請求，發送預檢請求後若沒有通過，真正要發送的請求是不會發送出去的，也就是說「一旦預檢請求完成，真正的請求才會被送出」
 > - 這類型的請求就可能具有危險性，因此會先探詢伺服器之後允許的範圍之後，若該次的請求符合條件，才將真正的請求往後送，如此一來便能多一層保障
+
+![Preflight Request.png](http://192.168.25.60:8000/files/file_storage/8b4470bb.png)
 
 #### 用戶端向伺服器端發送預檢請求（瀏覽器會自動發送）
 ```

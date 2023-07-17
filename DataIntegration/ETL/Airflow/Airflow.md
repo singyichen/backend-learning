@@ -2,7 +2,7 @@
 title: Airflow
 description: Airflow 介紹
 published: true
-date: 2023-07-07T02:31:59.181Z
+date: 2023-07-10T03:34:22.695Z
 tags: airflow
 editor: markdown
 dateCreated: 2023-05-23T07:49:41.975Z
@@ -137,3 +137,20 @@ Airflow提供了非常豐富的運算子（Operator）集合，其中一些是�
 
 ### HttpOperators
 使用者傳送HTTP請求
+
+# 優缺點
+## 優點
+- 工作流程可以存儲在版本控制中，以便回滾到以前的版本
+- 工作流可以由多人同時開發
+- 可以編寫測試來驗證功能
+- 組件是可擴展的，可以在大量現有組件的基礎上構建
+- 從介面可以檢查日誌和管理任務，例如在失敗的情況下重試任務
+- 清晰易懂的管理介面
+- 現成的 Operator 方便串接各式系統
+- 較容易管理複雜的工作流程
+- Workflow as Code
+
+## 缺點
+- 多一套系統需維護
+- 需設定一些相依服務（資料庫、RabbitMQ 之類的）
+- 部署多組 Worker 時較麻煩

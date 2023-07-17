@@ -2,7 +2,7 @@
 title: Preparations
 description: 準備事項(技能樹、軟體安裝、環境建置)
 published: true
-date: 2023-07-07T03:27:01.472Z
+date: 2023-07-10T01:10:49.385Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-28T00:51:37.605Z
@@ -75,6 +75,7 @@ eslint --init
 - AWS Toolkit
 > [usage info](https://aws.amazon.com/tw/codewhisperer/)
 {.is-info}
+- New Relic CodeStream
 
 ## [Postman](https://www.postman.com/)
 ### Set Environment

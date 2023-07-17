@@ -2,7 +2,7 @@
 title: 02.從HTTP協定開始講起
 description: 
 published: true
-date: 2023-06-05T23:56:34.146Z
+date: 2023-07-14T00:03:21.545Z
 tags: http, https
 editor: markdown
 dateCreated: 2022-11-15T00:24:34.813Z
@@ -32,6 +32,8 @@ HTTP 是英文 Hyper Text Transfer Protocol 的縮寫，也是全球資訊網路
 5. 伺服器端錯誤 ( Server errors, 500–599 )：伺服器在處理某個正確請求時發生錯誤。
 
 ![What's inside the HTTP Header.png](http://192.168.25.60:8000/files/file_storage/7797477e.png)
+
+![HTTP1, HTTP2, HTTP3.png](http://192.168.25.60:8000/files/file_storage/43858f8d.png)
 
 ## HTTP 會產生的問題
 由於 HTTP 是以明文的方式傳遞訊息，也就是說訊息傳輸的過程中並沒有任何的保護措施，因此只要有心人對於傳遞的訊息進行攔截，我們的資料就會被竊取，如果傳輸的資料是個人基本資料、銀行帳號、密碼等重要的個人資料，一但被竊取了，發生銀行帳號的錢被掏空的事件，就一點也不奇怪了!
