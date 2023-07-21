@@ -2,7 +2,7 @@
 title: Airflow Install
 description: Airflow 安裝
 published: true
-date: 2023-07-12T06:48:19.380Z
+date: 2023-07-21T07:00:38.634Z
 tags: airflow
 editor: markdown
 dateCreated: 2023-05-23T09:18:19.253Z
@@ -54,7 +54,7 @@ mkdir -p ./config ./dags ./logs ./plugins
 - `plugins`：可放置自定義的 plugin
 
 ## 新增 `docker-compose.yaml`，並做調整
-- 到 [官網](https://airflow.apache.org/docs/apache-airflow/2.6.1/docker-compose.yaml) 下載
+- 到 [官網](https://airflow.apache.org/docs/apache-airflow/2.6.3/docker-compose.yaml) 下載
 - 因需額外新增所需資料庫的 providers，故須 build 自己需要的 image，調整 `docker-compose.yaml` 如下：
 ```yaml
   # In order to add custom dependencies or upgrade provider packages you can use your extended image.
@@ -185,7 +185,7 @@ d43b48c2da80   redis:latest                "docker-entrypoint.s…"   About a mi
 
 # 資料庫連線
 ## 新增資料庫連線
-- Admin ➔ Connections ➔ 藍色加號(Add a new record)
+- Admin ➔ Connections ➔ 藍色 `+` 號(Add a new record)
 
 ![airflow add db connection.png](http://192.168.25.60:8000/files/file_storage/29dc8714.png)
 
@@ -205,7 +205,16 @@ d43b48c2da80   redis:latest                "docker-entrypoint.s…"   About a mi
   - Password：`airflow`
   - Port：`5432`
   - Extra：空白
-  
+
+```
+2023-07-19 14:01:45 [2023-07-19T06:01:45.701+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
+2023-07-19 14:01:45 [2023-07-19T06:01:45.905+0000] {base.py:73} INFO - Using connection ID 'qCB5b0wu' for task execution.
+2023-07-19 14:01:45 [2023-07-19T06:01:45.917+0000] {sql.py:375} INFO - Running statement: select 1, parameters: None
+2023-07-19 14:01:45 [2023-07-19T06:01:45.918+0000] {sql.py:384} INFO - Rows affected: 1
+2023-07-19 14:01:45 172.18.0.1 - - [19/Jul/2023:06:01:45 +0000] "POST /api/v1/connections/test HTTP/1.1" 200 68 "http://127.0.0.1:8080/connection/edit/2" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+2023-07-19 14:01:59 127.0.0.1 - - [19/Jul/2023:06:01:59 +0000] "GET /health HTTP/1.1" 200 141 "-" "curl/7.74.0"
+```
+
 ![airflow add db connection success.png](http://192.168.25.60:8000/files/file_storage/13a96d77.png)
 
 ## local_sql_server_conn
@@ -237,4 +246,10 @@ d43b48c2da80   redis:latest                "docker-entrypoint.s…"   About a mi
   
 ![airflow add db Postgres connection success.png](http://192.168.25.60:8000/files/file_storage/f648366b.png)  
   
-  
+```
+2023-07-21 15:00:14 [2023-07-21T07:00:14.989+0000] {base.py:73} INFO - Using connection ID 'Bv0n4uTH' for task execution.
+2023-07-21 15:00:15 [2023-07-21T07:00:15.053+0000] {sql.py:375} INFO - Running statement: select 1, parameters: None
+2023-07-21 15:00:15 [2023-07-21T07:00:15.069+0000] {sql.py:384} INFO - Rows affected: 1
+2023-07-21 15:00:15 172.18.0.1 - - [21/Jul/2023:07:00:15 +0000] "POST /api/v1/connections/test HTTP/1.1" 200 68 "http://127.0.0.1:8080/connection/edit/3" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+2023-07-21 15:00:18 127.0.0.1 - - [21/Jul/2023:07:00:18 +0000] "GET /health HTTP/1.1" 200 243 "-" "curl/7.74.0"
+```

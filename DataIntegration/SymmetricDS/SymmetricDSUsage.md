@@ -2,7 +2,7 @@
 title: SymmetricDS Usage
 description: 
 published: true
-date: 2023-07-11T07:41:57.720Z
+date: 2023-07-20T03:01:38.030Z
 tags: symmetricds
 editor: markdown
 dateCreated: 2023-06-14T05:33:55.689Z
@@ -16,6 +16,7 @@ dateCreated: 2023-06-14T05:33:55.689Z
 - [ ] [SymmetricDS SQL Server error while reading the database metadata](https://stackoverflow.com/questions/75664724/symmetricds-sql-server-error-while-reading-the-database-metadata)
 - [ ] [合併多SQL檔案到單檔案](https://developer.aliyun.com/article/503445)
 - [ ] [The growing pains of database architecture](https://www.figma.com/blog/how-figma-scaled-to-multiple-databases/#managing-migration)
+- [ ] [SQL - DB 中，所有資料表的資料總筆數](https://blog.xuite.net/f8789/DCLoveEP/64839461)
 
 # 使用原理
 - 在 SymmetricDS 裡，一台 DB 要對應一個應用程式 SymmetricDS 執行同步的動作，需為每個應用程式寫好啟動的設定檔。
@@ -181,15 +182,18 @@ cd D:\mandy\Project\symmetricds\mssql2postgres\bin
 .\symadmin -e server-000 reload-node 001
 ```
 ## 測試是否成功連接資料庫
-- 連接 PostgreSQL 成功
+- 連接 PostgreSQL 測試
 ```shell
 .\dbsql -e server-000
 ```
+- 連接 PostgreSQL 成功
 ```
 [] - ClientSymmetricEngine - Initializing connection to database
 [] - JdbcDatabasePlatformFactory - Detected database 'postgres95', version '13', protocol 'postgresql'
 [] - JdbcDatabasePlatformFactory - The IDatabasePlatform being used is org.jumpmind.db.platform.postgresql.PostgreSql95DatabasePlatform
 ```
+
+- 連接 SQL Server 測試
 ```shell
 .\dbsql -e client-001
 ```
@@ -271,6 +275,7 @@ copy /a *.sql migration.sql
 參閱文件 [Task Scheduler](/軟體開發/學習心得/11542/DataIntegration/SymmetricDS/TaskScheduler)
 
 # 資料驗證
+## 使用 `dbcompare`，可搭配工作排程器執行
 - 將屬性檔案(`client-001.properties`、`server-000.properties`)複製一份到資料夾 `bin` 中
 ```shell
 .\dbcompare ACRTC -s client-001.properties -t server-000.properties
@@ -288,6 +293,33 @@ copy /a *.sql migration.sql
 
 ![symmetricds dbcompare example results.png](http://192.168.25.60:8000/files/file_storage/f4f86346.png)
 
+##  使用 SQL
+- 查詢 client 端資料：所有 table 資料筆數
+```sql
+SELECT S.name '結構描述', O.name '資料表名稱', P.rows '列總數'
+FROM sys.objects O INNER JOIN sys.schemas S
+ON O.schema_id = S.schema_id
+INNER JOIN sys.partitions P
+ON O.object_id = P.object_id
+WHERE (O.type = 'U') AND
+(P.index_id IN (0,1))
+ORDER BY S.name, O.name ASC;
+```
+
+- 查詢 server 端資料：所有 table 資料筆數
+```sql
+WITH tbl AS
+  (SELECT table_schema,
+          TABLE_NAME
+   FROM information_schema.tables
+   WHERE TABLE_NAME not like 'pg_%'
+     AND table_schema in ('public'))
+SELECT table_schema,
+       TABLE_NAME,
+       (xpath('/row/c/text()', query_to_xml(format('select count(*) as c from %I.%I', table_schema, TABLE_NAME), FALSE, TRUE, '')))[1]::text::int AS rows_n
+FROM tbl
+ORDER BY TABLE_NAME ASC;
+```
 # 組態設定
 ## 設定資料同步方式
 - 查詢 table

@@ -2,7 +2,7 @@
 title: Docker Usage
 description: Docker學習筆記
 published: true
-date: 2023-07-14T00:10:26.108Z
+date: 2023-07-21T07:20:07.019Z
 tags: docker, devops
 editor: markdown
 dateCreated: 2022-07-21T06:34:46.172Z
@@ -185,7 +185,7 @@ CMD [ "node", "src/app" ]
 
 # Docker 佈署
 ## 檢查 package.json 是否有移除套件 nodemon
-套件 nodemon 會消耗大量資源，故佈署時需進行移除
+套件 `nodemon` 會消耗大量資源，故佈署時需進行移除
 
 ## 將專案複製一份到 ubuntu
 ### 方法一：git clone 專案到 ubuntu 
@@ -265,7 +265,7 @@ docker ps -a
 
 ### 使用 Postman 測試 API
 
-# docker-compose 基礎指令
+# docker compose 基礎指令
 ## 建立，背景執行
 - 會直接掃描當前目錄下的 docker-compose.yml 檔並進行 build 所有的 image 並建立好 container
 - `-d`：背景執行
@@ -279,23 +279,23 @@ docker-compose up -d
 
 ## 停止
 ```bash
-docker-compose stop  
+docker compose stop  
 ```
 ## 啟動
 ```bash
-docker-compose start  
+docker compose start  
 ```
 ## 重啟
 ```bash
-docker-compose restart  
+docker compose restart  
 ```
 ## 移除
 ```bash
-docker-compose rm  
+docker compose rm  
 ```
 ## 查看 log
 ```bash
-docker-compose logs -f 
+docker compose logs -f 
 ```
 ## 移除所有 container 與 image
 ```bash
@@ -330,7 +330,7 @@ docker compose down --volumes --rmi all
 ## 使用步驟
 1.利用 Dockerfile 定義應用程式的環境，以便於在任何地方重新複製 ( reproduce anywhere )。
 2.利用 docker-compose.yml 定義組成應用程式的服務，使它們能在隔離的環境中一起被執行。
-3.執行 `docker-compose up` 開始執行整個應用程式。
+3.執行 `docker compose up` 開始執行整個應用程式。
 
 # docker-compose.yml
 > - 撰寫 docker-compose.yml 來設定你的 services 該指向哪些 image、Port 對應、該走哪些任務
@@ -596,7 +596,7 @@ services:
 
 - 建立，背景執行
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 # Docker 異常處理
@@ -606,5 +606,5 @@ sudo service docker restart
 ```
 2. 然後再將有異常的 Docker 容器停止或移除，若是以 Docker Compose 方式啟動容器的話，在 Docker 服務重啟後，再使用下列指令移除異常 Docker 容器
 ``` shell
-sudo docker-compose down
+sudo docker compose down
 ``` 

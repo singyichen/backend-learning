@@ -2,7 +2,7 @@
 title: NiFi
 description: NiFi 介紹
 published: true
-date: 2023-07-13T08:23:08.643Z
+date: 2023-07-18T06:08:06.310Z
 tags: nifi
 editor: markdown
 dateCreated: 2023-07-06T00:36:02.732Z
@@ -14,6 +14,7 @@ dateCreated: 2023-07-06T00:36:02.732Z
 - [ ] [Apache NIFI中文文件](https://nifichina.github.io/)
 - [ ] [Nifi：nifi的基本使用](https://codingnote.cc/zh-tw/p/388377/)
 - [ ] [Apache NIFI 講解(讀完立即入門)](https://cloud.tencent.com/developer/article/1690392)
+- [ ] [Apache NiFi Tutorial](https://www.javatpoint.com/apache-nifi#buildflow)
 
 # 關於 NiFi
 

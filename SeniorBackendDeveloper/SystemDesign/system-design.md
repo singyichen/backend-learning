@@ -2,7 +2,7 @@
 title: System Design
 description: 
 published: true
-date: 2023-06-05T00:17:17.318Z
+date: 2023-07-18T00:42:53.209Z
 tags: 
 editor: markdown
 dateCreated: 2023-05-18T00:22:34.726Z
@@ -68,3 +68,7 @@ dateCreated: 2023-05-18T00:22:34.726Z
 ## Architecture Characteristics
 
 ![Architecture Characteristics and Non-Functional Requirements with Cheatsheet.png](http://192.168.25.60:8000/files/file_storage/7059e188.png)
+
+## Software Architecture Styles
+
+![software architectural styles.png](http://192.168.25.60:8000/files/file_storage/b32613c4.png)

@@ -2,7 +2,7 @@
 title: Migration
 description: 
 published: true
-date: 2023-06-09T06:18:49.643Z
+date: 2023-07-17T06:25:10.511Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-07T01:47:56.437Z
@@ -64,7 +64,7 @@ sqlserver2pgsql 是用 Perl 編寫的。這是一個開源遷移工具，用於�
 -- 列出 DB 所有 table
 SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE' ORDER BY TABLE_NAME;
 -- 計算 DB 中的 table 數量
-SELECT COUNT(*) FROM sys.tables
+SELECT COUNT(1) FROM sys.tables
 ```
 
 ### 將匯出的 Table Schema Script 與 EXCEL 檔案進行比對

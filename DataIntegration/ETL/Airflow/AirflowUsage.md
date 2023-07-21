@@ -2,7 +2,7 @@
 title: Airflow Usage
 description: Airflow 使用
 published: true
-date: 2023-07-07T00:47:09.865Z
+date: 2023-07-20T02:14:50.446Z
 tags: airflow
 editor: markdown
 dateCreated: 2023-06-27T08:20:57.125Z
@@ -272,8 +272,8 @@ start_task >> start >> end_task
 
 ![airflow dag excute log.png](http://192.168.25.60:8000/files/file_storage/4fb873c5.png)
 
-- 批次寫入 1000 筆，一次大約 2-3 分鐘
-- 顯示總共寫入幾筆資料
+- 批次寫入 1000 筆，一次大約 2-3 秒
+- 顯示總共寫入幾筆資料：83686 筆
 ```
 [2023-07-02, 08:04:40 CST] {sql.py:470} INFO - Loaded 82000 rows into "public"."ACPTA" so far
 [2023-07-02, 08:04:43 CST] {sql.py:470} INFO - Loaded 83000 rows into "public"."ACPTA" so far

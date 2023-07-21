@@ -2,7 +2,7 @@
 title: Fastify
 description: Fastify
 published: true
-date: 2023-05-17T07:01:03.671Z
+date: 2023-07-21T00:11:41.259Z
 tags: fastify, framework
 editor: markdown
 dateCreated: 2022-07-29T08:12:59.156Z
@@ -22,6 +22,7 @@ dateCreated: 2022-07-29T08:12:59.156Z
 - [ ] [Creating a Fastify REST API – Postgres, Swagger and Fastify CLI](https://progressivecoder.com/creating-a-fastify-rest-api/)
 - [ ] [Fastify 101 系列](https://ithelp.ithome.com.tw/users/20151148/ironman/5108)
 - [ ] [使用 Fastify 框架以及 TypeScript 語言來開發 Web 服務的起手式](https://magiclen.org/fastify-in-typescript/)
+- [ ] [Express vs Fastify: Hello world use case](https://medium.com/deno-the-complete-reference/express-vs-fastify-hello-world-use-case-eca4539211b0)
 
 # Fastify 框架介紹
 > **Fastify** 是一個 NodeJS 的 Web Framework，利用 Fastify 可以快速的讓開發者建立後端的伺服器應用

@@ -2,7 +2,7 @@
 title: PostgreSQL
 description: 
 published: true
-date: 2023-07-13T00:10:22.267Z
+date: 2023-07-20T00:14:57.150Z
 tags: postgresql, db
 editor: markdown
 dateCreated: 2022-10-26T00:34:10.467Z
@@ -20,6 +20,7 @@ dateCreated: 2022-10-26T00:34:10.467Z
 - [ ] [PostgreSQL如何为主键创建自增序列(Sequences)](https://blog.csdn.net/timo1160139211/article/details/78191470?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-78191470-blog-99950883.pc_relevant_multi_platform_whitelistv3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-78191470-blog-99950883.pc_relevant_multi_platform_whitelistv3&utm_relevant_index=2)
 - [ ] [Postgresql对不足位数的查询结果进行前后补0](https://blog.csdn.net/cao_mr/article/details/106617958)
 - [ ] [Why is PostgreSQL voted as the most loved database by Stackoverflow 2022 Developer Survey?](https://blog.bytebytego.com/p/ep30-why-is-postgresql-the-most-loved?utm_source=profile&utm_medium=reader2)
+- [ ] [Citus 12: Schema-based sharding for PostgreSQL](https://www.citusdata.com/blog/2023/07/18/citus-12-schema-based-sharding-for-postgres/)
 
 #  為什麼 PostgreSQL 被評為最受歡迎的數據庫
 

@@ -2,7 +2,7 @@
 title: NiFi Install
 description: NiFi 安裝
 published: true
-date: 2023-07-12T06:48:06.375Z
+date: 2023-07-18T07:15:24.082Z
 tags: nifi
 editor: markdown
 dateCreated: 2023-07-06T00:50:19.373Z
@@ -81,7 +81,6 @@ networks:
 - 將 zip 解壓縮，將資料夾中的 `jtds-1.3.1.jar` 複製到根目錄
 
 ## 新增 `dockerfile`
-- 安裝 OpenJDK-11：`openjdk-11-jdk`
 - 加載 JDBC Driver：`jtds-1.3.1.jar`
 	- 路徑：`/usr/local/nifi/jars/jtds-1.3.1.jar`
   - `CLASSPATH` 為到時候資料庫連線使用的 `Driver Path`
@@ -131,6 +130,9 @@ docker compose up -d
 ```
 
 ## 可於 Docker Desktop 上查看運行狀況
+啟動後的服務 Java 及 NiFi 位置如下
+- Java home: `/opt/java/openjdk`
+- NiFi home: `/opt/nifi/nifi-current`
 
 ![airflow running on docker desktop.png](http://192.168.25.60:8000/files/file_storage/36c69d7b.png)
 

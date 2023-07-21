@@ -2,7 +2,7 @@
 title: Preparations
 description: 準備事項(技能樹、軟體安裝、環境建置)
 published: true
-date: 2023-07-10T01:10:49.385Z
+date: 2023-07-21T01:49:02.865Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-28T00:51:37.605Z
@@ -90,6 +90,11 @@ eslint --init
 > [SQL Server download info](https://docs.microsoft.com/zh-tw/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver15)
 {.is-info}
 - DB : sql0802-srv
+
+## DBeaver
+> [DBeaver download info](https://dbeaver.io/download/)
+{.is-info}
+
 ## SourceTree (Option)
 > [SourceTree download info](https://www.sourcetreeapp.com/)
 {.is-info}

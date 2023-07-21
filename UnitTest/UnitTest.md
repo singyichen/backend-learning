@@ -2,7 +2,7 @@
 title: UnitTest
 description: 單元測試
 published: true
-date: 2023-05-17T01:15:32.261Z
+date: 2023-07-18T00:57:03.235Z
 tags: unit test
 editor: markdown
 dateCreated: 2022-05-11T01:13:18.392Z
@@ -25,6 +25,7 @@ dateCreated: 2022-05-11T01:13:18.392Z
 - https://medium.com/enjoy-life-enjoy-coding/unit-test-%E8%B7%A8%E8%B6%8A%E5%90%8C%E6%AD%A5%E5%9F%B7%E8%A1%8C%E7%9A%84-jest-%E6%B8%AC%E8%A9%A6-93bda140dcaa 
 - https://medium.com/enjoy-life-enjoy-coding/%E8%AE%93-jest-%E7%82%BA%E4%BD%A0%E7%9A%84-code-%E5%81%9A%E5%96%AE%E5%85%83%E6%B8%AC%E8%A9%A6-%E5%9F%BA%E7%A4%8E%E7%94%A8%E6%B3%95%E6%95%99%E5%AD%B8-d898f11d9a23
 - [ ] [Node.js Unit Testing with Jest](https://medium.com/@ben.dev.io/node-js-unit-testing-with-jest-b7042d7c2ad0)
+- [ ] [Paradigm Shift: How Developer to Tester Ratio Changed From 1:1 to 100:1](https://blog.bytebytego.com/p/ep68-top-architectural-styles?utm_source=profile&utm_medium=reader2)
 ### Online Video
 - https://www.udemy.com/course/nodejs-unit-testing-in-depth/
 - https://www.udemy.com/course/nodejs-unit-testing-and-integration-testing-with-express-and-jest/
@@ -237,6 +238,9 @@ PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8v
 
 5). **Thoroug ➔ 全面性** 
 測試必須盡可能地全面，有些人會理解為 Code coverage 越高越好，但覆蓋所有的使用案例才是應該考慮的事
+
+![How Developer to Tester Ratio Changed From 1 vs 1 to 100 vs 1.png](http://192.168.25.60:8000/files/file_storage/7c89e44d.png)
+
 
 # TDD
 

@@ -2,7 +2,7 @@
 title: Controller Service
 description: 
 published: true
-date: 2023-07-14T08:40:52.413Z
+date: 2023-07-18T08:35:38.693Z
 tags: nifi
 editor: markdown
 dateCreated: 2023-07-14T02:35:59.873Z
@@ -44,10 +44,31 @@ Controller Service 的另外一種比較常見的用法是針對特定檔案格�
 ![nifi add controller service.gif](http://192.168.25.60:8000/files/file_storage/688f604d.gif)
 
 # 設定 Controller Service
+## local_sql_server_conn
+### 新增一個 `DBCPConnectionPool` 連接 `MSSQL`
+- Database Connection URL：`jdbc:jtds:sqlserver://192.168.25.21:1433/Leader`
+- Database Driver Class Name：`net.sourceforge.jtds.jdbc.Driver`
+- Database Driver Location(s)：`/opt/nifi/nifi-current/lib/jtds-1.3.1.jar`
+- Database User：`sa`
+- Password ：`password`
+- Validation query：`Select 1 as test`
 
+### 連接測試
+點選打勾符號進行連接測試
 
+### 將 Service enabled
 
+## local_postgres_conn
+### 新增一個 `DBCPConnectionPool` 連接 `PostgresSQL`
+- Database Connection URL：`jdbc:postgresql://192.168.25.59:5432/A_SY004`
+- Database Driver Class Name：`org.postgresql.Driver`
+- Database Driver Location(s)：`/opt/nifi/nifi-current/lib/postgresql-42.5.1.jar`
+- Database User：`11542`
+- Password ：`password`
+- Validation query：`Select 1 as test`
 
+### 連接測試
+點選打勾符號進行連接測試
 
-
+### 將 Service enabled
 
