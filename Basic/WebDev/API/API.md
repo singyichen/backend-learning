@@ -2,7 +2,7 @@
 title: API
 description: 
 published: true
-date: 2023-07-07T00:43:49.571Z
+date: 2023-07-31T01:27:34.443Z
 tags: api
 editor: markdown
 dateCreated: 2022-11-17T05:44:26.014Z
@@ -19,6 +19,7 @@ dateCreated: 2022-11-17T05:44:26.014Z
 - [ ] [Code First v.s. API First - A change of software development philosophy](https://blog.bytebytego.com/p/twitter-architecture-2022-vs-2012?utm_source=profile&utm_medium=reader2)
 - [ ] [What are the API architectural styles?](https://blog.bytebytego.com/p/ep49-api-architectural-styles?utm_source=profile&utm_medium=reader2)
 - [ ] [Top 6 Most Popular API Architecture Styles](https://www.youtube.com/watch?v=4vLxWqE94l4&ab_channel=ByteByteGo&loop=0)
+- [ ] [Top 7 Ways to 10x Your API Performance](https://www.youtube.com/watch?v=zvWKqUiovAM&ab_channel=ByteByteGo&loop=0)
 
 # API ( Application Programming Interface ) 應用程式介面
 > - API（應用程式設計介面）是一種軟體介面，允許兩個不相關的應用程式相互通訊，它充當橋樑，從一個程式取得請求或訊息後，將其傳遞給另一個程式、翻譯訊息，及根據 API 程式設定的協議來執行指定動作

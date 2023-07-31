@@ -2,7 +2,7 @@
 title: NodeJS
 description: 
 published: true
-date: 2023-07-21T00:07:17.952Z
+date: 2023-07-31T01:47:44.918Z
 tags: nodejs
 editor: markdown
 dateCreated: 2023-01-19T00:21:27.297Z
@@ -17,5 +17,6 @@ dateCreated: 2023-01-19T00:21:27.297Z
 - [ ] [Node.js for Web Development: Is it the Right Choice? Pros and Cons Explained](https://medium.com/@adarsh_d/node-js-for-web-development-is-it-the-right-choice-pros-and-cons-explained-2df1ecfb97c4)
 - [ ] [Roadmap for learning Node JS](https://medium.com/@adarsh_d/roadmap-for-learning-node-js-fbd91d634035)
 - [ ] [PDF generating with Node.js](https://luckylibora.medium.com/pdf-generating-like-a-pro-a6f5bc7b3472)
+- [ ] [4 Common Mistakes Made by Node.js Developers](https://medium.com/@akashjha9041/4-common-mistakes-made-by-node-js-developers-970332ecef5a)
 
 ![Roadmap for learning Node JS.png](http://192.168.25.60:8000/files/file_storage/542c8820.png)

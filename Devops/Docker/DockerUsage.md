@@ -2,7 +2,7 @@
 title: Docker Usage
 description: Docker學習筆記
 published: true
-date: 2023-07-21T07:20:07.019Z
+date: 2023-07-31T01:45:38.195Z
 tags: docker, devops
 editor: markdown
 dateCreated: 2022-07-21T06:34:46.172Z
@@ -25,7 +25,7 @@ dateCreated: 2022-07-21T06:34:46.172Z
 - [ ] [Docker restart](https://quietbo.com/2022/07/27/docker-restart/)
 - [ ] [Use a restart policy](https://docs.docker.com/config/containers/start-containers-automatically/#use-a-restart-policy)
 - [ ] [Docker Extensions Every Developer Must Try](https://faun.pub/docker-extensions-every-developer-must-try-7ce0d7a6c292)
-
+- [ ] [Docker Compose Tutorial: advanced Docker made simple](https://learningdaily.dev/docker-compose-tutorial-advanced-docker-made-simple-d5f8ba43c388)
 # Docker Cheat Cheet
 ## [docker cheat sheet 1.pdf](http://192.168.25.60:8000/files/file_storage/ec6c1788.pdf)
 
@@ -327,10 +327,12 @@ docker compose down --volumes --rmi all
 
 ![docker compose usage.png](http://192.168.25.60:8000/files/file_storage/127a9492.png)
 
+![docker compose concept.png](http://192.168.25.60:8000/files/file_storage/8623419d.png)
+
 ## 使用步驟
-1.利用 Dockerfile 定義應用程式的環境，以便於在任何地方重新複製 ( reproduce anywhere )。
-2.利用 docker-compose.yml 定義組成應用程式的服務，使它們能在隔離的環境中一起被執行。
-3.執行 `docker compose up` 開始執行整個應用程式。
+1. 利用 `Dockerfile` 定義應用程式的環境，以便於在任何地方重新複製 ( reproduce anywhere )。
+2. 利用 `docker-compose.yml` 定義組成應用程式的服務，使它們能在隔離的環境中一起被執行。
+3. 執行 `docker compose up` 開始執行整個應用程式。
 
 # docker-compose.yml
 > - 撰寫 docker-compose.yml 來設定你的 services 該指向哪些 image、Port 對應、該走哪些任務

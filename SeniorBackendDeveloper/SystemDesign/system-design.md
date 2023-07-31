@@ -2,7 +2,7 @@
 title: System Design
 description: 
 published: true
-date: 2023-07-18T00:42:53.209Z
+date: 2023-07-26T00:17:06.116Z
 tags: 
 editor: markdown
 dateCreated: 2023-05-18T00:22:34.726Z
@@ -55,6 +55,8 @@ dateCreated: 2023-05-18T00:22:34.726Z
 - [ ] [How do we design a chat application like WhatsApp, Facebook Messenger, or Discord?](https://blog.bytebytego.com/p/ep-42-designing-a-chat-application?utm_source=profile&utm_medium=reader2)
 - [ ] [Discover Amazon's innovative build system - Brazil.](https://blog.bytebytego.com/p/ep56-system-design-blueprint-the?utm_source=profile&utm_medium=reader2)
 - [ ] [An educational side project](https://newsletter.pragmaticengineer.com/p/an-educational-side-project?utm_source=post-email-title&publication_id=458709&post_id=125323716&isFreemail=true&utm_medium=email)
+- [ ] [Design Dropbox/Google Drive](https://nikhilgupta1.medium.com/design-dropbox-google-drive-81cd343571a8)
+- [ ] [Will Twitter collapse? Examining the resiliency of Twitter’s architecture](https://learningdaily.dev/will-twitter-collapse-examining-the-resiliency-of-twitters-architecture-45d3959ab9c0)
 ## Problem
 - [ ] [How to avoid double payment?](https://blog.bytebytego.com/p/how-to-avoid-double-payment?utm_source=profile&utm_medium=reader2)
 - [ ] [Payment reconciliation](https://blog.bytebytego.com/p/payment-reconciliation?utm_source=profile&utm_medium=reader2)

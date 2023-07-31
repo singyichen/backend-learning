@@ -2,7 +2,7 @@
 title: JWT
 description: 
 published: true
-date: 2023-07-10T00:08:35.992Z
+date: 2023-07-24T06:02:30.223Z
 tags: jwt, 驗證, authentication
 editor: markdown
 dateCreated: 2022-06-01T07:27:37.054Z
@@ -29,6 +29,7 @@ dateCreated: 2022-06-01T07:27:37.054Z
 - [ ] [Secure User Authentication in Node.js using JSON Web Tokens (JWT)](https://singh-sandeep.medium.com/secure-user-authentication-in-node-js-using-json-web-tokens-jwt-271cd0599df)
 - [ ] [How to Use JWT and Node.js for Better App Security](https://www.toptal.com/json/jwt-nodejs-security)
 - [ ] [React and NodeJS Authentication with Refresh & Access Tokens: A Step-by-Step Guide](https://medium.com/@Sukhjinder/react-and-nodejs-authentication-with-refresh-access-tokens-a-step-by-step-guide-343c7a722aec)
+- [ ] [EP69: Explaining JSON Web Token (JWT) To a 10 Year Old Kid](https://blog.bytebytego.com/p/ep69-explaining-json-web-token-jwt?utm_source=profile&utm_medium=reader2)
 # 源起
 
 ![JWT slogan.png](http://192.168.25.60:8000/files/file_storage/9b0855d6.png)
@@ -51,6 +52,8 @@ JSON Web Token (JWT) 是由 Auth0 所提構出的一個新 Token 想法，這並
 
 
 # 概念
+
+![Explaining JSON Web Token (JWT) to a 10 year old Kid.png](http://192.168.25.60:8000/files/file_storage/19b58199.png)
 
 ![JWT 運作原理.png](http://192.168.25.60:8000/files/file_storage/fd60f3db.png)
 

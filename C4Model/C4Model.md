@@ -2,7 +2,7 @@
 title: C4 Model
 description: 
 published: true
-date: 2023-06-29T02:37:09.149Z
+date: 2023-07-24T23:57:52.321Z
 tags: c4 model
 editor: markdown
 dateCreated: 2022-05-06T00:45:59.610Z
@@ -15,6 +15,7 @@ dateCreated: 2022-05-06T00:45:59.610Z
 - [ ] [Making C4-Model in Software Architecture](https://medium.easyread.co/c4-model-in-software-architecture-6587ab4a2d0f)
 - [ ] [Example Component Diagram](https://structurizr.com/help/component-diagram)
 - [ ] [[Other][Tools]畫軟體系統圖- C4 Model 軟體系統建模的圖形表示技巧](https://stevenjhu.com/2022/04/28/othertools%E5%B7%A5%E7%A8%8B%E5%B8%AB%E7%95%AB%E5%9C%96-c4-model-%E8%BB%9F%E9%AB%94%E7%B3%BB%E7%B5%B1%E5%BB%BA%E6%A8%A1%E7%9A%84%E5%9C%96%E5%BD%A2%E8%A1%A8%E7%A4%BA%E6%8A%80%E5%B7%A7/)
+- [ ] [7 modelling languages for software architecture](https://icepanel.medium.com/7-modelling-languages-for-software-architecture-2ed3a9f75343)
 
 # Concept  
 - 用來描述軟體架構的概念

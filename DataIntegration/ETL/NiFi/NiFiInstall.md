@@ -2,7 +2,7 @@
 title: NiFi Install
 description: NiFi 安裝
 published: true
-date: 2023-07-18T07:15:24.082Z
+date: 2023-07-24T06:12:15.651Z
 tags: nifi
 editor: markdown
 dateCreated: 2023-07-06T00:50:19.373Z
@@ -26,6 +26,9 @@ NiFi 有本地部署（Running NiFi locally）和 Docker 部署（Running NiFi i
 - 安裝步驟參閱 [python install](/軟體開發/學習心得/11542/Python/PythonInstall)
 - Python 目前使用 v3.10.11
 - pip 目前使用 v23.0.1
+
+## apache/nifi
+- 目前使用 v1.20.0
 
 # 安裝
 ## 專案資料夾
@@ -77,24 +80,26 @@ networks:
 ```
 
 ## 新增 JDBC Driver 到根目錄
+### 連接 mssql 使用
 - 到 [官網](https://sourceforge.net/projects/jtds/) 下載 `jtds-1.3.1-dist.zip`
 - 將 zip 解壓縮，將資料夾中的 `jtds-1.3.1.jar` 複製到根目錄
 
+### 連接 postgresql 使用
+- 到 [官網](https://mvnrepository.com/artifact/org.postgresql/postgresql/42.5.1) 下載 `postgresql-42.5.1.jar`
+- 將 `postgresql-42.5.1.jar` 複製到根目錄
+
 ## 新增 `dockerfile`
-- 加載 JDBC Driver：`jtds-1.3.1.jar`
-	- 路徑：`/usr/local/nifi/jars/jtds-1.3.1.jar`
-  - `CLASSPATH` 為到時候資料庫連線使用的 `Driver Path`
+- 加載 JDBC Driver：
+	- `jtds-1.3.1.jar` 路徑：`/opt/nifi/nifi-current/lib/jtds-1.3.1.jar`
+  - `postgresql-42.5.1.jar` 路徑：`/opt/nifi/nifi-current/lib/postgresql-42.5.1.jar`
   
 ```dockerfile
-FROM apache/nifi:latest
+FROM apache/nifi:1.20.0
 
 USER root
 
-RUN mkdir -p /usr/local/nifi/jars
-COPY jtds-1.3.1.jar /usr/local/nifi/jars/jtds-1.3.1.jar
-ENV CLASSPATH /usr/local/nifi/jars/jtds-1.3.1.jar
-RUN export CLASSPATH
-
+COPY jtds-1.3.1.jar /opt/nifi/nifi-current/lib/jtds-1.3.1.jar
+COPY postgresql-42.5.1.jar /opt/nifi/nifi-current/lib/postgresql-42.5.1.jar
 ADD requirements.txt /tmp/project/
 
 RUN apt-get update && \
@@ -108,14 +113,15 @@ RUN apt-get update && \
 
 ## 資料夾結構
 ```
-│  .env                  # 環境變數檔
-│  .env.example          # 環境變數範例檔
-│  .gitignore            # git 忽略檔案
-│  docker-compose.yaml   # docker compose 設定檔
-│  dockerfile            # dockerfile
-│  README.md             # 專案說明檔案
-│  requirements.txt      # 安裝套件清單
-│  jtds-1.3.1.jar      　# JDBC Driver
+│  .env                   　# 環境變數檔
+│  .env.example           　# 環境變數範例檔
+│  .gitignore             　# git 忽略檔案
+│  docker-compose.yaml    　# docker compose 設定檔
+│  dockerfile             　# dockerfile
+│  README.md              　# 專案說明檔案
+│  requirements.txt       　# 安裝套件清單
+│  jtds-1.3.1.jar      　 　# JDBC Driver for mssql
+│  postgresql-42.5.1.jar   # JDBC Driver for postgresql
 └─
 ```
 
@@ -136,7 +142,7 @@ docker compose up -d
 
 ![airflow running on docker desktop.png](http://192.168.25.60:8000/files/file_storage/36c69d7b.png)
 
-## 取得登入賬密
+## 取得登入帳密
 - 點選 `nifi-service` 從 `Logs` 上面查看登入帳密，搜尋 `Generated Username`
 
 ```

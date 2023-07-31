@@ -2,7 +2,7 @@
 title: Clean Architecture
 description: 
 published: true
-date: 2023-07-18T23:49:25.858Z
+date: 2023-07-31T02:25:07.612Z
 tags: nodejs
 editor: markdown
 dateCreated: 2023-05-17T01:12:49.376Z
@@ -27,5 +27,7 @@ dateCreated: 2023-05-17T01:12:49.376Z
 - [ ] [Resource optimization in Node.js](https://medium.com/pipedrive-engineering/resource-optimization-in-node-js-c90c731f9df4)
 - [ ] [Microservices Architecture with Node.js: Building Scalable and Robust Applications](https://medium.com/@adarsh_d/microservices-architecture-with-node-js-building-scalable-and-robust-applications-de278a090c39)
 - [ ] [Clean architecture tutorial: Design for enterprise-scale apps](https://learningdaily.dev/clean-architecture-tutorial-design-for-enterprise-scale-apps-ce58dc9102a2)
+- [ ] [The Problem with Clean Architecture: Vertical Slices](https://medium.com/design-microservices-architecture-with-patterns/the-problem-with-clean-architecture-vertical-slices-111537c0ffcb)
+- [ ] [How to build a culture of code quality](https://alex-omeyer.medium.com/how-to-build-a-culture-of-code-quality-c10c1d648cd5)
 
 ![Microservices Architecture with NodeJs.png](http://192.168.25.60:8000/files/file_storage/b189c4af.png)

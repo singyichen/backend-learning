@@ -2,7 +2,7 @@
 title: Preparations
 description: 準備事項(技能樹、軟體安裝、環境建置)
 published: true
-date: 2023-07-21T01:49:02.865Z
+date: 2023-07-31T00:27:14.930Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-28T00:51:37.605Z
@@ -15,8 +15,10 @@ dateCreated: 2022-04-28T00:51:37.605Z
 - [ ] [backend](http://192.168.25.60:8000/files/file_storage/210d883f.pdf)
 - [ ] [ExplainThis](https://www.explainthis.io/zh-hant/about)
 - [ ] [IT-Tools](https://it.jason.tools/)
-
+- [ ] [Essential skills for a web developer](https://learningdaily.dev/essential-skills-for-a-web-developer-5dbc052cea89)
 ## 簡介 intro
+
+![web developer skills.png](http://192.168.25.60:8000/files/file_storage/bceac928.png)
 
 ![intro.png](http://192.168.25.60:8000/files/file_storage/cafd78d5.png)
 

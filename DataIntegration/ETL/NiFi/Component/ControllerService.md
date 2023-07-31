@@ -2,7 +2,7 @@
 title: Controller Service
 description: 
 published: true
-date: 2023-07-18T08:35:38.693Z
+date: 2023-07-24T06:26:39.794Z
 tags: nifi
 editor: markdown
 dateCreated: 2023-07-14T02:35:59.873Z
@@ -51,12 +51,17 @@ Controller Service 的另外一種比較常見的用法是針對特定檔案格�
 - Database Driver Location(s)：`/opt/nifi/nifi-current/lib/jtds-1.3.1.jar`
 - Database User：`sa`
 - Password ：`password`
-- Validation query：`Select 1 as test`
+- Validation query：`Select 1`
 
 ### 連接測試
-點選打勾符號進行連接測試
+點選 `打勾符號` ( Verify Properties ) 進行連接測試 ➔ 測試成功 ➔ 點選 `APPLY`
+
+![nifi controller service connect mssql success.png](http://192.168.25.60:8000/files/file_storage/ad309e11.png)
 
 ### 將 Service enabled
+點選 `閃電符號` ( Enable ) ➔ 點選 `ENABLE`
+
+![nifi controller service connect mssql enabled.png](http://192.168.25.60:8000/files/file_storage/6707fab3.png)
 
 ## local_postgres_conn
 ### 新增一個 `DBCPConnectionPool` 連接 `PostgresSQL`
@@ -65,10 +70,14 @@ Controller Service 的另外一種比較常見的用法是針對特定檔案格�
 - Database Driver Location(s)：`/opt/nifi/nifi-current/lib/postgresql-42.5.1.jar`
 - Database User：`11542`
 - Password ：`password`
-- Validation query：`Select 1 as test`
+- Validation query：`Select 1`
 
 ### 連接測試
-點選打勾符號進行連接測試
+點選 `打勾符號` ( Verify Properties ) 進行連接測試 ➔ 測試成功 ➔ 點選 `APPLY`
+
+![nifi controller service connect postgres success.png](http://192.168.25.60:8000/files/file_storage/cb0847f5.png)
 
 ### 將 Service enabled
+點選 `閃電符號` ( Enable ) ➔ 點選 `ENABLE`
 
+![nifi controller service connect postgres enabled.png](http://192.168.25.60:8000/files/file_storage/9bada704.png)

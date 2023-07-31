@@ -2,7 +2,7 @@
 title: Cloud Computing
 description: Cloud Computing 簡介
 published: true
-date: 2023-07-06T03:41:37.178Z
+date: 2023-07-31T00:59:40.961Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-06T03:20:26.986Z
@@ -12,9 +12,7 @@ dateCreated: 2023-07-06T03:20:26.986Z
 - [ ] [What is Cloud Computing](https://www.sitesbay.com/cloud-computing/cloud-computing-introduction)
 - [ ] [Pros and Cons of Different Cloud Computing Models](https://www.heptabit.at/blog/cloud-migration/pros-and-cons-of-different-cloud-computing-models)
 
-
 ![types-of-cloud-computing.png](http://192.168.25.60:8000/files/file_storage/5a9194a8.png)
-
 
 ![cloud service models.png](http://192.168.25.60:8000/files/file_storage/344246fd.png)
 
@@ -23,6 +21,8 @@ dateCreated: 2023-07-06T03:20:26.986Z
 ![cloud-computing-models-comparison.png](http://192.168.25.60:8000/files/file_storage/e108fff5.png)
 
 ![pros-and-cons-of-different-cloud-computing-models-cover.png](http://192.168.25.60:8000/files/file_storage/801e2fc1.png)
+
+![cloud comparison cheat sheet.png](http://192.168.25.60:8000/files/file_storage/108e6791.png)
 
 # 雲端運算模型
 雲端運算有三種主要的模型。每個模型各代表雲端運算堆疊的不同部分。

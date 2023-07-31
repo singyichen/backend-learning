@@ -2,7 +2,7 @@
 title: Airflow Install
 description: Airflow 安裝
 published: true
-date: 2023-07-21T07:00:38.634Z
+date: 2023-07-24T03:58:29.160Z
 tags: airflow
 editor: markdown
 dateCreated: 2023-05-23T09:18:19.253Z
@@ -32,6 +32,9 @@ Airflow 有本地部署（Running Airflow locally）和 Docker 部署（Running 
 - 安裝步驟參閱 [python install](/軟體開發/學習心得/11542/Python/PythonInstall)
 - Python 目前使用 v3.10.11
 - pip 目前使用 v23.0.1
+
+## apache/airflow
+- 目前使用 v2.6.1
 
 # 安裝
 ## 專案資料夾
@@ -77,6 +80,7 @@ apache-airflow-providers-jdbc
 ```
 
 ## 新增 JDBC Driver 到根目錄
+### 連接 mssql 使用
 - 到 [官網](https://sourceforge.net/projects/jtds/) 下載 `jtds-1.3.1-dist.zip`
 - 將 zip 解壓縮，將資料夾中的 `jtds-1.3.1.jar` 複製到根目錄
 
@@ -84,7 +88,6 @@ apache-airflow-providers-jdbc
 - 安裝 OpenJDK-11：`openjdk-11-jdk`
 - 加載 JDBC Driver：`jtds-1.3.1.jar`
 	- 路徑：`/usr/local/airflow/jars/jtds-1.3.1.jar`
-  - `CLASSPATH` 為到時候資料庫連線使用的 `Driver Path`
   
 ```dockerfile
 FROM apache/airflow:2.6.1
@@ -106,11 +109,9 @@ RUN apt-get update -y && \
     apt-get -y autoclean && \
     apt autoremove
 
-# Set JAVA_HOME、CLASSPATH
+# Set JAVA_HOME
 ENV JAVA_HOME /usr/lib/jvm/openjdk-11-jdk-amd64/
-ENV CLASSPATH /usr/local/airflow/jars/jtds-1.3.1.jar
 RUN export JAVA_HOME
-RUN export CLASSPATH
 
 USER airflow
 
@@ -183,6 +184,17 @@ d43b48c2da80   redis:latest                "docker-entrypoint.s…"   About a mi
 
 ![airflow login.png](http://192.168.25.60:8000/files/file_storage/aa457970.png)
 
+## 若遇到資料庫連線有問題須重新部屬時，須將 docker 中的 `volumn` 一起刪除
+- docker 中的 `volumn`
+	- airflow_postgres-db-volume
+	- 70064156631cf33c87bda214f6fcc429ec434afbc7e4caf8d906d99ae8dc7a21
+- 目前測試結果須指定安裝 `apache/airflow:2.6.1`
+- 升版到 `apache/airflow:latest` 會有資料庫連線問題
+
+![airflow docker mssql connect failed.png](http://192.168.25.60:8000/files/file_storage/bfa1d25f.png)
+
+- 升版到最新再直接重新安裝 `apache/airflow:2.6.1` 會有問題，需將 docker 中的 `volumn` 一起刪除再重新安裝 `apache/airflow:2.6.1`
+
 # 資料庫連線
 ## 新增資料庫連線
 - Admin ➔ Connections ➔ 藍色 `+` 號(Add a new record)
@@ -206,6 +218,8 @@ d43b48c2da80   redis:latest                "docker-entrypoint.s…"   About a mi
   - Port：`5432`
   - Extra：空白
 
+![airflow add db connection success.png](http://192.168.25.60:8000/files/file_storage/13a96d77.png)
+
 ```
 2023-07-19 14:01:45 [2023-07-19T06:01:45.701+0000] {crypto.py:83} WARNING - empty cryptography key - values will not be stored encrypted.
 2023-07-19 14:01:45 [2023-07-19T06:01:45.905+0000] {base.py:73} INFO - Using connection ID 'qCB5b0wu' for task execution.
@@ -214,8 +228,6 @@ d43b48c2da80   redis:latest                "docker-entrypoint.s…"   About a mi
 2023-07-19 14:01:45 172.18.0.1 - - [19/Jul/2023:06:01:45 +0000] "POST /api/v1/connections/test HTTP/1.1" 200 68 "http://127.0.0.1:8080/connection/edit/2" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
 2023-07-19 14:01:59 127.0.0.1 - - [19/Jul/2023:06:01:59 +0000] "GET /health HTTP/1.1" 200 141 "-" "curl/7.74.0"
 ```
-
-![airflow add db connection success.png](http://192.168.25.60:8000/files/file_storage/13a96d77.png)
 
 ## local_sql_server_conn
 - 連接資料庫 SQL Server
@@ -230,6 +242,13 @@ d43b48c2da80   redis:latest                "docker-entrypoint.s…"   About a mi
   - Driver Class：`net.sourceforge.jtds.jdbc.Driver`
   
 ![airflow add db JDBC connection success.png](http://192.168.25.60:8000/files/file_storage/971beaeb.png)
+
+```
+2023-07-24 08:23:10 [2023-07-24T00:23:10.700+0000] {base.py:73} INFO - Using connection ID 'cAS3xpZh' for task execution.
+2023-07-24 08:23:13 127.0.0.1 - - [24/Jul/2023:00:23:13 +0000] "GET /health HTTP/1.1" 200 141 "-" "curl/7.74.0"
+2023-07-24 08:23:15 [2023-07-24T00:23:15.684+0000] {sql.py:375} INFO - Running statement: select 1, parameters: None
+2023-07-24 08:23:15 172.22.0.1 - - [24/Jul/2023:00:23:15 +0000] "POST /api/v1/connections/test HTTP/1.1" 200 68 "http://127.0.0.1:8080/connection/edit/2" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+```
 
 ## local_postgres_conn
 - 連接資料庫 Postgres

@@ -2,7 +2,7 @@
 title: DBeaver
 description: 資料庫管理工具
 published: true
-date: 2023-07-21T07:19:00.904Z
+date: 2023-07-24T08:56:37.879Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-21T01:54:06.956Z
@@ -26,10 +26,26 @@ DBeaver 提供一個圖形介面來查看資料庫結構，執行 SQL 查詢，�
 - 語言選取英文並直接安裝
 
 # 新增資料庫連線
-New Database Connection ➔ 
+New Database Connection ➔ 選擇要連線的資料庫
 
-## SQL Server
+## SQL Server (2008)
+### 輸入連線資訊 ➔ 連線測試( Test Connection )
+- database：`SQL Server(Old driver,jTDS)`
+- Host：`192.168.25.21`
+- Database/Schema：`Leader`
+- URL：`jdbc:jtds:sqlserver://192.168.25.21/Leader` (會自動生成)
+- Username：`sa` 
+- Password：`Password`
+
+![dbeaver connect mssql.png](http://192.168.25.60:8000/files/file_storage/ba6a8c5b.png)
+
+### 查看 Driver 資訊 ➔ 點選 Driver Settings
+
 
 ## PostgreSQL
+- database：
+
+
 
 ## SQLite
+- database：
