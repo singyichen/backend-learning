@@ -2,7 +2,7 @@
 title: Fastify Dependencies ( Database )
 description: 資料庫套件
 published: true
-date: 2023-05-17T07:37:54.241Z
+date: 2023-08-04T08:51:47.820Z
 tags: fastify, framework
 editor: markdown
 dateCreated: 2022-11-04T08:13:19.416Z
@@ -12,6 +12,7 @@ dateCreated: 2022-11-04T08:13:19.416Z
 - [ ] [仿Trello - Prisma 安裝與 Schema 建立](https://ithelp.ithome.com.tw/articles/10250424)
 - [ ] [仿Trello - Prisma Migrate 與新增Seeder](https://ithelp.ithome.com.tw/articles/10250814)
 - [ ] [仿Trello - Prisma client CRUD](https://ithelp.ithome.com.tw/articles/10251700)
+- [ ] [Seeding your database](https://www.prisma.io/docs/guides/migrate/seed-database)
 
 ## prisma
 > Prisma is a next-generation ORM.
@@ -232,6 +233,34 @@ npx prisma studio
 ```
 
 ![npx prisma studio.png](http://192.168.25.60:8000/files/file_storage/cdffbb5f.png)
+
+#### 對於已上線的專案，需執行 migration 新增資料表及新增初始化資料，開發流程與上線流程
+1. **開發階段**
+- 先將 docker 中 db 備份到本機端
+- 執行 `npm run migration:generate AddWeatherCode` 產製 migration (此步驟會將所有資料 reset)
+- 再次將 docker 中 db 備份到本機端
+- 執行 `npm run migration:run` ：執行 migration，建立 table weather_code
+- 產製初始化資料檔案並執行
+  - 產製 seed 檔案 initWeatherCode.js 放置在資料夾 prisma 底下
+  - 在 package.json 中的 prisma 新增 "seed": "node prisma/initWeatherCode.js"
+```json
+{
+  "prisma": {
+    "schema": "./prisma/schema.prisma",
+    "seed": "node prisma/initWeatherCode.js"
+  }
+}
+```
+  - 執行 `npx prisma db seed` ：執行 seed 將初始化資料 insert 到 table 中
+
+2. **上線階段**
+- db 備份：先將 docker 中 db 備份到本機端 
+- docker 部屬完成
+- 進入到 container：`docker exec -it c8ca0553f3bb /bin/bash`
+- 執行 `npm run migration:run`：執行 migration，建立 table weather_code
+- 執行 `npx prisma db seed`：執行 seed 將初始化資料 insert 到 table 中
+
+![Eboard System access container to execte migration and seed.png](http://192.168.25.60:8000/files/file_storage/c3e3e8c1.png)
 
 ## @fastify/redis
 > - Fastify Redis connection plugin, with which you can share the same Redis connection across every part of your server.

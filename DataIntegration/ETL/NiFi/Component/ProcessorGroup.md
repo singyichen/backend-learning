@@ -2,7 +2,7 @@
 title: Processor Group
 description: 
 published: true
-date: 2023-07-13T08:45:10.330Z
+date: 2023-08-01T00:35:18.600Z
 tags: nifi
 editor: markdown
 dateCreated: 2023-07-13T08:16:42.008Z
@@ -24,13 +24,5 @@ PG 除了有作為 Module 的功能之外，他也有幾個額外重點，其實
 
 # 設定 Processor Group
 ## 設定 Input Port 與 Output Port
-
-## 加入 SplitRecord Processor
-
-## 加入 UpdateRecord Processor
-
-## 加入 EvaluateJsonPath Processor
-
-## 加入 RouteOnAttributes Processor
 
 # 對接 Processor Group

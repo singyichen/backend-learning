@@ -2,7 +2,7 @@
 title: Docker
 description: Docker學習筆記
 published: true
-date: 2023-07-14T00:16:22.382Z
+date: 2023-08-03T02:58:52.222Z
 tags: docker, devops
 editor: markdown
 dateCreated: 2022-07-19T06:36:20.283Z
@@ -53,6 +53,8 @@ Docker 是個輕量級的虛擬化技術，可以把你的應用程式連同環�
 
 > 只要該作業系統能夠安裝 Docker Engine，就可以保證開發的軟體可順利在該 OS 上執行。
 {.is-info}
+  
+![Dockerizing a production ready MERN (MongoDB Express React Nodejs) application.png](http://192.168.25.60:8000/files/file_storage/8e57f856.png)  
   
 ## Docker 怎麼做到的
 1. 在作業系統上架設 Docker Engine

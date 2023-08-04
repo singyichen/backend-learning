@@ -2,7 +2,7 @@
 title: Docker Usage
 description: Docker學習筆記
 published: true
-date: 2023-07-31T01:45:38.195Z
+date: 2023-08-01T00:14:22.431Z
 tags: docker, devops
 editor: markdown
 dateCreated: 2022-07-21T06:34:46.172Z
@@ -26,6 +26,7 @@ dateCreated: 2022-07-21T06:34:46.172Z
 - [ ] [Use a restart policy](https://docs.docker.com/config/containers/start-containers-automatically/#use-a-restart-policy)
 - [ ] [Docker Extensions Every Developer Must Try](https://faun.pub/docker-extensions-every-developer-must-try-7ce0d7a6c292)
 - [ ] [Docker Compose Tutorial: advanced Docker made simple](https://learningdaily.dev/docker-compose-tutorial-advanced-docker-made-simple-d5f8ba43c388)
+- [ ] [How To Reduce Docker Image Size by 81%](https://betterprogramming.pub/how-to-reduce-docker-image-size-by-81-frontend-next-js-practice-8680bda50fee)
 # Docker Cheat Cheet
 ## [docker cheat sheet 1.pdf](http://192.168.25.60:8000/files/file_storage/ec6c1788.pdf)
 

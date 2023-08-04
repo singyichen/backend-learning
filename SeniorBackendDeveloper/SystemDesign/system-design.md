@@ -2,7 +2,7 @@
 title: System Design
 description: 
 published: true
-date: 2023-07-26T00:17:06.116Z
+date: 2023-08-04T00:19:38.293Z
 tags: 
 editor: markdown
 dateCreated: 2023-05-18T00:22:34.726Z
@@ -57,6 +57,10 @@ dateCreated: 2023-05-18T00:22:34.726Z
 - [ ] [An educational side project](https://newsletter.pragmaticengineer.com/p/an-educational-side-project?utm_source=post-email-title&publication_id=458709&post_id=125323716&isFreemail=true&utm_medium=email)
 - [ ] [Design Dropbox/Google Drive](https://nikhilgupta1.medium.com/design-dropbox-google-drive-81cd343571a8)
 - [ ] [Will Twitter collapse? Examining the resiliency of Twitter’s architecture](https://learningdaily.dev/will-twitter-collapse-examining-the-resiliency-of-twitters-architecture-45d3959ab9c0)
+- [ ] [Graphic Design for Software Engineers and Architects](https://betterprogramming.pub/graphic-design-for-software-engineers-and-architects-c616bb6c3366)
+- [ ] [How I Built a Social Network in 4 Years as a Solo Developer](https://betterprogramming.pub/how-i-built-a-social-network-in-4-years-as-a-solo-developer-4af70fb2d4c8)
+- [ ] [Design Dropbox/Google Drive](https://nikhilgupta1.medium.com/design-dropbox-google-drive-81cd343571a8)
+- [ ] [Headless Architecture with Separated UI for Backend and Frontend](https://medium.com/design-microservices-architecture-with-patterns/headless-architecture-with-separated-ui-for-backend-and-frontend-f9789920e112)
 ## Problem
 - [ ] [How to avoid double payment?](https://blog.bytebytego.com/p/how-to-avoid-double-payment?utm_source=profile&utm_medium=reader2)
 - [ ] [Payment reconciliation](https://blog.bytebytego.com/p/payment-reconciliation?utm_source=profile&utm_medium=reader2)
@@ -74,3 +78,10 @@ dateCreated: 2023-05-18T00:22:34.726Z
 ## Software Architecture Styles
 
 ![software architectural styles.png](http://192.168.25.60:8000/files/file_storage/b32613c4.png)
+
+## Graphic Design in Software Design
+
+![Graphic Design in Software Design.png](http://192.168.25.60:8000/files/file_storage/74371974.png)
+
+
+

@@ -2,7 +2,7 @@
 title: Fastify Dependencies ( Test )
 description: 測試套件
 published: true
-date: 2023-05-24T09:13:07.097Z
+date: 2023-08-04T02:22:25.731Z
 tags: fastify, framework
 editor: markdown
 dateCreated: 2022-08-15T03:17:32.668Z
@@ -85,6 +85,7 @@ module.exports = {
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(js|ts)x?$',
   testPathIgnorePatterns: ['/node_modules/', '/build/', '/coverage/'],
   setupFilesAfterEnv: ['./test/config.js'], // 放置 config.js 的路徑
+  setupFiles: ['dotenv/config'], // 此設定可讓 .env 在 jest 中使用
 };
 ```
 
@@ -127,6 +128,7 @@ module.exports = {
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(js|ts)x?$',
   testPathIgnorePatterns: ['/node_modules/', '/build/', '/coverage/'],
   setupFilesAfterEnv: ['./test/config.js'],
+  setupFiles: ['dotenv/config'], // 此設定可讓 .env 在 jest 中使用
 };
 ```
 
