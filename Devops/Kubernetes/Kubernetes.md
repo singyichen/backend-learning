@@ -2,7 +2,7 @@
 title: Kubernetes
 description: 
 published: true
-date: 2023-07-10T00:40:42.656Z
+date: 2023-08-07T02:18:17.246Z
 tags: kubernetes, k8s
 editor: markdown
 dateCreated: 2023-05-18T08:49:34.904Z
@@ -19,3 +19,7 @@ dateCreated: 2023-05-18T08:49:34.904Z
 ## Kubernetes Periodic Table
 
 ![Kubernetes Periodic Table.png](http://192.168.25.60:8000/files/file_storage/3804f476.png)
+
+## Docker vs Kubernetes
+
+![Docker vs Kubernetes.png](http://192.168.25.60:8000/files/file_storage/4e6ac9fe.png)

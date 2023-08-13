@@ -2,7 +2,7 @@
 title: API Gateway
 description: 
 published: true
-date: 2023-05-30T00:20:22.303Z
+date: 2023-08-07T02:12:27.837Z
 tags: 
 editor: markdown
 dateCreated: 2023-05-18T07:19:40.997Z

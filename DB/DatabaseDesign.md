@@ -2,7 +2,7 @@
 title: Database Design
 description: 
 published: true
-date: 2023-06-17T00:50:52.295Z
+date: 2023-08-09T00:26:19.105Z
 tags: db
 editor: markdown
 dateCreated: 2023-01-30T01:04:07.278Z
@@ -19,3 +19,4 @@ dateCreated: 2023-01-30T01:04:07.278Z
 - [ ] [What are database isolation levels (Episode 8)](https://blog.bytebytego.com/p/what-are-database-isolation-levels?utm_source=profile&utm_medium=reader2)
 - [ ] [Database Design for Spotify.](https://medium.com/towards-data-engineering/design-the-database-for-a-system-like-spotify-95ffd1fb5927)
 - [ ] [Maximizing database efficiency: 15 tips for effective table design](https://medium.com/@xjpp22/maximizing-database-efficiency-15-tips-for-effective-table-design-3dc88f56c0d3)
+- [ ] [Data Replication Strategies I Wish I Knew Before the System Design Interview](https://levelup.gitconnected.com/i-wished-i-knew-these-data-replication-strategies-before-the-system-design-interview-e228216290f3)

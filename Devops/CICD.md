@@ -2,7 +2,7 @@
 title: CI/CD
 description: 
 published: true
-date: 2023-05-18T09:23:57.323Z
+date: 2023-08-07T02:25:34.914Z
 tags: devops
 editor: markdown
 dateCreated: 2022-12-14T06:08:20.338Z
@@ -17,6 +17,7 @@ dateCreated: 2022-12-14T06:08:20.338Z
 - [ ] [CI/CD是什麼？一篇認識CI/CD工具及優勢，將日常瑣事自動化](https://www.wingwill.com.tw/zh-tw/%E9%83%A8%E8%90%BD%E6%A0%BC/%E9%9B%B2%E5%9C%B0%E6%B7%B7%E5%90%88%E6%87%89%E7%94%A8/cicd%E5%B7%A5%E5%85%B7/)
 - [ ] [DevOps books](https://blog.bytebytego.com/p/devops-books?utm_source=profile&utm_medium=reader2)
 - [ ] [What is CI/CD? How does it help us ship faster? Is it worth the hassle?](https://www.youtube.com/watch?v=42UP1fxi2SY&embeds_referring_euri=https%3A%2F%2Fblog.bytebytego.com%2F&feature=emb_imp_woyt&ab_channel=ByteByteGo)
+- [ ] [EP71: CI/CD Pipeline Explained in Simple Terms](https://blog.bytebytego.com/p/ep71-cicd-pipeline-explained-in-simple?utm_source=profile&utm_medium=reader2)
 
 # 概念
 
@@ -29,6 +30,8 @@ dateCreated: 2022-12-14T06:08:20.338Z
 ![CICD.png](http://192.168.25.60:8000/files/file_storage/5e4671c1.png)
 
 ![CICD Pipeline.png](http://192.168.25.60:8000/files/file_storage/0581e116.png)
+
+![CICD Pipeline Explained in Simple Terms.png](http://192.168.25.60:8000/files/file_storage/f7cc01f0.png)
 
 # CI ( Continuous Integration ) 持續整合
 > 每當開發人員 push 程式碼變更到 remote repository 時，觸發自動化 build 和 test 的程序，確保這次的變更是符合規範且通過所有測試案例的，減少有問題的程式碼影響到生產環境的機會。

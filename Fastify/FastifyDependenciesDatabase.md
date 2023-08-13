@@ -2,7 +2,7 @@
 title: Fastify Dependencies ( Database )
 description: 資料庫套件
 published: true
-date: 2023-08-04T08:51:47.820Z
+date: 2023-08-04T09:11:41.025Z
 tags: fastify, framework
 editor: markdown
 dateCreated: 2022-11-04T08:13:19.416Z
@@ -237,7 +237,7 @@ npx prisma studio
 #### 對於已上線的專案，需執行 migration 新增資料表及新增初始化資料，開發流程與上線流程
 1. **開發階段**
 - 先將 docker 中 db 備份到本機端
-- 執行 `npm run migration:generate AddWeatherCode` 產製 migration (此步驟會將所有資料 reset)
+- 執行 `npm run migration:generate AddWeatherCode`：產製 migration (此步驟會將所有資料 reset)
 - 再次將 docker 中 db 備份到本機端
 - 執行 `npm run migration:run` ：執行 migration，建立 table weather_code
 - 產製初始化資料檔案並執行

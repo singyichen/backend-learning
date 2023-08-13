@@ -2,7 +2,7 @@
 title: Fastify Dependencies ( Basic )
 description: 基本套件
 published: true
-date: 2023-08-04T02:27:11.595Z
+date: 2023-08-04T08:59:15.950Z
 tags: fastify, framework
 editor: markdown
 dateCreated: 2022-08-09T05:57:34.299Z
@@ -283,3 +283,5 @@ npm install dotenv --save-dev
 ```
 ### Usage
 在 fastify 專案中，已使用套件 `@fastify/env` 取得 `.env` 的資訊，這此使用 `dotenv` 是為了使用 jest 進行測試時能取得 `.env ` 的設定檔
+
+- 參考資料：[Using .env files for unit testing with jest](https://stackoverflow.com/questions/50259025/using-env-files-for-unit-testing-with-jest)
