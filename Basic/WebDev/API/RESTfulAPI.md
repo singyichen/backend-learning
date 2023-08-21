@@ -2,7 +2,7 @@
 title: RESTful API
 description: 
 published: true
-date: 2023-05-19T05:59:25.535Z
+date: 2023-08-17T23:56:07.968Z
 tags: api, restful
 editor: markdown
 dateCreated: 2022-11-22T02:59:49.680Z
@@ -18,6 +18,7 @@ dateCreated: 2022-11-22T02:59:49.680Z
 - [ ] [What Is REST API? Examples And How To Use It: Crash Course System Design](https://www.youtube.com/watch?v=-mN3VyJuCjM&t=28s&ab_channel=ByteByteGo&loop=0)
 - [ ] [Principles & Best practices of REST API Design](https://blog.devgenius.io/best-practice-and-cheat-sheet-for-rest-api-design-6a6e12dfa89f)
 - [ ] [Design Effective and Secure REST APIs](https://blog.bytebytego.com/p/design-effective-and-secure-rest?utm_source=profile&utm_medium=reader2)
+- [ ] [Top 7 Ways to 10x Your API Performance](https://www.youtube.com/watch?v=zvWKqUiovAM&ab_channel=ByteByteGo&loop=0)
 # 什麼是 REST ?
 
 ![RESTful slogan.png](http://192.168.25.60:8000/files/file_storage/d639dc10.png)

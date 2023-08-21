@@ -2,7 +2,7 @@
 title: Docker
 description: Docker學習筆記
 published: true
-date: 2023-08-03T02:58:52.222Z
+date: 2023-08-16T06:53:24.860Z
 tags: docker, devops
 editor: markdown
 dateCreated: 2022-07-19T06:36:20.283Z
@@ -27,6 +27,7 @@ dateCreated: 2022-07-19T06:36:20.283Z
 - [ ] [Docker 是什麼？Docker 基本觀念介紹與容器和虛擬機的比較](https://www.omniwaresoft.com.tw/product-news/docker-news/docker-introduction/)
 - [ ] [Docker — What it is, How Images are structured, Docker vs. VM and some tips (part 1)](https://ragin.medium.com/docker-what-it-is-how-images-are-structured-docker-vs-vm-and-some-tips-part-1-d9686303590f)
 - [ ] [Streamline Application Shipping with Docker: Linux and Windows Made Easy!](https://medium.com/@adarsh_d/streamline-application-shipping-with-docker-linux-and-windows-made-easy-78195361887)
+- [ ] [【Docker 容器化】初探微服務時代的虛擬化技術](https://vocus.cc/article/64dab182fd89780001252c70)
 
 # Docker 簡介
 > 2013 年，dotCloud 公司將內部開發的 Docker 開源，基於上面提到的 LXC 技術基礎，將系統設計容器轉為微服務（Micro-service）的容器！因為很火熱，dotCloud 後來索性改名叫做 Docker Inc 現在成熟的 Docker 已經不是以 LXC 為架構，而是自己開發的 Libcontainer 作為底層的技術。
@@ -71,23 +72,34 @@ Docker 是個輕量級的虛擬化技術，可以把你的應用程式連同環�
 
 ![docker example.png](http://192.168.25.60:8000/files/file_storage/ed4a9423.png)
 
+![組成 Docker 的重要組件.png](http://192.168.25.60:8000/files/file_storage/b876eafd.png)
+
 執行 Docker 的主機，稱為 Host。
 
 在 Host 執行 docker run 指令時，Docker 會操作這三個元件來完成任務。首先來了解這三個元件
 
 ### 映像檔 (Image)
+
+![docker image.png](http://192.168.25.60:8000/files/file_storage/189ca195.png)
+
 - 利用 Docker Engine 將「應用系統」打包的一個唯讀單元
 - Docker 映像檔是一個模板，用來重複產生容器實體。例如：一個映像檔裡可以包含一個完整的 MySQL 服務、一個 Golang 的編譯環境、或是一個 Ubuntu 作業系統。
 - 透過 Docker 映像檔，我們可以快速的產生可以執行應用程式的容器。而 Docker 映像檔可以透過撰寫由命令行構成的 Dockerfile 輕鬆建立，或甚至可以從公開的地方下載已經做好的映像檔來使用。
 - 舉例來說，如果我今天想要一個 node.js 的執行環境跑我寫好的程式，我可以直接到上 DockerHub 找到相對應的 node.js 映像檔 ，而不需要自己想辦法打包一個執行環境。
 
 ### 容器 (Container)
+
+![docker container.png](http://192.168.25.60:8000/files/file_storage/dcf24b1c.png)
+
 - 利用映像檔建立的一個執行實例 (runtime instance)，一個映像檔可建立多個容器
 - 就像是用蛋糕模具烤出來的蛋糕本體，容器是用映像檔建立出來的執行實例。它可以被啟動、開始、停止、刪除。每個容器都是相互隔離、保證安全的平台。
 - 可以把容器看做是一個執行的應用程式加上執行它的簡易版 Linux 環境（包括 root 使用者權限、程式空間、使用者空間和網路空間等）。
 - 另外要注意的是，Docker 映像檔是唯讀（read-only）的，而容器在啟動的時候會建立一層可以被修改的可寫層作為最上層，讓容器的功能可以再擴充。這點在下面的實例會有更多補充。
 
 ### 倉庫 (Registry)
+
+![docker repository.png](http://192.168.25.60:8000/files/file_storage/32f21560.png)
+
 - 存放映像檔的地方，分為公用倉庫及私有倉庫
 - 倉庫（Repository）是集中存放映像檔檔案的場所，也可以想像成存放蛋糕模具的大本營。倉庫註冊伺服器（Registry）上則存放著多個倉庫。
 - 最大的公開倉庫註冊伺服器是上面提到過的 Docker Hub，存放了數量龐大的映像檔供使用者下載，我們可以輕鬆在上面找到各式各樣現成實用的映像檔。
@@ -100,6 +112,16 @@ Image、container、repository 之間的關係就像光碟一樣：早期世紀�
 Image 像光碟片一樣，唯讀且不能獨立執行
 Container 像硬碟一樣，可讀可寫可執行
 Repository 則是光碟盒，而 Registry 則是像光碟零售商
+
+### Dockerfile
+
+![docker dockerfile.png](http://192.168.25.60:8000/files/file_storage/ddd0f5b6.png)
+
+這個部份主要在描述映像檔( Image )的組成方式， Docker 就會依照我們的描述去產生映像檔( Image )，那開發者可以根據不同的應用程式製作不一樣的映像檔。
+
+我們只要記住 Dockerfile 等於是一份汽車製造設計圖，而車廠根據設計圖進行工程施作，最終打造出一台汽車也就是映像檔，待駕駛上坐之後開始運行，因此汽車相當於是載具，擔任乘客的容器。
+
+但 Dockerfile 其實並沒有這麼簡單，我們後續也會根據 Dockerfile 撰寫專門的一篇來進行介紹。
 
 ## Docker 跟傳統的虛擬化方式相比具有眾多的優勢
 - Docker container 的啟動可以在秒級實作，這相比傳統的虛擬機方式要快得多。

@@ -2,7 +2,7 @@
 title: Clean Architecture
 description: 
 published: true
-date: 2023-08-04T00:14:51.736Z
+date: 2023-08-16T01:31:02.523Z
 tags: nodejs
 editor: markdown
 dateCreated: 2023-05-17T01:12:49.376Z
@@ -30,5 +30,12 @@ dateCreated: 2023-05-17T01:12:49.376Z
 - [ ] [The Problem with Clean Architecture: Vertical Slices](https://medium.com/design-microservices-architecture-with-patterns/the-problem-with-clean-architecture-vertical-slices-111537c0ffcb)
 - [ ] [How to build a culture of code quality](https://alex-omeyer.medium.com/how-to-build-a-culture-of-code-quality-c10c1d648cd5)
 - [ ] [Backend side architecture evolution (N-layered, DDD, Hexagon, Onion, Clean Architecture)](https://medium.com/@iamprovidence/backend-side-architecture-evolution-n-layered-ddd-hexagon-onion-clean-architecture-643d72444ce4)
+- [ ] [JavaScript Clean Coding Best Practices](https://blog.risingstack.com/javascript-clean-coding-best-practices-node-js-at-scale/)
+- [ ] [成為乾淨的開發者吧! Clean Code, Clean Coder, Clean Architecture 導讀之旅](https://ithelp.ithome.com.tw/users/20138643/ironman/3923)
+- [ ] [clean-code-javascript
+](https://github.com/AllJointTW/clean-code-javascript)
+
+
+
 
 ![Microservices Architecture with NodeJs.png](http://192.168.25.60:8000/files/file_storage/b189c4af.png)

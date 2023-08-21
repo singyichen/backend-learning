@@ -2,7 +2,7 @@
 title: Authentication
 description: 
 published: true
-date: 2023-08-09T00:10:43.637Z
+date: 2023-08-14T00:15:24.986Z
 tags: authentication, 認證
 editor: markdown
 dateCreated: 2023-05-18T03:22:11.625Z
@@ -36,6 +36,8 @@ dateCreated: 2023-05-18T03:22:11.625Z
 ![roadmap-basic-authentication.png](http://192.168.25.60:8000/files/file_storage/dcedea3c.png)
 
 ![Session cookie JWT token SSO and OAuth.png](http://192.168.25.60:8000/files/file_storage/cdb66600.png)
+
+![Top 4 Forms of Authentication Mechanisms.png](http://192.168.25.60:8000/files/file_storage/cf32f555.png)
 
 ## Single Sign On (SSO)
 

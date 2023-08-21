@@ -2,7 +2,7 @@
 title: Preparations
 description: 準備事項(技能樹、軟體安裝、環境建置)
 published: true
-date: 2023-07-31T00:27:14.930Z
+date: 2023-08-15T01:46:39.018Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-28T00:51:37.605Z
@@ -80,6 +80,9 @@ eslint --init
 - New Relic CodeStream
 
 ## [Postman](https://www.postman.com/)
+### Learning
+> [[POSTMAN] 該知道的都知道，不知道的慢慢瞭解 - 與波斯麵三十天的感情培養](https://ithelp.ithome.com.tw/articles/10289954)
+{.is-info}
 ### Set Environment
 > [set environment info](https://blog.yowko.com/postman-parameter-test/)
 {.is-info}

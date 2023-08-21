@@ -1,8 +1,8 @@
 ---
 title: Docker Install
-description: Docker學習筆記
+description: Docker 安裝
 published: true
-date: 2023-05-17T01:48:08.903Z
+date: 2023-08-18T01:40:22.365Z
 tags: docker, devops
 editor: markdown
 dateCreated: 2022-04-29T01:11:05.872Z

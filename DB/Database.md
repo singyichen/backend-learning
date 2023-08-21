@@ -2,7 +2,7 @@
 title: Database
 description: 
 published: true
-date: 2023-06-19T00:28:03.586Z
+date: 2023-08-15T00:00:15.816Z
 tags: db, database
 editor: markdown
 dateCreated: 2023-05-15T00:29:55.477Z
@@ -34,6 +34,9 @@ dateCreated: 2023-05-15T00:29:55.477Z
 
 ## NoSQL vs SQL Decision Tree and Cloud Cheat Sheet
 ![NoSQL vs SQL Decision Tree and Cloud Cheat Sheet.png](http://192.168.25.60:8000/files/file_storage/c58cc525.png)
+
+## cloud database cheat sheet
+![cloud database cheat sheet.png](http://192.168.25.60:8000/files/file_storage/6d682be8.png)
 
 ## Database Deciding Factors
 ![Database Deciding Factors.png](http://192.168.25.60:8000/files/file_storage/47b61729.png)

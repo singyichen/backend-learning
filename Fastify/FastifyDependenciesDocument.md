@@ -2,7 +2,7 @@
 title: Fastify Dependencies ( Document )
 description: 文件套件
 published: true
-date: 2023-05-17T08:16:50.035Z
+date: 2023-08-17T06:29:10.212Z
 tags: fastify, framework
 editor: markdown
 dateCreated: 2022-08-01T06:35:10.677Z
@@ -22,6 +22,7 @@ npm install @fastify/swagger@7.6.1 --save
 ```
 
 ### Usage
+#### 線上打卡系統
 - app.js
 
 ```javascript
@@ -236,10 +237,92 @@ definitions:
         type: string
 ```
 
-### 查看 API 文件
-https://192.168.25.180:10001/swagger/WebSignin_API
+- 查看 API 文件：https://192.168.25.180:10001/swagger/WebSignin_API
 
 ![swagger api document for WebSignin_API.png](http://192.168.25.60:8000/files/file_storage/85445df6.png)
+
+#### 資訊看板系統
+- 在 `src/routes/swagger` 新增一個 `swagger.js`
+- 並在 plugin router 進行 register
+
+```js
+'use strict';
+/**
+ * @description swagger 路由( GET /swagger/e_board_API )
+ */
+async function router(fastify, opts) {
+  // 配置 swagger
+  fastify.register(require('@fastify/swagger'), {
+    // swagger 文件路由
+    routePrefix: '/swagger/e_board_API',
+    mode: 'static',
+    specification: {
+      // yaml 或 json 檔案存放位置
+      path: './src/routes/swagger/swagger.yaml',
+    },
+    exposeRoute: true,
+  });
+}
+
+module.exports = router;
+```
+
+- 在 `src/routes/swagger` 新增一個 `swagger.yaml`
+- 查看 API 文件：https://192.168.25.180:8115/swagger/e_board_API 
+ 
+## AsyncAPI
+
+
+> [reference](https://github.com/asyncapi/cli)
+{.is-info}
+
+### Install
+- cli
+
+```shell
+npm install -g @asyncapi/cli
+```
+
+- generator
+
+```shell
+npm install -g @asyncapi/generator
+```
+
+### Usage
+- 列出所有 cli
+
+```
+asyncapi 
+```
+
+```
+All in one CLI for all AsyncAPI tools
+
+VERSION
+  @asyncapi/cli/0.52.5 win32-x64 node-v14.18.0
+
+USAGE
+  $ asyncapi [COMMAND]
+
+TOPICS
+  config    CLI config settings
+  generate  Generate models and template
+  new       Creates a new asyncapi file
+  start     Start asyncapi studio
+
+COMMANDS
+  bundle    bundle one or multiple asyncapi documents and their references together.
+  config    CLI config settings
+  convert   Convert asyncapi documents older to newer versions
+  diff      Find diff between two asyncapi files
+  generate  Generate typed models or other things like clients, applications or docs using AsyncAPI        
+            Generator templates.
+  new       Creates a new asyncapi file
+  optimize  optimize asyncapi specification file
+  start     Start asyncapi studio
+  validate  validate asyncapi file
+```
 
 
 

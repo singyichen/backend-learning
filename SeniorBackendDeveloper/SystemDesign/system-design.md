@@ -2,7 +2,7 @@
 title: System Design
 description: 
 published: true
-date: 2023-08-09T00:14:38.754Z
+date: 2023-08-13T23:58:22.870Z
 tags: 
 editor: markdown
 dateCreated: 2023-05-18T00:22:34.726Z
@@ -32,6 +32,7 @@ dateCreated: 2023-05-18T00:22:34.726Z
 - [ ] [Deep dive Into System Design](https://vishalrana9915.medium.com/deep-dive-into-system-design-d6b27525f208)
 - [ ] [Rate Limiting Fundamentals](https://blog.bytebytego.com/p/rate-limiting-fundamentals?utm_source=profile&utm_medium=reader2)
 - [ ] [10 System Design Interview Questions (With Answers) I Wished I Knew Before the Interview](https://levelup.gitconnected.com/10-system-design-interview-questions-with-answers-i-wished-i-knew-before-the-interview-31dcfc3cddef)
+- [ ] [Headless Architecture with Separated UI for Backend and Frontend](https://medium.com/design-microservices-architecture-with-patterns/headless-architecture-with-separated-ui-for-backend-and-frontend-f9789920e112)
 ## Example
 - [ ] [Payment system](https://blog.bytebytego.com/p/payment-system?utm_source=profile&utm_medium=reader2)
 - [ ] [Low Latency Stock Exchange Design](https://blog.bytebytego.com/p/low-latency-stock-exchange?utm_source=profile&utm_medium=reader2)
