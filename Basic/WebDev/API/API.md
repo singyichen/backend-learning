@@ -2,7 +2,7 @@
 title: API
 description: 
 published: true
-date: 2023-07-31T01:27:34.443Z
+date: 2023-08-25T05:29:57.733Z
 tags: api
 editor: markdown
 dateCreated: 2022-11-17T05:44:26.014Z
@@ -124,6 +124,8 @@ JSON 是最常用的回應格式之一，各種程式語言都可以產生或解
 ![API architectural styles.png](http://192.168.25.60:8000/files/file_storage/3e0aa892.png)
 
 ![API Architecture Styles.png](http://192.168.25.60:8000/files/file_storage/641bccf0.png)
+
+![Top 8 API Architectural Styles.gif](http://192.168.25.60:8000/files/file_storage/cfa1a81b.gif)
 
 ![RPC and RESTful.png](http://192.168.25.60:8000/files/file_storage/bec401cf.png)
 

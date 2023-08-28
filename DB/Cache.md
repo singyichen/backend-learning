@@ -2,7 +2,7 @@
 title: Cache
 description: 
 published: true
-date: 2023-07-14T00:11:59.888Z
+date: 2023-08-28T00:06:39.653Z
 tags: db, cache
 editor: markdown
 dateCreated: 2023-05-17T07:03:15.435Z
@@ -21,7 +21,7 @@ dateCreated: 2023-05-17T07:03:15.435Z
 - [ ] [Caching Strategies for Node.js: Boosting Performance with Node Cache, Redis, and Memcached](https://singh-sandeep.medium.com/caching-strategies-for-node-js-boosting-performance-with-node-cache-redis-and-memcached-cc148a978a32)
 - [ ] [6-Caching Strategies to Remember while designing Cache System](https://javascript.plainenglish.io/6-caching-strategies-to-remember-while-designing-cache-system-da058a3757cf)
 - [ ] [Deep Dive In Caching](https://vishalrana9915.medium.com/deep-dive-in-caching-9780bc55ea7)
-
+- [ ] [System Design Basics: 5 Common Caching Misunderstandings Explained](https://medium.com/geekculture/system-design-basics-5-common-caching-misunderstandings-explained-2f19b1c88373)
 ## 什麼是緩存
 
 ![cache.png](http://192.168.25.60:8000/files/file_storage/72d1ff10.png)
@@ -29,6 +29,10 @@ dateCreated: 2023-05-17T07:03:15.435Z
 ## 可以在什麼地方緩存資料
 
 ![Where do we cache data.png](http://192.168.25.60:8000/files/file_storage/4ccf9db2.png)
+
+## backend caching strategies
+
+![backend caching strategies.png](http://192.168.25.60:8000/files/file_storage/1bdfe62f.gif)
 
 ## Things to consider when using cache
 

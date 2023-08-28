@@ -2,7 +2,7 @@
 title: 02.從HTTP協定開始講起
 description: 
 published: true
-date: 2023-07-14T00:03:21.545Z
+date: 2023-08-25T05:39:33.804Z
 tags: http, https
 editor: markdown
 dateCreated: 2022-11-15T00:24:34.813Z
@@ -52,6 +52,9 @@ HTTPS 比 HTTP 多了一個 S ，那個 S 就是 Secure 的 S ，因此 HTTPS �
 
 ![how-does-https-work.png](http://192.168.25.60:8000/files/file_storage/a8d324be.png)
 
+![HTTPS SSL Handshake and Data Encryption Explained to Kids.png](http://192.168.25.60:8000/files/file_storage/ee2ece2c.png)
+
+
 ## 使用 HTTPS 的好處
 1. 資料的隱私：使用者在網路上的行為越來越多是有關交易、個人基本資料的傳遞等等，試想如果你在交易時的信用卡卡號、銀行帳號、或是個人信箱的帳號密碼都暴露在網路上，是件多可怕的事，也許一覺醒來戶頭的錢全被提領一空、自己的帳號被當作是駭客跳板去做其他網站的攻擊，都不是我們願意見到的，只有 HTTPS 加密過的網站才能保護我們資料與交易的安全。
 
@@ -85,6 +88,8 @@ nslookup gitbub.com
 
 # HTTP 請求方法
 > HTTP 定義了一組能令給定資源，執行特定操作的請求方法（request methods）。他們儘管屬於名詞，但也能稱為 HTTP 動詞。每個方法都有不同的語意，不過也有些共享的相通功能，像是safe (en-US)、idempotent (en-US)、cacheable。
+
+![Top 9 HTTP request methods.png](http://192.168.25.60:8000/files/file_storage/8ec48ec1.png)
 
 ## GET
 - GET 方法請求展示指定資源。使用 GET 的請求只應用於取得資料

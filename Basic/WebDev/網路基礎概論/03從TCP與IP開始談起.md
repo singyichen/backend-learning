@@ -2,7 +2,7 @@
 title: 03.從TCP與IP開始談起
 description: 
 published: true
-date: 2023-06-26T01:18:05.257Z
+date: 2023-08-25T03:53:13.214Z
 tags: tcp, ip
 editor: markdown
 dateCreated: 2022-11-15T06:18:30.805Z
@@ -26,6 +26,11 @@ dateCreated: 2022-11-15T06:18:30.805Z
 > - Network Access Layer（網路存取層）
 
 ![TCPIP Encapsulation.png](http://192.168.25.60:8000/files/file_storage/8c279c95.png)
+
+
+## TCP/IP 如何運作
+
+![how TCP IP Works.gif](http://192.168.25.60:8000/files/file_storage/65c87d4d.gif)
 
 ## 網路的層級 
 Internet 中要經過非常多道手續才能順利將資訊傳遞到另一端，因此就有組織將手續整理後明確分層變成一個模型，分層的好處就是只要處理那個層級的事情就好，可以把每一個層級想像成是一個「關卡」，傳遞的資訊時必須層層破關（通過協定），才能將資訊傳遞到另一端。

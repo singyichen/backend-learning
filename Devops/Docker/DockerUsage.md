@@ -2,7 +2,7 @@
 title: Docker Usage
 description: Docker學習筆記
 published: true
-date: 2023-08-01T00:14:22.431Z
+date: 2023-08-25T05:55:07.294Z
 tags: docker, devops
 editor: markdown
 dateCreated: 2022-07-21T06:34:46.172Z
@@ -42,6 +42,9 @@ dateCreated: 2022-07-21T06:34:46.172Z
 
 
 # Docker 基礎指令
+
+![docker workflow and commands.gif](http://192.168.25.60:8000/files/file_storage/10ffa850.gif)
+
 ## 打包 Docker 映像檔
 ```bash
 docker build -t <image-name> --no-cache . 

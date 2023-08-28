@@ -2,7 +2,7 @@
 title: Docker
 description: Docker學習筆記
 published: true
-date: 2023-08-16T06:53:24.860Z
+date: 2023-08-25T08:00:30.888Z
 tags: docker, devops
 editor: markdown
 dateCreated: 2022-07-19T06:36:20.283Z
@@ -73,6 +73,8 @@ Docker 是個輕量級的虛擬化技術，可以把你的應用程式連同環�
 ![docker example.png](http://192.168.25.60:8000/files/file_storage/ed4a9423.png)
 
 ![組成 Docker 的重要組件.png](http://192.168.25.60:8000/files/file_storage/b876eafd.png)
+
+![Docker Architecture.gif](http://192.168.25.60:8000/files/file_storage/f108687a.gif)
 
 執行 Docker 的主機，稱為 Host。
 
@@ -149,6 +151,7 @@ Docker 的架構中提供 REST API 和客戶端 Docker CLI 來控制 Docker 物�
 - 代碼修改網頁伺服器應用程式所監聽的 port 和掛載它所需的資料。
 - 代碼控制應用程式副本的縮放。
 - 因為代碼控制基礎設施，所以代碼可以保存基礎設施的設定也可以進行版本控制。
+
 # Docker 原理
 ## Docker 與 Virtual Machine 的差異
 
@@ -178,20 +181,20 @@ Namespace 隔離各項資源（PID、網路等等），使得容器內的 proces
 ![docker Linux Containers.png](http://192.168.25.60:8000/files/file_storage/5bcde4d6.png)
 
 ## Docker Daemon 與 Docker Client
-Docker client 對 Docker 下命令的使用者
-Docker daemon 是 Docker 常駐程式，負責執行指令，視為 Docker server 端
-Libcontainer 用來與 Linux kernel 溝通
+- Docker client 對 Docker 下命令的使用者
+- Docker daemon 是 Docker 常駐程式，負責執行指令，視為 Docker server 端
+- Libcontainer 用來與 Linux kernel 溝通
 
 ![docker Docker Daemon 與 Docker Client.png](http://192.168.25.60:8000/files/file_storage/f034032f.png)
 
 ## Daemon/Client/Linux kernel 溝通過程
 
-Client 下令建立容器 -> Docker Daemon接收到指令 -> Libcontainer通知Linux kernel建立容器 -> Linux kernel建立獨立空間，擁有獨立的namespace及cgroup -> 把映像檔的內容放進容器 -> 啟動容器
+Client 下令建立容器 ➔ Docker Daemon 接收到指令 ➔ Libcontainer 通知 Linux kernel 建立容器 ➔ Linux kernel 建立獨立空間，擁有獨立的 namespace 及 cgroup ➔ 把映像檔的內容放進容器 ➔ 啟動容器
 
 
 ## Docker 如何運作的
 
 ![How does Docker work.png](http://192.168.25.60:8000/files/file_storage/f9fdb01e.png)
 
-# Docker 指令大全
+
 

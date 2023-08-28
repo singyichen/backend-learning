@@ -2,13 +2,14 @@
 title: Fastify Dependencies ( Test )
 description: 測試套件
 published: true
-date: 2023-08-04T02:22:25.731Z
+date: 2023-08-24T08:10:25.491Z
 tags: fastify, framework
 editor: markdown
 dateCreated: 2022-08-15T03:17:32.668Z
 ---
 
 # 測試套件介紹 ( Test Dependencies )
+- [ ] [How to test Socket.io with Jest on backend (Node.js)?](https://medium.com/@tozwierz/testing-socket-io-with-jest-on-backend-node-js-f71f7ec7010f)
 ## jest
 > 寫測試的工具，為一個測試框架
 
@@ -86,6 +87,7 @@ module.exports = {
   testPathIgnorePatterns: ['/node_modules/', '/build/', '/coverage/'],
   setupFilesAfterEnv: ['./test/config.js'], // 放置 config.js 的路徑
   setupFiles: ['dotenv/config'], // 此設定可讓 .env 在 jest 中使用
+  testTimeout: 50000,
 };
 ```
 
@@ -129,6 +131,7 @@ module.exports = {
   testPathIgnorePatterns: ['/node_modules/', '/build/', '/coverage/'],
   setupFilesAfterEnv: ['./test/config.js'],
   setupFiles: ['dotenv/config'], // 此設定可讓 .env 在 jest 中使用
+  testTimeout: 50000,
 };
 ```
 

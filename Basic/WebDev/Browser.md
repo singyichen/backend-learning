@@ -2,7 +2,7 @@
 title: Browser
 description: 
 published: true
-date: 2023-08-07T03:27:47.208Z
+date: 2023-08-21T01:26:24.327Z
 tags: 
 editor: markdown
 dateCreated: 2023-05-18T01:46:07.641Z
@@ -19,4 +19,6 @@ dateCreated: 2023-05-18T01:46:07.641Z
 ## 瀏覽器如何呈現網頁?
 
 ![How does the browser render a web page.png](http://192.168.25.60:8000/files/file_storage/36dd4a1d.png)
+
+![How does Chrome work.png](http://192.168.25.60:8000/files/file_storage/4b3e57b7.png)
 

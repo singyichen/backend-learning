@@ -2,7 +2,7 @@
 title: Webhook
 description: 
 published: true
-date: 2023-08-14T09:23:30.909Z
+date: 2023-08-25T05:30:50.863Z
 tags: api
 editor: markdown
 dateCreated: 2023-06-26T01:50:27.132Z
@@ -49,3 +49,10 @@ dateCreated: 2023-06-26T01:50:27.132Z
 所以說到底 Webhooks 算是一種機制，其也是利用 HTTP REST API 來實現。
 
 那為什麼用 Webhooks ？ Webhooks 有什麼好處呢？有了 Webhooks server 端就能即時主動發送更新給 client ，不必由 client 不斷發送請求來詢問是否有更新（又稱輪詢(polling)）。
+
+
+![polling vs webhook.gif](http://192.168.25.60:8000/files/file_storage/7d941260.gif)
+
+
+
+

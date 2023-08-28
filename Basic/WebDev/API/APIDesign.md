@@ -2,7 +2,7 @@
 title: API Design
 description: 
 published: true
-date: 2023-07-24T07:14:32.722Z
+date: 2023-08-25T05:31:55.881Z
 tags: api
 editor: markdown
 dateCreated: 2023-07-07T00:43:03.191Z
@@ -21,6 +21,7 @@ dateCreated: 2023-07-07T00:43:03.191Z
 - [ ] [Demystifying the Unusual Evolution of the Netflix API Architecture](https://www.youtube.com/watch?v=Uu32ggF-DWg&ab_channel=ByteByteGo&loop=0)
 - [ ] [How to handle multiple API requests in your NodeJS Application](https://medium.com/@abhinavcv007/how-to-handle-multiple-api-requests-in-your-nodejs-application-cfa298e11b28)
 - [ ] [How to Build World-Class Web APIs: 3 Lessons from the Postman Team](https://learningdaily.dev/how-to-build-world-class-web-apis-3-lessons-from-the-postman-team-d76de34011db)
+- [ ] [Crafting Effective API Design with Node.js and Express](https://smit90.medium.com/crafting-effective-api-design-with-node-js-and-express-65c2bb16845c)
 
 # producer api lifecycle map
 
@@ -36,3 +37,13 @@ dateCreated: 2023-07-07T00:43:03.191Z
 
 # How to improve API performance
 ![How to improve API performance.png](http://192.168.25.60:8000/files/file_storage/c6f0c599.png)
+
+# API-Driven Application Infrastructure Blueprint
+![API-Driven Application Infrastructure Blueprint.gif](http://192.168.25.60:8000/files/file_storage/7759ab93.gif)
+
+# Top 16 API Security Practices
+![Top 16 API Security Practices.gif](http://192.168.25.60:8000/files/file_storage/9458aead.gif)
+
+
+
+

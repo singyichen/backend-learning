@@ -2,7 +2,7 @@
 title: Security
 description: 
 published: true
-date: 2023-07-24T23:54:54.032Z
+date: 2023-08-25T05:53:44.899Z
 tags: security
 editor: markdown
 dateCreated: 2022-05-25T02:26:29.750Z
@@ -19,3 +19,6 @@ dateCreated: 2022-05-25T02:26:29.750Z
 - [ ] [6 Best Practices for Securing Backend APIs from Common Vulnerabilities : A Comprehensive 2023 Guide](https://sandydev.medium.com/6-best-practices-for-securing-backend-apis-from-common-vulnerabilities-a-comprehensive-2023-guide-cd15d5225b1f)
 - [ ] [Top 10 Best Practices To Secure Node.js Apps in Production](https://levelup.gitconnected.com/top-10-best-practices-to-secure-node-js-apps-in-production-916c69fcb43f)
 - [ ] [Node.js good practices for security](https://medium.com/@techwithharry/node-js-security-good-practices-for-security-56a5f56d4f6d)
+
+
+![Top 9 Types of Malware.gif](http://192.168.25.60:8000/files/file_storage/cbd80ab0.gif)

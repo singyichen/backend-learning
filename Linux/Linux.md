@@ -2,7 +2,7 @@
 title: Linux
 description: 
 published: true
-date: 2023-07-31T01:28:46.921Z
+date: 2023-08-25T03:48:55.162Z
 tags: linux
 editor: markdown
 dateCreated: 2022-10-31T01:17:39.079Z
@@ -29,5 +29,8 @@ dateCreated: 2022-10-31T01:17:39.079Z
 
 ## 5 Inter-Process Communications
 ![5 Inter-Process Communications.png](http://192.168.25.60:8000/files/file_storage/d1d2777c.png)
+
+## linux directory structure
+![linux directory structure.gif](http://192.168.25.60:8000/files/file_storage/7cf5e25b.gif)
 
 

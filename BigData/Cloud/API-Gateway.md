@@ -2,7 +2,7 @@
 title: API Gateway
 description: 
 published: true
-date: 2023-08-07T02:12:27.837Z
+date: 2023-08-25T03:51:37.957Z
 tags: 
 editor: markdown
 dateCreated: 2023-05-18T07:19:40.997Z
@@ -19,5 +19,6 @@ dateCreated: 2023-05-18T07:19:40.997Z
 
 ![Uber’s API gateway.png](http://192.168.25.60:8000/files/file_storage/8f385f7e.png)
 
-
 ![API Gateway DesignGurus Org.png](http://192.168.25.60:8000/files/file_storage/8063cb91.png)
+
+![API Gateway Architecture.gif](http://192.168.25.60:8000/files/file_storage/7eef3de5.gif)

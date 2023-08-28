@@ -2,7 +2,7 @@
 title: Cloud Computing
 description: Cloud Computing 簡介
 published: true
-date: 2023-08-07T02:23:51.953Z
+date: 2023-08-25T05:37:32.082Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-06T03:20:26.986Z
@@ -25,6 +25,8 @@ dateCreated: 2023-07-06T03:20:26.986Z
 ![cloud comparison cheat sheet.png](http://192.168.25.60:8000/files/file_storage/108e6791.png)
 
 ![Cloud Native Anti Patterns.png](http://192.168.25.60:8000/files/file_storage/7cdb0a87.png)
+
+![Top anything as a service tools.png](http://192.168.25.60:8000/files/file_storage/0bff30fb.png)
 
 # 雲端運算模型
 雲端運算有三種主要的模型。每個模型各代表雲端運算堆疊的不同部分。

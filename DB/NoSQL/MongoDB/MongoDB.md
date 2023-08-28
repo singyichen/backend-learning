@@ -2,7 +2,7 @@
 title: MongoDB
 description: 
 published: true
-date: 2023-07-12T03:54:28.558Z
+date: 2023-08-25T01:11:15.670Z
 tags: nosql, mongodb
 editor: markdown
 dateCreated: 2023-05-18T06:05:19.280Z
@@ -17,7 +17,7 @@ dateCreated: 2023-05-18T06:05:19.280Z
 - [ ] [Preventing MongoDB NoSQL Injection Attacks: Securing Your Node.js Express Application with Code Examples](https://ritikchourasiya.medium.com/preventing-mongodb-nosql-injection-attacks-securing-your-node-js-56215ef7455)
 - [ ] [10 Advanced Querying Techniques for MongoDB](https://javascripttricks.com/10-advanced-querying-techniques-for-mongodb-8237214f3e75)
 - [ ] [MongoDB 是什麼？ MongoDB 優勢、適用場景、與 MySQL 的差異介紹](https://www.omniwaresoft.com.tw/product-news/mongodb-news/introduction-to-mongodb/)
-
+- [ ] [MongoDB Best Practices: 🚀 Optimizing Performance and Reliability](https://smit90.medium.com/mongodb-best-practices-optimizing-performance-and-reliability-c5933445adc0)
 # 關於 MongoDB
 
 

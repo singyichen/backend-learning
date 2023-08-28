@@ -2,7 +2,7 @@
 title: Algorithms
 description: 演算法
 published: true
-date: 2023-05-22T00:24:38.471Z
+date: 2023-08-25T03:39:48.653Z
 tags: 
 editor: markdown
 dateCreated: 2023-05-18T00:24:42.411Z
@@ -13,7 +13,8 @@ dateCreated: 2023-05-18T00:24:42.411Z
 - [ ] [Algorithms you should know before you take system design interviews](https://blog.bytebytego.com/p/algorithms-you-should-know-before?utm_source=profile&utm_medium=reader2)
 - [ ] [blocking and non-blocking algorithms](https://blog.bytebytego.com/p/ep13-tcp-or-udp-for-zoom-also?utm_source=profile&utm_medium=reader2)
 - [ ] [EP14: Algorithms you should know for System Design. Also...](https://blog.bytebytego.com/p/ep14-algorithms-you-should-known?utm_source=profile&utm_medium=reader2)
-
+- [ ] [Unit 1: Algorithms](https://www.khanacademy.org/computing/computer-science/algorithms)
+- [ ] [visualgo](https://visualgo.net/zh)
 
 ## Algorithms you should know before system design
 

@@ -2,7 +2,7 @@
 title: Async Await
 description: 
 published: true
-date: 2023-05-17T02:02:35.806Z
+date: 2023-08-28T00:12:27.213Z
 tags: promise, async, await
 editor: markdown
 dateCreated: 2022-05-26T03:31:40.760Z
@@ -13,6 +13,7 @@ dateCreated: 2022-05-26T03:31:40.760Z
 - [ ] [我要學會 JS(三)：callback、Promise 和 async/await 那些事兒](https://noob.tw/js-async/)
 - [ ] [callback, promise, async/await 使用方式教學以及介紹 Part I](https://yu-jack.github.io/2018/07/22/promise/)
 - [ ] [JavaScript Visualized: Promises & Async/Await](https://medium.com/@masterrajpatel/javascript-visualized-promises-async-await-%EF%B8%8F-c51af935f7f5)
+- [ ] [Difference Between Promise and Async/Await](https://medium.com/version-1/difference-between-promise-and-async-await-95e453182f55)
 
 # 只有這四種寫法才會是 promise 的函式
 ```javascript

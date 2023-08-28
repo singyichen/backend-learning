@@ -2,7 +2,7 @@
 title: Design Pattern
 description: 
 published: true
-date: 2023-07-12T03:42:12.905Z
+date: 2023-08-25T05:38:24.606Z
 tags: design pattern
 editor: markdown
 dateCreated: 2023-05-18T06:51:01.745Z
@@ -24,6 +24,10 @@ dateCreated: 2023-05-18T06:51:01.745Z
 # 18 Key Design Patterns Every Developer Should Know
 
 ![18 Key Design Patterns Every Developer Should Know.png](http://192.168.25.60:8000/files/file_storage/f8a8631f.png)
+
+# 12 Design patterns
+
+![12 Design patterns.png](http://192.168.25.60:8000/files/file_storage/ecbd5cb9.png)
 
 ## Abstract Factory
 Family Creator - Makes groups of related items.
