@@ -2,7 +2,7 @@
 title: Design Pattern
 description: 
 published: true
-date: 2023-08-25T05:38:24.606Z
+date: 2023-08-28T08:52:46.273Z
 tags: design pattern
 editor: markdown
 dateCreated: 2023-05-18T06:51:01.745Z
@@ -28,6 +28,11 @@ dateCreated: 2023-05-18T06:51:01.745Z
 # 12 Design patterns
 
 ![12 Design patterns.png](http://192.168.25.60:8000/files/file_storage/ecbd5cb9.png)
+
+# 18 Design Patterns
+
+![18 Design Patterns.png](http://192.168.25.60:8000/files/file_storage/f8594f2a.png)
+
 
 ## Abstract Factory
 Family Creator - Makes groups of related items.

@@ -2,7 +2,7 @@
 title: API
 description: 
 published: true
-date: 2023-08-25T05:29:57.733Z
+date: 2023-08-28T08:31:57.540Z
 tags: api
 editor: markdown
 dateCreated: 2022-11-17T05:44:26.014Z
@@ -128,6 +128,8 @@ JSON 是最常用的回應格式之一，各種程式語言都可以產生或解
 ![Top 8 API Architectural Styles.gif](http://192.168.25.60:8000/files/file_storage/cfa1a81b.gif)
 
 ![RPC and RESTful.png](http://192.168.25.60:8000/files/file_storage/bec401cf.png)
+
+![The Top 8 API Architectural Styles.png](http://192.168.25.60:8000/files/file_storage/2288e901.png)
 
 ## REST
 Proposed in 2000, REST is the most used style. It is often used between front-end clients and back-end services. It is compliant with 6 architectural constraints. The payload format can be JSON, XML, HTML, or plain text.

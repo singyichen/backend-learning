@@ -2,7 +2,7 @@
 title: Data Structure
 description: 資料結構
 published: true
-date: 2023-05-19T05:49:05.843Z
+date: 2023-08-28T08:41:00.479Z
 tags: data structure
 editor: markdown
 dateCreated: 2022-12-19T01:28:30.310Z
@@ -22,5 +22,7 @@ dateCreated: 2022-12-19T01:28:30.310Z
 
 ![8 Data Structures That Power Your Databases.png](http://192.168.25.60:8000/files/file_storage/c53a57a4.png)
 
-
 ![data structures used in daily life.png](http://192.168.25.60:8000/files/file_storage/f8ace0be.png)
+
+![data structure cheatsheet.png](http://192.168.25.60:8000/files/file_storage/e1089844.png)
+

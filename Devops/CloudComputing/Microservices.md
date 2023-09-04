@@ -2,7 +2,7 @@
 title: Microservices
 description: 
 published: true
-date: 2023-08-09T00:24:19.472Z
+date: 2023-08-31T00:09:25.365Z
 tags: devops
 editor: markdown
 dateCreated: 2023-07-10T00:18:07.332Z
@@ -17,7 +17,10 @@ dateCreated: 2023-07-10T00:18:07.332Z
 - [ ] [99% Need Modularity](https://medium.com/qe-unit/99-need-modularity-30e6da3c73fc)
 - [ ] [10 Microservice Patterns Software Engineers Should Know](https://medium.com/cloud-native-daily/10-microservice-patterns-software-engineer-should-know-c143443a4f2a)
 - [ ] [Building Scalable Microservice Architecture with Next.js, Node.js, Redis](https://mostafizur99.medium.com/building-scalable-microservice-architecture-with-next-js-node-js-redis-bec0e737f758)
+- [ ] [Microservices vs Monolithic Architectures: Building a Node.js Blog App Showdown](https://smit90.medium.com/microservices-vs-monolithic-architectures-building-a-node-js-blog-app-showdown-%EF%B8%8F-a45136446d2b)
 
 ![9 best practices for developing microservices.png](http://192.168.25.60:8000/files/file_storage/cdd13086.png)
 
 ![Minimal Modular Architecture (MMA).png](http://192.168.25.60:8000/files/file_storage/66792aa2.png)
+
+![Top 10 Microservices Patterns.png](http://192.168.25.60:8000/files/file_storage/6cec346a.png)

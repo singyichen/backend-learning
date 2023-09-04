@@ -2,7 +2,7 @@
 title: NodeJS
 description: 
 published: true
-date: 2023-08-09T00:29:02.025Z
+date: 2023-09-01T02:16:53.343Z
 tags: nodejs
 editor: markdown
 dateCreated: 2023-01-19T00:21:27.297Z
@@ -20,5 +20,6 @@ dateCreated: 2023-01-19T00:21:27.297Z
 - [ ] [4 Common Mistakes Made by Node.js Developers](https://medium.com/@akashjha9041/4-common-mistakes-made-by-node-js-developers-970332ecef5a)
 - [ ] [Efficient Node.js Backend Development with Essential NPM Packages! ](https://javascript.plainenglish.io/efficient-node-js-backend-development-with-essential-npm-packages-40db1c634885)
 - [ ] [5 Advanced NodeJS Techniques with ExpressJS](https://medium.com/@arulvalananto/5-advanced-nodejs-techniques-6ac0b7b024a8)
+- [ ] [學習NodeJS的30天系列](https://ithelp.ithome.com.tw/articles/10265482)
 
 ![Roadmap for learning Node JS.png](http://192.168.25.60:8000/files/file_storage/542c8820.png)

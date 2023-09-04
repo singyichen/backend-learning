@@ -2,7 +2,7 @@
 title: Redis
 description: Redis 簡介
 published: true
-date: 2023-08-25T01:15:21.545Z
+date: 2023-08-30T00:07:58.119Z
 tags: db, redis
 editor: markdown
 dateCreated: 2022-12-14T00:06:36.235Z
@@ -36,6 +36,8 @@ dateCreated: 2022-12-14T00:06:36.235Z
 - [ ] [Distributed Locking with Redis](https://varunkruthiventi.medium.com/distributed-locking-with-redis-af4e7d80b503)
 - [ ] [Understanding Redis High-Availability Architectures](https://semaphoreci.medium.com/understanding-redis-high-availability-architectures-2b544fe3ec1e)
 - [ ] [Building Scalable Microservice Architecture with Next.js, Node.js, Redis](https://mostafizur99.medium.com/building-scalable-microservice-architecture-with-next-js-node-js-redis-bec0e737f758)
+- [ ] [Redis Unleashed: Powering Up with Node.js! ](https://smit90.medium.com/redis-unleashed-powering-up-with-node-js-c7531fa33e3e)
+
 # 什麼是 Redis？
 > - **Redis** 代表 **Remote Dictionary Server** ，是快速的開放原始碼記憶體內資料存放區，可做為資料庫、快取、訊息代理程式和佇列使用。
 > - **Redis** 的回應時間低於一毫秒，可讓遊戲、廣告科技、金融服務、醫療保健和 IoT 等產業的即時應用程式每秒處理數百萬個請求。如今，Redis 是當今最熱門的開源引擎之一，連續五年被 Stack Overflow 評為「最愛」資料庫。由於其快速的效能，Redis 是用於快取、工作階段管理、遊戲、排行榜、即時分析、地理空間、叫車、聊天/簡訊、媒體串流和發佈/訂閱應用程式的熱門選項。

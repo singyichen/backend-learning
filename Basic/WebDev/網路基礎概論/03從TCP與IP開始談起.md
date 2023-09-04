@@ -2,7 +2,7 @@
 title: 03.從TCP與IP開始談起
 description: 
 published: true
-date: 2023-08-25T03:53:13.214Z
+date: 2023-09-01T02:45:54.751Z
 tags: tcp, ip
 editor: markdown
 dateCreated: 2022-11-15T06:18:30.805Z
@@ -17,6 +17,7 @@ dateCreated: 2022-11-15T06:18:30.805Z
 - [ ] [TCP vs. UDP: 7 Differences You Should Know](https://blog.bytebytego.com/p/ep54-cache-systems-every-developer?utm_source=profile&utm_medium=reader2)
 - [ ] [Network Protocols Run the Internet](https://blog.bytebytego.com/p/network-protocols-run-the-internet?utm_source=profile&utm_medium=reader2)
 - [ ] [Everything You Always Wanted to Know About TCP But Too Afraid to Ask](https://blog.bytebytego.com/p/everything-you-always-wanted-to-know?utm_source=profile&utm_medium=reader2)
+- [ ] [Day11 Internet-Protocol](https://ithelp.ithome.com.tw/articles/10272605)
 
 # TCP ( Transmission Control Protocol ) 傳輸控制協議
 ## TCP/IP 四層架構
@@ -27,10 +28,21 @@ dateCreated: 2022-11-15T06:18:30.805Z
 
 ![TCPIP Encapsulation.png](http://192.168.25.60:8000/files/file_storage/8c279c95.png)
 
+![Networking OSI Model.png](http://192.168.25.60:8000/files/file_storage/5a641402.png)
 
 ## TCP/IP 如何運作
 
 ![how TCP IP Works.gif](http://192.168.25.60:8000/files/file_storage/65c87d4d.gif)
+
+TCP(Transmission Control Protocol，傳輸控制協定)和IP(Internet Protocol，網際網路協定)是網際網路基礎通訊架構下最早通過的標準，TCP是負責在網際網路中傳輸資料的協定；IP作為網際網路中識別的協定，紀錄網際網路的位址。
+
+在網際網路中以socket連結端點並作為資料傳輸的機制，資料格式會以HTTP、FTP、SMTP等通訊協定規範，並透過TCP將資料分成封包(packet)後傳輸。
+
+![在網際網路中以socket連結端點並作為資料傳輸的機制，資料格式會以HTTP、FTP、SMTP等通訊協定規範，並透過TCP將資料分成封包(packet)後傳輸.png](http://192.168.25.60:8000/files/file_storage/09828899.png)
+
+為了連結的端點位址並提供傳送的通道，socket會以IP及埠(port)組成socket位址，藉由埠可以確認接收或處理被傳遞的資料的程式。
+
+![為了連結的端點位址並提供傳送的通道，socket會以IP及埠(port)組成socket位址，藉由埠可以確認接收或處理被傳遞的資料的程式。.png](http://192.168.25.60:8000/files/file_storage/c234aa88.png)
 
 ## 網路的層級 
 Internet 中要經過非常多道手續才能順利將資訊傳遞到另一端，因此就有組織將手續整理後明確分層變成一個模型，分層的好處就是只要處理那個層級的事情就好，可以把每一個層級想像成是一個「關卡」，傳遞的資訊時必須層層破關（通過協定），才能將資訊傳遞到另一端。

@@ -2,7 +2,7 @@
 title: ETL
 description: 
 published: true
-date: 2023-08-07T23:48:56.283Z
+date: 2023-08-28T08:48:04.001Z
 tags: etl
 editor: markdown
 dateCreated: 2023-05-19T08:53:18.375Z
@@ -14,3 +14,7 @@ dateCreated: 2023-05-19T08:53:18.375Z
 - [ ] [What is Stream Processing? | Batch vs Stream Processing | Data Pipelines | Real-Time Data Processing](https://www.youtube.com/watch?v=ya4298V8Mqo&ab_channel=BIInsightsInc&loop=0)
 - [ ] [A List of The 17 Best ETL Tools And Why To Choose Them](https://www.datacamp.com/blog/a-list-of-the-16-best-etl-tools-and-why-to-choose-them)
 - [ ] [Rethinking Stream Processing and Streaming Databases](https://betterprogramming.pub/rethinking-stream-processing-and-streaming-databases-21076aaec375)
+
+
+
+![Modern Data Stack.png](http://192.168.25.60:8000/files/file_storage/18d7d9d8.png)

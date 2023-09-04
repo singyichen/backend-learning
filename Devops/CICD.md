@@ -2,7 +2,7 @@
 title: CI/CD
 description: 
 published: true
-date: 2023-08-07T02:25:34.914Z
+date: 2023-08-28T08:43:32.655Z
 tags: devops
 editor: markdown
 dateCreated: 2022-12-14T06:08:20.338Z
@@ -32,6 +32,8 @@ dateCreated: 2022-12-14T06:08:20.338Z
 ![CICD Pipeline.png](http://192.168.25.60:8000/files/file_storage/0581e116.png)
 
 ![CICD Pipeline Explained in Simple Terms.png](http://192.168.25.60:8000/files/file_storage/f7cc01f0.png)
+
+![How to explain CICD to a kid & grown-up.png](http://192.168.25.60:8000/files/file_storage/6986bef8.png)
 
 # CI ( Continuous Integration ) 持續整合
 > 每當開發人員 push 程式碼變更到 remote repository 時，觸發自動化 build 和 test 的程序，確保這次的變更是符合規範且通過所有測試案例的，減少有問題的程式碼影響到生產環境的機會。

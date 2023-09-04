@@ -2,7 +2,7 @@
 title: SQL
 description: 
 published: true
-date: 2023-05-25T01:35:17.278Z
+date: 2023-08-28T08:44:50.531Z
 tags: sql
 editor: markdown
 dateCreated: 2023-05-18T06:23:37.172Z
@@ -24,5 +24,8 @@ dateCreated: 2023-05-18T06:23:37.172Z
 
 ## SQL 視覺化
 ![Visualizing a SQL query sql query execution order.png](http://192.168.25.60:8000/files/file_storage/8324bb66.png)
+
+## SQL in a nutshell
+![SQL in a nutshell.png](http://192.168.25.60:8000/files/file_storage/eb9773a0.png)
 
 

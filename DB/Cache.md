@@ -2,7 +2,7 @@
 title: Cache
 description: 
 published: true
-date: 2023-08-28T00:06:39.653Z
+date: 2023-09-01T00:42:48.157Z
 tags: db, cache
 editor: markdown
 dateCreated: 2023-05-17T07:03:15.435Z
@@ -22,6 +22,10 @@ dateCreated: 2023-05-17T07:03:15.435Z
 - [ ] [6-Caching Strategies to Remember while designing Cache System](https://javascript.plainenglish.io/6-caching-strategies-to-remember-while-designing-cache-system-da058a3757cf)
 - [ ] [Deep Dive In Caching](https://vishalrana9915.medium.com/deep-dive-in-caching-9780bc55ea7)
 - [ ] [System Design Basics: 5 Common Caching Misunderstandings Explained](https://medium.com/geekculture/system-design-basics-5-common-caching-misunderstandings-explained-2f19b1c88373)
+- [ ] [極限加速！Web 開發者不能不知道的 Cache 大補帖！](https://oldmo860617.medium.com/%E6%A5%B5%E9%99%90%E5%8A%A0%E9%80%9F-web-%E9%96%8B%E7%99%BC%E8%80%85%E4%B8%8D%E8%83%BD%E4%B8%8D%E7%9F%A5%E9%81%93%E7%9A%84-cache-%E5%A4%A7%E8%A3%9C%E5%B8%96-3c7a9c4241de)
+- [ ] [Day17 X 初探快取 ＆ HTTP Caching](https://ithelp.ithome.com.tw/articles/10276125)
+- [ ] [Cache Policy — 效能與一致性之間的抉擇](https://oldmo860617.medium.com/%E4%B8%8D%E5%90%8C%E7%9A%84-cache-policy-%E6%95%88%E8%83%BD-%E8%88%87-%E4%B8%80%E8%87%B4%E6%80%A7-%E4%B9%8B%E9%96%93%E7%9A%84%E6%8A%89%E6%93%87-709455fa472a)
+- [ ] [沒瞭解過 Cache，就別說網站性能沒救了！](https://oldmo860617.medium.com/%E6%B2%92%E4%BA%86%E8%A7%A3%E9%81%8E-cache-%E5%B0%B1%E5%88%A5%E8%AA%AA%E7%B6%B2%E7%AB%99%E6%80%A7%E8%83%BD%E6%B2%92%E6%95%91%E4%BA%86-6d9d4cfe3291)
 ## 什麼是緩存
 
 ![cache.png](http://192.168.25.60:8000/files/file_storage/72d1ff10.png)

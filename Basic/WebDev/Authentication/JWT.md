@@ -2,7 +2,7 @@
 title: JWT
 description: 
 published: true
-date: 2023-08-10T01:03:57.121Z
+date: 2023-08-28T08:37:16.227Z
 tags: jwt, 驗證, authentication
 editor: markdown
 dateCreated: 2022-06-01T07:27:37.054Z
@@ -56,9 +56,13 @@ JSON Web Token (JWT) 是由 Auth0 所提構出的一個新 Token 想法，這並
 
 ![Explaining JSON Web Token (JWT) to a 10 year old Kid.png](http://192.168.25.60:8000/files/file_storage/19b58199.png)
 
+![Explaining JSON Web Tokens (JWTs) to a Kid.png](http://192.168.25.60:8000/files/file_storage/94a0a22b.png)
+
 ![JWT 運作原理.png](http://192.168.25.60:8000/files/file_storage/fd60f3db.png)
 
 ![jwt-authentication.png](http://192.168.25.60:8000/files/file_storage/390c0d1d.png)
+
+![jwt and jwt auth flow.png](http://192.168.25.60:8000/files/file_storage/3784d32b.png)
 
 # JWT 何時可以使用
 > - **授權 ( Authorization )**

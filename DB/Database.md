@@ -2,7 +2,7 @@
 title: Database
 description: 
 published: true
-date: 2023-08-15T00:00:15.816Z
+date: 2023-08-28T08:40:12.816Z
 tags: db, database
 editor: markdown
 dateCreated: 2023-05-15T00:29:55.477Z
@@ -52,6 +52,9 @@ dateCreated: 2023-05-15T00:29:55.477Z
 
 ## Types of Databases
 ![types of databases.png](http://192.168.25.60:8000/files/file_storage/eec9a7ef.png)
+
+## 10 Types of Databases
+![10 Types of Databases.png](http://192.168.25.60:8000/files/file_storage/84ae582c.png)
 
 ## A handy Cheatsheet for SQL and NoSQL databases
 ![A handy Cheatsheet for SQL and NoSQL databases.png](http://192.168.25.60:8000/files/file_storage/74a52d55.png)

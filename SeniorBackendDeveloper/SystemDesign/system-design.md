@@ -2,7 +2,7 @@
 title: System Design
 description: 
 published: true
-date: 2023-08-13T23:58:22.870Z
+date: 2023-09-01T00:33:02.454Z
 tags: 
 editor: markdown
 dateCreated: 2023-05-18T00:22:34.726Z
@@ -33,6 +33,8 @@ dateCreated: 2023-05-18T00:22:34.726Z
 - [ ] [Rate Limiting Fundamentals](https://blog.bytebytego.com/p/rate-limiting-fundamentals?utm_source=profile&utm_medium=reader2)
 - [ ] [10 System Design Interview Questions (With Answers) I Wished I Knew Before the Interview](https://levelup.gitconnected.com/10-system-design-interview-questions-with-answers-i-wished-i-knew-before-the-interview-31dcfc3cddef)
 - [ ] [Headless Architecture with Separated UI for Backend and Frontend](https://medium.com/design-microservices-architecture-with-patterns/headless-architecture-with-separated-ui-for-backend-and-frontend-f9789920e112)
+- [ ] [Architecting a Scalable and Fault-Tolerant System for a Million Users](https://levelup.gitconnected.com/building-a-fault-tolerant-system-architecting-for-scalability-d56c5426d5db)
+- [ ] [前端開發者也可以懂的基礎 System Design](https://medium.com/starbugs/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC%E8%80%85%E4%B9%9F%E5%8F%AF%E4%BB%A5%E6%87%82%E7%9A%84%E5%9F%BA%E7%A4%8E-system-design-5468e0f43033)
 ## Example
 - [ ] [Payment system](https://blog.bytebytego.com/p/payment-system?utm_source=profile&utm_medium=reader2)
 - [ ] [Low Latency Stock Exchange Design](https://blog.bytebytego.com/p/low-latency-stock-exchange?utm_source=profile&utm_medium=reader2)
@@ -85,5 +87,7 @@ dateCreated: 2023-05-18T00:22:34.726Z
 
 ![Graphic Design in Software Design.png](http://192.168.25.60:8000/files/file_storage/74371974.png)
 
+## System design interview cheatsheet
 
+![System design interview cheatsheet.png](http://192.168.25.60:8000/files/file_storage/4f32d7a0.png)
 

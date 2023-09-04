@@ -2,7 +2,7 @@
 title: GraphQL
 description: 
 published: true
-date: 2023-08-07T00:15:57.054Z
+date: 2023-08-29T00:20:27.949Z
 tags: api
 editor: markdown
 dateCreated: 2023-05-18T07:14:50.070Z
@@ -13,6 +13,9 @@ dateCreated: 2023-05-18T07:14:50.070Z
 - [ ] [How does GraphQL work in the real world?](https://blog.bytebytego.com/p/ep61-the-journey-of-a-slack-message?utm_source=profile&utm_medium=reader2)
 - [ ] [GraphQL 入門： 簡介 X 範例 X 優缺點](https://ithelp.ithome.com.tw/articles/10200678)
 - [ ] [Difference between REST and GraphQL API with Example](https://javarevisited.blogspot.com/2022/04/difference-between-graphql-and-rest-api.html)
+- [ ] [REST API vs. GraphQL: Unraveling the Web of APIs](https://smit90.medium.com/rest-api-vs-graphql-unraveling-the-web-of-apis-ba889d201828)
+
+![GraphQL.png](http://192.168.25.60:8000/files/file_storage/52bb6470.png)
 
 ![REST and GraphQL.png](http://192.168.25.60:8000/files/file_storage/0ae64748.png)
 

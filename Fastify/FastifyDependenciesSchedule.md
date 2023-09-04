@@ -2,7 +2,7 @@
 title: Fastify Dependencies ( Schedule )
 description: 排程套件
 published: true
-date: 2023-05-17T08:22:52.951Z
+date: 2023-08-28T07:23:24.937Z
 tags: fastify, framework
 editor: markdown
 dateCreated: 2022-09-15T07:57:46.312Z
@@ -141,7 +141,7 @@ module.exports = job1;
 	- 6：星期六
 
 
-- 在 plugin 底下新建一個 schedule.js
+- 在 plugin 底下新建一個 `schedule.js`
 ```javascript
 // schedule.js
 /**
@@ -168,7 +168,7 @@ async function scheduleConnector(fastify) {
 module.exports = fastifyPlugin(scheduleConnector);
 ```
 
-- 在 app.js 中 import 並 register
+- 在 `app.js` 中 import 並 register
 
 ```javascript
 // app.js

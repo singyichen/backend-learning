@@ -2,7 +2,7 @@
 title: 02.從HTTP協定開始講起
 description: 
 published: true
-date: 2023-08-25T05:39:33.804Z
+date: 2023-08-28T08:53:53.204Z
 tags: http, https
 editor: markdown
 dateCreated: 2022-11-15T00:24:34.813Z
@@ -53,6 +53,8 @@ HTTPS 比 HTTP 多了一個 S ，那個 S 就是 Secure 的 S ，因此 HTTPS �
 ![how-does-https-work.png](http://192.168.25.60:8000/files/file_storage/a8d324be.png)
 
 ![HTTPS SSL Handshake and Data Encryption Explained to Kids.png](http://192.168.25.60:8000/files/file_storage/ee2ece2c.png)
+
+![Learning HTTP like a Kid.png](http://192.168.25.60:8000/files/file_storage/e4e65e57.png)
 
 
 ## 使用 HTTPS 的好處

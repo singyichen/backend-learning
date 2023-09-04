@@ -2,7 +2,7 @@
 title: ABAC
 description: 
 published: true
-date: 2023-05-17T01:55:51.092Z
+date: 2023-08-31T08:03:16.310Z
 tags: abac, authorization, 權限
 editor: markdown
 dateCreated: 2023-04-17T00:56:27.183Z
@@ -28,6 +28,8 @@ dateCreated: 2023-04-17T00:56:27.183Z
 > - 如果濃縮到一句話，你可以細粒度地授權在何種情況下對某個資源具備某個特定的權限。
 
 ![abac concept.png](http://192.168.25.60:8000/files/file_storage/9fb4a37c.jpg)
+
+![ABAC.png](http://192.168.25.60:8000/files/file_storage/de1f6ff8.png)
 
 ## 概念
 屬性是使用者、環境、操作、資源的特徵，包含 `name-value` 的訊息。

@@ -2,7 +2,7 @@
 title: RESTful API
 description: 
 published: true
-date: 2023-08-17T23:56:07.968Z
+date: 2023-08-29T00:21:16.428Z
 tags: api, restful
 editor: markdown
 dateCreated: 2022-11-22T02:59:49.680Z
@@ -22,6 +22,8 @@ dateCreated: 2022-11-22T02:59:49.680Z
 # 什麼是 REST ?
 
 ![RESTful slogan.png](http://192.168.25.60:8000/files/file_storage/d639dc10.png)
+
+![restful api.png](http://192.168.25.60:8000/files/file_storage/675bc30f.png)
 
 REST 是 Representational State Transfer 的縮寫，可譯為「具象狀態傳輸」。由 Roy Fielding 博士在 2000 年的博士論文中所提出。他同時也是 HTTP 規範的主要作者之一。符合 REST 風格的網站架構可以稱為 RESTful。
 

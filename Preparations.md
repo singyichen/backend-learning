@@ -2,7 +2,7 @@
 title: Preparations
 description: 準備事項(技能樹、軟體安裝、環境建置)
 published: true
-date: 2023-08-25T00:35:31.101Z
+date: 2023-08-31T07:56:46.823Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-28T00:51:37.605Z
@@ -21,6 +21,8 @@ dateCreated: 2022-04-28T00:51:37.605Z
 ![web developer skills.png](http://192.168.25.60:8000/files/file_storage/bceac928.png)
 
 ![intro.png](http://192.168.25.60:8000/files/file_storage/cafd78d5.png)
+
+![software engineering in nutshell.png](http://192.168.25.60:8000/files/file_storage/ab0af574.png)
 
 ## 後端 backend
 
@@ -79,7 +81,7 @@ eslint --init
 {.is-info}
 - New Relic CodeStream
 - Postman
-
+- CodiumAI (Test writing)
 ## [Postman](https://www.postman.com/)
 ### Learning
 > [[POSTMAN] 該知道的都知道，不知道的慢慢瞭解 - 與波斯麵三十天的感情培養](https://ithelp.ithome.com.tw/articles/10289954)
@@ -116,11 +118,13 @@ eslint --init
 > [Sumatra PDF download info](https://www.sumatrapdfreader.org/free-pdf-reader)
 
 ## Notepad++
-- set in the direction C:\Program Files (x86)
+- set in the direction `C:\Program Files (x86)`
 
 ## Ngrok (Option)
-> [reference](https://medium.com/%E4%BC%81%E9%B5%9D%E4%B9%9F%E6%87%82%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/%E5%BF%AB%E9%80%9F%E8%AE%93%E5%A4%96%E7%B6%B2%E9%80%A3%E6%8E%A5%E6%9C%AC%E6%A9%9F%E7%9A%84%E5%88%A9%E5%99%A8-ngrok-ac92f792e1f0)
+> - [快速讓外網連接本機的利器 — ngrok](https://medium.com/%E4%BC%81%E9%B5%9D%E4%B9%9F%E6%87%82%E7%A8%8B%E5%BC%8F%E8%A8%AD%E8%A8%88/%E5%BF%AB%E9%80%9F%E8%AE%93%E5%A4%96%E7%B6%B2%E9%80%A3%E6%8E%A5%E6%9C%AC%E6%A9%9F%E7%9A%84%E5%88%A9%E5%99%A8-ngrok-ac92f792e1f0)
+> - [架設臨時伺服器不求人，用 ngrok 一個指令搞定！（含 Windows + MacOS 環境變數教學）](https://israynotarray.com/other/20230210/1090666501/)
 {.is-info}
+
 
 ### Download and use ngrok.exe
 > [Ngrok download info](https://ngrok.com/download)
@@ -129,8 +133,12 @@ eslint --init
 ### Login Account
 https://dashboard.ngrok.com/get-started/setup
 
+- get `add-authtoken`
+
+![ngrok login account to get add-authtoken.png](http://192.168.25.60:8000/files/file_storage/9418413e.png)
+
 ### Usage
-location：`C:\Program Files (x86)\ngrok-v3-stable-windows-amd64\ngrok.exe`
+path：`C:\Program Files (x86)\ngrok-v3-stable-windows-amd64\ngrok.exe`
 
 ### Connect your account
 ```shell
@@ -174,6 +182,11 @@ https://a7ab-122-147-204-116.jp.ngrok.io/swagger/WebSignin_API
 ## Lightshot
 > [Lightshot download info](https://app.prntscr.com/zh-cn/index.html)
 {.is-info}
+
+## TryCloudflare (Option)
+> [使用 Cloudflare Tunnel 的 TryCloudflare 取代 ngrok](https://blog.miniasp.com/post/2023/08/25/Cloudflare-Tunnel-TryCloudflare)
+{.is-info}
+
 
 # Build Environment
 ## nvm
