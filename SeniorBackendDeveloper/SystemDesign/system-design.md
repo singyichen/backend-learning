@@ -2,7 +2,7 @@
 title: System Design
 description: 
 published: true
-date: 2023-09-01T00:33:02.454Z
+date: 2023-09-11T00:51:28.595Z
 tags: 
 editor: markdown
 dateCreated: 2023-05-18T00:22:34.726Z
@@ -65,6 +65,7 @@ dateCreated: 2023-05-18T00:22:34.726Z
 - [ ] [Design Dropbox/Google Drive](https://nikhilgupta1.medium.com/design-dropbox-google-drive-81cd343571a8)
 - [ ] [Headless Architecture with Separated UI for Backend and Frontend](https://medium.com/design-microservices-architecture-with-patterns/headless-architecture-with-separated-ui-for-backend-and-frontend-f9789920e112)
 - [ ] [How did Uber solve data consistency problem?](https://medium.com/@dmosyan/how-did-uber-solve-data-consistency-problem-dcdd39bd3ed6)
+- [ ] [EP76: Netflix's Tech Stack](https://blog.bytebytego.com/p/ep76-netflixs-tech-stack?utm_source=profile&utm_medium=reader2)
 ## Problem
 - [ ] [How to avoid double payment?](https://blog.bytebytego.com/p/how-to-avoid-double-payment?utm_source=profile&utm_medium=reader2)
 - [ ] [Payment reconciliation](https://blog.bytebytego.com/p/payment-reconciliation?utm_source=profile&utm_medium=reader2)

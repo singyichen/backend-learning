@@ -2,7 +2,7 @@
 title: API Design
 description: 
 published: true
-date: 2023-08-30T02:46:55.661Z
+date: 2023-09-11T00:37:23.639Z
 tags: api
 editor: markdown
 dateCreated: 2023-07-07T00:43:03.191Z
@@ -23,7 +23,7 @@ dateCreated: 2023-07-07T00:43:03.191Z
 - [ ] [How to Build World-Class Web APIs: 3 Lessons from the Postman Team](https://learningdaily.dev/how-to-build-world-class-web-apis-3-lessons-from-the-postman-team-d76de34011db)
 - [ ] [Crafting Effective API Design with Node.js and Express](https://smit90.medium.com/crafting-effective-api-design-with-node-js-and-express-65c2bb16845c)
 - [ ] [API Architecture - Synchronous, Asynchronous, and Parallel calls](https://abdulrwahab.medium.com/api-architecture-synchronous-asynchronous-and-parallel-calls-e85b9c08fe51)
-
+- [ ] [REST-Based API explained](https://medium.com/@dmosyan/rest-based-api-explained-8940af50f545)
 
 
 ![api slogan.png](http://192.168.25.60:8000/files/file_storage/dbe158de.png)

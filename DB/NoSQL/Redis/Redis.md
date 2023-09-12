@@ -2,7 +2,7 @@
 title: Redis
 description: Redis 簡介
 published: true
-date: 2023-08-30T00:07:58.119Z
+date: 2023-09-11T00:05:24.827Z
 tags: db, redis
 editor: markdown
 dateCreated: 2022-12-14T00:06:36.235Z
@@ -37,6 +37,7 @@ dateCreated: 2022-12-14T00:06:36.235Z
 - [ ] [Understanding Redis High-Availability Architectures](https://semaphoreci.medium.com/understanding-redis-high-availability-architectures-2b544fe3ec1e)
 - [ ] [Building Scalable Microservice Architecture with Next.js, Node.js, Redis](https://mostafizur99.medium.com/building-scalable-microservice-architecture-with-next-js-node-js-redis-bec0e737f758)
 - [ ] [Redis Unleashed: Powering Up with Node.js! ](https://smit90.medium.com/redis-unleashed-powering-up-with-node-js-c7531fa33e3e)
+- [ ] [Understanding Redis High-Availability Architectures](https://semaphoreci.medium.com/understanding-redis-high-availability-architectures-2b544fe3ec1e)
 
 # 什麼是 Redis？
 > - **Redis** 代表 **Remote Dictionary Server** ，是快速的開放原始碼記憶體內資料存放區，可做為資料庫、快取、訊息代理程式和佇列使用。

@@ -2,7 +2,7 @@
 title: Authentication
 description: 
 published: true
-date: 2023-08-14T00:15:24.986Z
+date: 2023-09-11T00:32:06.583Z
 tags: authentication, 認證
 editor: markdown
 dateCreated: 2023-05-18T03:22:11.625Z
@@ -30,6 +30,9 @@ dateCreated: 2023-05-18T03:22:11.625Z
 - [ ] [How to Build Secure and Scalable Authentication System with Node.js and MongoDB](https://sandydev.medium.com/how-to-build-secure-and-scalable-authentication-system-with-node-js-and-mongodb-c50bf51c06b0)
 - [ ] [什麼是多重要素驗證 (MFA)？](https://aws.amazon.com/tw/what-is/mfa/)
 - [ ] [Add Authentication to Any Web Page in 10 Minutes](https://medium.com/@bumurzaqov2/add-authentication-to-any-web-page-in-10-minutes-ecf3171269cb)
+- [ ] [EP75: How Does A Password Manager Work](https://blog.bytebytego.com/p/ep75-how-does-a-password-manager?utm_source=profile&utm_medium=reader2)
+
+![API keys vs tokens.png](http://192.168.25.60:8000/files/file_storage/f429ade5.png)
 
 # Basics of Authentication
 

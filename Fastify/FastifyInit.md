@@ -2,7 +2,7 @@
 title: Fastify Init
 description: Fastify 專案初始化步驟
 published: true
-date: 2023-06-13T03:09:37.173Z
+date: 2023-09-05T06:17:39.999Z
 tags: fastify, framework
 editor: markdown
 dateCreated: 2022-09-20T01:12:00.943Z
@@ -139,12 +139,12 @@ feat：remove useless folder and files
 
 ## 新增套件 ( Basic、Database、Others、Log )
 ```shell
-npm i @fastify/env @fastify/cors @prisma/client@4.0.0 prisma@4.1.0 moment pino --save
+npm i @fastify/env @fastify/cors @prisma/client@4.0.0 prisma@4.1.0 moment pino http-status-codes rotating-file-stream --save
 ```
 ```
 feat：add dependencies
 
-原因：新增套件 @fastify/env、@fastify/cors、@prisma/client、prisma、moment、pino
+原因：新增套件 @fastify/env、@fastify/cors、@prisma/client、prisma、moment、pino、http-status-codes、rotating-file-stream
 
 調整項目：
 1. package.json
@@ -154,6 +154,8 @@ feat：add dependencies
     - 新增 prisma@4.1.0：DB ORM prisma
     - 新增 moment：時間套件
     - 新增 pino：日誌套件
+	  - 新增 http-status-codes：HTTP 狀態碼套件
+    - 新增 rotating-file-stream：建立可自動輪轉的日誌文件流套件
 ```
 
 ## 新增 prisma 並將現有 DB 的 table 轉成 prisma 的 schema
@@ -165,7 +167,7 @@ npx prisma init --datasource-provider postgresql
 ```shell
 npx prisma db pull
 ```
-- 新增一個資料夾 `src` ，將資料夾 `prisma` 放置在 `src` 中
+
 ```
 feat：add prisma and export the schema from DB
 
@@ -180,12 +182,12 @@ feat：add prisma and export the schema from DB
 ```json
 // package.json
   "prisma": {
-    "schema": "./src/prisma/schema.prisma"
+    "schema": "./prisma/schema.prisma"
   }
 ```
 - 生成 Prisma Client：已經有 `schema.prisma` 時使用
 ```shell
-npx prisma generate --schema=./src/prisma/schema.prisma
+npx prisma generate --schema=./prisma/schema.prisma
 ```
 ```
 feat：add prisma schema path in package.json
@@ -194,7 +196,7 @@ feat：add prisma schema path in package.json
 
 調整項目：
 1. package.json
-    - 設置 prisma schema 檔案路徑："./src/prisma/schema.prisma"
+    - 設置 prisma schema 檔案路徑："./prisma/schema.prisma"
 ```
 
 ## 新增 prismaClientService.js 到資料夾 ormService 中，放置 Prisma Client
@@ -277,21 +279,8 @@ feat：add cors plugin
     - export corsConnector
 ```
 
-## 新增 router 插件
-```
-feat：add router plugin
-
-原因：新增插件 router，import 與 register 路由
-
-新增項目：
-1. router.js：
-    - import 各 api 路由
-    - register 各 api 路由
-    - export routerConnector
-```
-
 ## 新增 root router
-- 新增一個資料夾 `routes`
+- 新增一個資料夾 `routes`，放置 `root.js`
 ```javascript
 // routes/root.js
 'use strict';
@@ -323,6 +312,38 @@ feat：add root.js
 新增項目：
 1. routes/root.js：新增根路由
 ```
+
+## 新增 router 插件
+```javascript
+// plugin/router.js
+/**
+ * @description router plugin
+ */
+
+const fastifyPlugin = require('fastify-plugin');
+// import routes
+const rootRouter = require('../routes/root');
+async function routerConnector(fastify, opts, done) {
+  // 初始化路由
+  fastify.register(rootRouter);
+
+  done();
+}
+
+module.exports = fastifyPlugin(routerConnector);
+```
+```
+feat：add router plugin
+
+原因：新增插件 router，import 與 register 路由
+
+新增項目：
+1. router.js：
+    - import 各 api 路由
+    - register 各 api 路由
+    - export routerConnector
+```
+
 ## 重構 app.js
 ```javascript
 'use strict';
@@ -375,8 +396,9 @@ function build() {
 
   return app;
 }
-const app = build();
-app.listen({ port: process.env.PORT, host: '0.0.0.0' }, function (err) {
+const server = build();
+// restful api server
+server.listen({ port: process.env.PORT, host: '0.0.0.0' }, function (err) {
   console.log(
     `Welcome to e_board_API app listening at http://${process.env.IP_ADDRESS}:${process.env.PORT}`,
   );
@@ -386,7 +408,8 @@ app.listen({ port: process.env.PORT, host: '0.0.0.0' }, function (err) {
     console.log(err);
   }
 });
-module.exports = build;
+module.exports.build = build;
+module.exports.server = server;
 ```
 ```
 refactor：refactor app.js
@@ -406,8 +429,10 @@ refactor：refactor app.js
     - 取得 .env 中的環境變數
     - 組態跨網域
     - 初始化路由
-    - app.listen
+    - server.listen
     - 紀錄全域狀態下的 error 到日誌
+    - export build
+    - export server
 ```
 
 ## 新增套件 ( Test )
