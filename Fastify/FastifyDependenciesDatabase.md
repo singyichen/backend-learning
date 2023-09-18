@@ -2,7 +2,7 @@
 title: Fastify Dependencies ( Database )
 description: 資料庫套件
 published: true
-date: 2023-08-04T09:11:41.025Z
+date: 2023-09-12T02:51:30.762Z
 tags: fastify, framework
 editor: markdown
 dateCreated: 2022-11-04T08:13:19.416Z
@@ -180,12 +180,21 @@ npx prisma generate --schema=./src/prisma/schema.prisma
 
 - 生成 Prisma Client成功
 ```shell
-Prisma schema loaded from src\prisma\schema.prisma
+Environment variables loaded from .env
+Prisma schema loaded from prisma\schema.prisma
 
-✔ Generated Prisma Client (3.14.0 | library) to .\node_modules\@prisma\client in 83ms
-You can now start using Prisma Client in your code. Reference: https://pris.ly/d/client
+✔ Generated Prisma Client (v5.2.0) to .\node_modules\@prisma\client in 111ms
+Start using Prisma Client in Node.js (See: https://pris.ly/d/client)
+
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
+
+or start using Prisma Client at the edge (See: https://pris.ly/d/accelerate)
+
+import { PrismaClient } from '@prisma/client/edge'
+const prisma = new PrismaClient()
+
+See other ways of importing Prisma Client: http://pris.ly/d/importing-client
 ```
 
 ![npx prisma generate.png](http://192.168.25.60:8000/files/file_storage/35b8b821.png)

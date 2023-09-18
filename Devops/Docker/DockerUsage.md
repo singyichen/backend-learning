@@ -2,7 +2,7 @@
 title: Docker Usage
 description: Docker學習筆記
 published: true
-date: 2023-08-29T02:04:59.875Z
+date: 2023-09-18T00:00:40.619Z
 tags: docker, devops
 editor: markdown
 dateCreated: 2022-07-21T06:34:46.172Z
@@ -134,12 +134,36 @@ docker system df
 ```bash
 df -h
 ```
-## 清理沒有使用的數據，包括 image、已停止的 container 
+## 刪除所有停止的容器、無用的網路、無用的卷以及無用的構建快取
 ```bash
 docker system prune
 ```
 ```bash
 docker system prune --all --force --volumes
+```
+## 清理所有快取，包括停止的容器、無用的網路、無用的卷以及無用的構建快取
+```bash
+docker system prune -a
+```
+
+## 刪除所有未使用的 Docker image
+```bash
+docker image prune
+```
+
+## 刪除所有停止的容器
+```bash
+docker container prune
+```
+
+## 刪除所有未使用的卷
+```bash
+docker volume prune
+```
+
+## 刪除所有無用的構建快取
+```bash
+docker build cache prune
 ```
 
 ## 進入到 container

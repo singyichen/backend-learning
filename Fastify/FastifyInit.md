@@ -2,7 +2,7 @@
 title: Fastify Init
 description: Fastify 專案初始化步驟
 published: true
-date: 2023-09-05T06:17:39.999Z
+date: 2023-09-12T02:48:40.397Z
 tags: fastify, framework
 editor: markdown
 dateCreated: 2022-09-20T01:12:00.943Z
@@ -111,7 +111,7 @@ feat：add dependencies and add format script
 // package.json
   "scripts": {
     "start": "node app.js",
-    "dev": "./node_modules/.bin/nodemon app.js",
+    "dev": "nodemon app.js",
   },
 ```
 ```

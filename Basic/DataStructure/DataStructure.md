@@ -2,7 +2,7 @@
 title: Data Structure
 description: 資料結構
 published: true
-date: 2023-08-28T08:41:00.479Z
+date: 2023-09-13T00:06:16.553Z
 tags: data structure
 editor: markdown
 dateCreated: 2022-12-19T01:28:30.310Z
@@ -19,6 +19,7 @@ dateCreated: 2022-12-19T01:28:30.310Z
 - [ ] [8 Key Data Structures That Power Modern Databases](https://www.youtube.com/watch?v=W_v05d_2RTo&ab_channel=ByteByteGo&loop=0)
 - [ ] [What are the data structures used in daily life?](https://blog.bytebytego.com/p/ep55-data-structures-used-in-daily?utm_source=profile&utm_medium=reader2)
 - [ ] [10 Key Data Structures We Use Every Day](https://www.youtube.com/watch?v=ouipSd_5ivQ&embeds_referring_euri=https%3A%2F%2Fblog.bytebytego.com%2F&feature=emb_imp_woyt&ab_channel=ByteByteGo)
+- [ ] [System Design — 8 Data Structures That Power Your Databases](https://medium.com/@maheshsaini.sec/system-design-8-data-structures-that-power-your-databases-98ea40bf863)
 
 ![8 Data Structures That Power Your Databases.png](http://192.168.25.60:8000/files/file_storage/c53a57a4.png)
 

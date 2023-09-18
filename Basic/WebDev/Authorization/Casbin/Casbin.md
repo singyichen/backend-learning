@@ -2,7 +2,7 @@
 title: Casbin
 description: Casbin 簡介
 published: true
-date: 2023-09-07T03:26:53.862Z
+date: 2023-09-14T05:41:28.317Z
 tags: authorization, casbin
 editor: markdown
 dateCreated: 2023-09-05T01:16:42.899Z
@@ -12,8 +12,9 @@ dateCreated: 2023-09-05T01:16:42.899Z
 - [ ] [[NestJS 帶你飛！] DAY25 - Authorization & RBAC](https://ithelp.ithome.com.tw/articles/10279982)
 - [ ] [Casbin is All You Need —— 存取控制框架 Casbin Ramp Up](https://zhuanlan.zhihu.com/p/533586189)
 
-
 ![casbin logo.png](http://192.168.25.60:8000/files/file_storage/c32e5ba5.png)
+
+# Casbin 心智圖
 
 ![casbin.png](https://edrawcloudpublicus.s3.amazonaws.com/viewer/self/2742053/share/2023-9-5/1693876952/main.svg)
 
@@ -240,4 +241,37 @@ g, role:manager role:staff
 m = g(r.sub, p.sub) && r.act == p.act && r.obj == p.obj
 ```
 
+# Casbin 使用
+在 Casbin 中，model、adapter 和 enforcer 是三個不同的概念，分別代表以下含義：
 
+## Model
+Model（模型）定義了 Casbin 的策略結構。模型是 Casbin 中的核心組件之一，它定義了策略（Policy）規則和角色的基本結構。模型描述了策略如何組織，包括規則類型、角色、資源和操作等。它通過定義策略規則的格式和內容，提供了一種統一的方式來表示和管理訪問控制邏輯。
+
+## Adapter
+Adapter（適配器）負責從外部資源（如數據庫、文件或API）中加載策略數據。適配器是 Casbin 中用於將策略數據存儲到持久化存儲介質（例如數據庫）或從持久化存儲介質中讀取策略數據的介面。適配器負責將策略數據轉換為 Casbin 可理解的格式，並提供對策略的增刪改查操作。Casbin 提供了多種適配器實現，可以與不同的存儲介質（如 MySQL、PostgreSQL、Redis 等）進行交互。
+
+## Enforcer
+Effector（執行器）負責根據策略結果決定是否允許訪問。執行器是 Casbin 的核心組件之一，它負責實際執行訪問控制邏輯。執行器接收輸入的請求，並根據事先定義的策略規則進行評估，來決定是否允許該請求的執行。執行器檢查請求中的角色、資源和操作，並使用模型和適配器進行策略驗證。如果符合策略規則，執行器則允許該請求的執行，否則拒絕該請求。
+
+## Watcher
+Watcher（監視器）負責監視策略的更改。它可以用於在策略發生更改時自動重新加載策略數據，以確保 Casbin 始終使用最新的策略。
+
+## Role Manager
+Role Manager（角色管理器）負責對角色進行管理和操作。它提供了添加、刪除和查詢角色的方法，並為 Casbin 提供了角色相關的功能。
+
+## Dispatcher
+Dispatcher（調度器）負責將請求分發給 Casbin 的其他組件。它協調不同組件之間的通信和操作。
+
+總結來說，Model 定義了策略的結構，Adapter 用於存儲和讀取策略數據，Enforcer 負責執行訪問控制邏輯。這三個組件共同協作，實現了 Casbin 的訪問控制功能。
+
+# Casbin 功能
+## Casbin 有的功能
+- 遵循經典的 {主體，對象，操作} 形式或您定義的自定義形式來執行策略，支持允許和拒絕授權。
+- 處理訪問控制模型及其策略的存儲。
+- 管理角色-用戶映射和角色-角色映射（也稱為 RBAC 中的角色層次結構）。
+- 支持內置的超級用戶，如 `root` 或 `administrator`。超級用戶可以在沒有明確權限的情況下執行任何操作。
+- 提供多個內置操作符來支持規則匹配。例如，`keyMatch` 可以將資源鍵 `/foo/bar` 映射到模式 `/foo*` 。
+
+## Casbin 不具備以下功能
+- 認證（即驗證用戶名和密碼當用戶登錄時）。
+- 管理用戶或角色列表。我認為由項目本身來管理這些實體更方便。通常，用戶擁有自己的密碼，而 Casbin 並非設計為密碼容器。然而，Casbin 會在 RBAC 情境中存儲用戶-角色映射。

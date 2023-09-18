@@ -2,7 +2,7 @@
 title: ABAC
 description: 
 published: true
-date: 2023-08-31T08:03:16.310Z
+date: 2023-09-14T03:55:31.469Z
 tags: abac, authorization, 權限
 editor: markdown
 dateCreated: 2023-04-17T00:56:27.183Z
@@ -30,6 +30,8 @@ dateCreated: 2023-04-17T00:56:27.183Z
 ![abac concept.png](http://192.168.25.60:8000/files/file_storage/9fb4a37c.jpg)
 
 ![ABAC.png](http://192.168.25.60:8000/files/file_storage/de1f6ff8.png)
+
+![Policy Evaluation.png](http://192.168.25.60:8000/files/file_storage/b6a4ebe3.png)
 
 ## 概念
 屬性是使用者、環境、操作、資源的特徵，包含 `name-value` 的訊息。
@@ -93,11 +95,6 @@ PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8v
 對於哪種權限模型更好，這取決於具體的應用場景和需求。RBAC 模型更適用於大型組織的權限管理，可以簡化權限管理流程；而 ABAC 模型更適用於動態權限分配的場景，可以靈活地控制使用者的存取權。
 
 在選擇權限模型時，應該根據具體的應用場景和需求來進行選擇。如果需要簡化權限管理流程，則可以使用 RBAC 模型；如果需要靈活地控制使用者的存取權，則可以使用 ABAC 模型。
-
-# ABAC 實作
-Attribute-Based Access Control (ABAC) 是一種透過 Attribute (屬性) 為依據的權限控管策略。AWS 上提供 Tags (標籤) 的功能，來讓使用者們幫使用資源增加識別性、做 Cost allocation…等辨識需求，甚至可以搭配 IAM Policy 來要求 IAM User 在建立 AWS Resources 時必須同時新增 Tags。
-
-Tags (標籤)也能使用在 IAM User 和 IAM Role 上，搭配 ABAC Policy 可以輕易地實現透過 Tags 配對 Key、Value 決定該 IAM 身份能不能對該 AWS Resources 做操作。
 
 
 

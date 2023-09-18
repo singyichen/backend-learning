@@ -2,7 +2,7 @@
 title: Preparations
 description: 準備事項(技能樹、軟體安裝、環境建置)
 published: true
-date: 2023-08-31T07:56:46.823Z
+date: 2023-09-13T00:03:19.850Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-28T00:51:37.605Z
@@ -193,7 +193,13 @@ https://a7ab-122-147-204-116.jp.ngrok.io/swagger/WebSignin_API
 
 > [nvm download info](https://github.com/coreybutler/nvm-windows)
 {.is-info}
-- 安裝時將 nvm 及 node 都安裝在 D:\SDK
+
+> cmd 使用管理員身分執行
+{.is-warning}
+
+> 安裝時將 nvm 及 node 都安裝在 `D:\SDK`
+{.is-warning}
+
 - install nvm 
 ```bash
 nvm install
@@ -207,10 +213,12 @@ nvm version
 - install this node.js version
 ```bash
 nvm install 14.18.0
+nvm install 18.17.0
 ```
 - use this node.js version
 ```bash
 nvm use 14.18.0
+nvm use 18.17.0
 ```
 - check node.js version
 ```bash
@@ -219,7 +227,13 @@ node -v
 
 ![install node.png](http://192.168.25.60:8000/files/file_storage/94f4088b.png)
 
-- check env location
+- 資料夾 `SDK` 會出現兩個資料夾 `nvm` 與 `nodejs`
+
+![nvm install node.png](http://192.168.25.60:8000/files/file_storage/5bd76ea7.png)
+
+- 設定 `nvm` 與 `nodejs` 的環境變數
+- `NVM_HOME`：`D:\SDK\nvm`
+- `NVM_SYMLINK`：`D:\SDK\nodejs`
 
 ![node 環境變數設定.png](http://192.168.25.60:8000/files/file_storage/91d290b2.png)
  

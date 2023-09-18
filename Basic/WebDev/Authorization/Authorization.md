@@ -2,7 +2,7 @@
 title: Authorization
 description: 
 published: true
-date: 2023-08-31T08:41:32.993Z
+date: 2023-09-14T03:34:53.749Z
 tags: authorization, 授權
 editor: markdown
 dateCreated: 2023-05-18T07:27:01.461Z
@@ -12,6 +12,8 @@ dateCreated: 2023-05-18T07:27:01.461Z
 - [ ] [How do we design a permission system?](https://blog.bytebytego.com/p/ep24-environment-friendly-languages?utm_source=profile&utm_medium=reader2)
 - [ ] [Redesigning your authorization model: the key issues (1/2)](https://www.riskinsight-wavestone.com/en/2020/12/redesigning-your-authorization-model-the-key-issues-1-2/)
 - [ ] [Redesigning your authorization model: the key issues (2/2)](https://www.riskinsight-wavestone.com/en/2021/01/redesigning-your-authorization-model-the-key-issues-2-2/)
+- [ ] [Designing an Authorization Model for an Enterprise](https://cerbos.dev/blog/designing-an-authorization-model-for-an-enterprise)
+- [ ] [3 Most Common Authorization Designs for SaaS Products](https://cerbos.dev/blog/3-most-common-authorization-designs-for-saa-s-products)
 
 # 權限概念
 > - 使用者對使用資源的控制

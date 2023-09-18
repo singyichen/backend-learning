@@ -2,13 +2,14 @@
 title: Fastify Dependencies ( Basic )
 description: 基本套件
 published: true
-date: 2023-08-04T08:59:15.950Z
+date: 2023-09-13T00:16:21.146Z
 tags: fastify, framework
 editor: markdown
 dateCreated: 2022-08-09T05:57:34.299Z
 ---
 
 # 基本套件介紹 ( Basic Dependencies )
+- [ ] [[NodeJS]使用 nodemon 來啟動 node server](https://medium.com/@hayato.chang/nodejs-%E4%BD%BF%E7%94%A8-nodemon-%E4%BE%86%E5%95%9F%E5%8B%95-node-server-c6293260278e)
 ## nodemon
 > 檢測你的程式碼是否有任何更改並自動重新啟動服務，這時只要重整你的瀏覽器就能看到更動
 - 自動重啟應用程式
@@ -33,7 +34,7 @@ npm install nodemon --save-dev
 ```json
 // package.json
 "scripts": {
-    "dev": "./node_modules/.bin/nodemon src/app",
+    "dev": "nodemon app.js",
 },
 ```
 > 開發階段可使用，當正式佈署到 docker 時須移除
