@@ -2,7 +2,7 @@
 title: Casbin
 description: Casbin 簡介
 published: true
-date: 2023-09-14T05:41:28.317Z
+date: 2023-09-20T05:44:14.277Z
 tags: authorization, casbin
 editor: markdown
 dateCreated: 2023-09-05T01:16:42.899Z
@@ -11,6 +11,7 @@ dateCreated: 2023-09-05T01:16:42.899Z
 # Casbin
 - [ ] [[NestJS 帶你飛！] DAY25 - Authorization & RBAC](https://ithelp.ithome.com.tw/articles/10279982)
 - [ ] [Casbin is All You Need —— 存取控制框架 Casbin Ramp Up](https://zhuanlan.zhihu.com/p/533586189)
+- [ ] [Casbin online editor](https://casbin.org/editor/)
 
 ![casbin logo.png](http://192.168.25.60:8000/files/file_storage/c32e5ba5.png)
 

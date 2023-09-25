@@ -2,7 +2,7 @@
 title: Fastify Dependencies ( Authorization )
 description: 權限套件
 published: true
-date: 2023-09-18T05:39:56.916Z
+date: 2023-09-20T03:16:22.082Z
 tags: fastify, authorization, framework
 editor: markdown
 dateCreated: 2023-09-05T00:06:22.698Z
@@ -12,14 +12,23 @@ dateCreated: 2023-09-05T00:06:22.698Z
 - [ ] [ACCESS CONTROL IN NODE.JS WITH FASTIFY AND CASBIN](https://www.nearform.com/blog/access-control-node-js-fastify-and-casbin/)
 - [ ] [Supported Models Examples](https://github.com/casbin/casbin/tree/master/examples)
 
-## 比較表
-| 功能 | fastify-casbin | fastify-casbin-rest |
-|---|:--:|:--:|
-| 可用於任何類型的 Fastify 應用程式 | ✓ | ✓ |
-| 提供簡單的 API 來檢查權限 | ✓ | ✓ |
-| 支援路徑和操作來匹配請求 | ✕ | ✓ |
-| 支援 HTTP 狀態碼來響應拒絕請求 | ✕ | ✓ |
-| 支援自定義錯誤訊息 | ✕ | ✓ |
+## 套件功能比較表
+| 功能 | casbin | fastify-casbin | fastify-casbin-rest |
+|---|:--:|:--:|:--:|
+| 可用於任何類型的 Fastify 應用程式 | ✓ | ✓ | ✓ |
+| 提供簡單的 API 來檢查權限 | ✓ | ✓ | ✓ |
+| 支援路徑和操作來匹配請求 | ✕ | ✕ | ✓ |
+| 支援 HTTP 狀態碼來響應拒絕請求 | ✕ | ✕ | ✓ |
+| 支援自定義錯誤訊息 | ✕ | ✕ | ✓ |
+| 權限 API 完整度 | ✓ | ✕ | ✕ |
+
+## 不同權限使用套件建議表
+| 權限 | casbin| fastify-casbin | fastify-casbin-rest |
+| 功能 | 提供權限的 API | fastify-casbin-rest 相依套件 | 支援路徑和操作來匹配請求 |
+|---|:--:|:--:|:--:|
+| RBAC | ✓ | ✓ | ✓ |
+| ABAC | ✓ | ✕ | ✕ |
+
 
 ## fastify-casbin
 > - A plugin for Fastify that adds support for Casbin.
@@ -28,6 +37,9 @@ dateCreated: 2023-09-05T00:06:22.698Z
 {.is-info}
 
 ### Install
+> 注意有相依套件
+{.is-warning}
+
 ```shell
 npm i casbin fastify-casbin --save
 ```
@@ -278,7 +290,7 @@ module.exports = router;
 
 ### Install
 ```shell
-npm i fastify-casbin-rest --save
+npm i casbin fastify-casbin fastify-casbin-rest --save
 ```
 ### Usage
 > [reference](https://github.com/nearform/fastify-casbin-rest)
@@ -440,7 +452,7 @@ INSERT INTO casbin_rule (ptype, v0, v1, v2) VALUES
   ('g', 'manager', 'user', null),
   ('g', '11542', 'admin', null),
   ('g', '11548', 'user', null),
-  ('g', '11284', 'manager', null),
+  ('g', '11284', 'manager', null);
 ```
 
 ## casbin
@@ -458,5 +470,286 @@ npm i fastify-casbin --save
 {.is-info}
 
 
+- 在 `plugin` 中新增 `enforcer.js`
+
+```js
+// enforcer.js
+/**
+ * @description enforcer plugin
+ */
+
+const { newEnforcer } = require('casbin');
+const createCasbinConfig = require('../../config/casbinConfig');
+
+async function createEnforcer() {
+  const options = await createCasbinConfig();
+  const enforcer = await newEnforcer(options.model, options.adapter);
+  return enforcer;
+}
+
+module.exports = createEnforcer;
+```
 
 
+#### ABAC 權限範例
+- `abac_model.conf`：`sub_rule` 設定使用權限條件
+
+```
+[request_definition]
+r = sub, obj, act
+
+[policy_definition]
+p = sub_rule, obj, act
+
+[policy_effect]
+e = some(where (p.eft == allow))
+
+[matchers]
+m = eval(p.sub_rule) && r.obj == p.obj && r.act == p.act
+```
+
+- 寫入測試資料
+
+```
+INSERT INTO casbin_rule (ptype, v0, v1, v2) VALUES
+  ('p', 'r.sub.Age > 18', '/data1', 'read'),
+  ('p', 'r.sub.Age < 60', '/data2', 'write');
+``` 
+
+- `casbinConfig.js`：使用 abac 的 model conf 檔
+
+```js
+// casbinConfig.js
+/**
+ * @description casbin config
+ */
+
+const { join } = require('path');
+const { PrismaAdapter } = require('casbin-prisma-adapter');
+const prismaClientService = require('../src/ormService/prismaClientService');
+async function createCasbinConfig() {
+  const model = join(__dirname, '../src/casbin/abac', 'abac_model.conf');
+  const adapter = await PrismaAdapter.newAdapter(prismaClientService.prisma);
+  // const adapter = join(__dirname, '../src/casbin/abac', 'abac_policy.csv');
+  const options = {
+    model: model, // the model configuration
+    adapter: adapter, // the adapter
+  };
+  return options;
+}
+
+module.exports = createCasbinConfig;
+```
+
+- 使用 `enforcer.enforce(query, '/data1', 'read')` 做權限檢核
+
+```js
+// root.js
+'use strict';
+/**
+ * @description root API 路由
+ */
+const errorLogger = require('../plugin/logger');
+const enforcerCreator = require('../plugin/enforcer');
+const { permissionDeniedInfo } = require('../utils/errorInfo');
+async function router(fastify, opts) {
+  fastify.get('/abac', {
+    handler: async (request, reply) => {
+      try {
+        const enforcer = await enforcerCreator();
+        const query = request.query;
+        const p = await enforcer.enforce(query, '/data1', 'read');
+        if (!p) {
+          const age = query.Age;
+          const message = `Age ${age} 無 /data1 read 權限`;
+          reply.code(403).send({
+            statusCode: permissionDeniedInfo.statusCode,
+            code: permissionDeniedInfo.code,
+            error: permissionDeniedInfo.error,
+            message: message,
+          });
+        }
+        reply.send({ hello: 'world' });
+      } catch (error) {
+        errorLogger.error(error);
+        reply.send({ status: -1, message: error.message });
+        console.log(error);
+      }
+    },
+  });
+}
+
+module.exports = router;
+
+```
+
+- API 需在 `request.query` 傳入檢核參數
+
+```
+{{localUrl}}/?Age=20
+```
+
+#### RBAC 權限範例
+- `casbinConfig.js`：使用 rbac 的 model conf 檔
+
+```js
+// casbinConfig.js
+/**
+ * @description casbin config
+ */
+
+const { join } = require('path');
+const { PrismaAdapter } = require('casbin-prisma-adapter');
+const prismaClientService = require('../src/ormService/prismaClientService');
+async function createCasbinConfig() {
+  const model = join(__dirname, '../src/casbin/rbac', 'rbac_model.conf');
+  const adapter = await PrismaAdapter.newAdapter(prismaClientService.prisma);
+  // const adapter = join(__dirname, '../src/casbin/rbac', 'rbac_policy.csv');
+  const options = {
+    model: model, // the model configuration
+    adapter: adapter, // the adapter
+  };
+  return options;
+}
+
+module.exports = createCasbinConfig;
+```
+
+- 可在 router 直接設定檢核權限邏輯
+
+```js
+// root.js
+'use strict';
+/**
+ * @description root API 路由
+ */
+const errorLogger = require('../plugin/logger');
+async function router(fastify, opts) {
+  fastify.get('/rbac', {
+    casbin: {
+      rest: {
+        getSub: (request) => request.query.user_id,
+        getObj: '/',
+        getAct: 'get',
+      },
+    },
+    handler: async (request, reply) => {
+      try {
+        reply.send({ hello: 'world' });
+      } catch (error) {
+        errorLogger.error(error);
+        reply.send({ status: -1, message: error.message });
+        console.log(error);
+      }
+    },
+  });
+}
+
+module.exports = router;
+```
+
+- 可在 service 中使用 `enforcer` 提供的 API 做權限相關功能
+
+```js
+// permissionsService.js
+const errorLogger = require('../../../../plugin/logger');
+const enforcerCreator = require('../../../../plugin/enforcer');
+/**
+ * @description permissions service
+ */
+class PermissionsService {
+  /**
+   * @description 取得多筆角色權限
+   * @param { string } role 角色
+   * @returns { Boolean } Boolean
+   */
+  async getPermissionsForUser(role) {
+    try {
+      const enforcer = await enforcerCreator();
+      return await enforcer.getPermissionsForUser(role);
+    } catch (error) {
+      errorLogger.error(error);
+      console.log(error);
+    }
+  }
+  /**
+   * @description 新增單筆角色權限
+   * @param { string } role 角色
+   * @param { array } permission 權限
+   * @returns { Boolean } Boolean
+   */
+  async addPermissionForUser(role, permission) {
+    try {
+      const enforcer = await enforcerCreator();
+      return await enforcer.addPermissionForUser(role, ...permission);
+    } catch (error) {
+      errorLogger.error(error);
+      console.log(error);
+    }
+  }
+  /**
+   * @description 刪除單筆角色權限
+   * @param { string } role 角色
+   * @param { array } permission 權限
+   * @returns { Boolean } Boolean
+   */
+  async deletePermissionForUser(role, permission) {
+    try {
+      const enforcer = await enforcerCreator();
+      return await enforcer.deletePermissionForUser(role, ...permission);
+    } catch (error) {
+      errorLogger.error(error);
+      console.log(error);
+    }
+  }
+  /**
+   * @description 取得多筆人員角色
+   * @param { string } role 角色
+   * @returns { Boolean } Boolean
+   */
+  async getUsersForRole(role) {
+    try {
+      const enforcer = await enforcerCreator();
+      return await enforcer.getUsersForRole(role);
+    } catch (error) {
+      errorLogger.error(error);
+      console.log(error);
+    }
+  }
+  /**
+   * @description 新增單筆人員角色
+   * @param { string } id id
+   * @param { string } role 角色
+   * @returns { Boolean } Boolean
+   */
+  async addRoleForUser(id, role) {
+    try {
+      const enforcer = await enforcerCreator();
+      return await enforcer.addRoleForUser(id, role);
+    } catch (error) {
+      errorLogger.error(error);
+      console.log(error);
+    }
+  }
+  /**
+   * @description 刪除單筆人員角色
+   * @param { string } id id
+   * @param { string } role 角色
+   * @returns { Boolean } Boolean
+   */
+  async deleteRoleForUser(id, role) {
+    try {
+      const enforcer = await enforcerCreator();
+      return await enforcer.deleteRoleForUser(id, role);
+    } catch (error) {
+      errorLogger.error(error);
+      console.log(error);
+    }
+  }
+}
+
+module.exports = PermissionsService;
+
+```
+
+#### RBAC+ABAC 權限範例

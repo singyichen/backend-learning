@@ -2,7 +2,7 @@
 title: Fastify Dependencies ( Basic )
 description: 基本套件
 published: true
-date: 2023-09-13T00:16:21.146Z
+date: 2023-09-23T08:07:34.243Z
 tags: fastify, framework
 editor: markdown
 dateCreated: 2022-08-09T05:57:34.299Z
@@ -10,6 +10,8 @@ dateCreated: 2022-08-09T05:57:34.299Z
 
 # 基本套件介紹 ( Basic Dependencies )
 - [ ] [[NodeJS]使用 nodemon 來啟動 node server](https://medium.com/@hayato.chang/nodejs-%E4%BD%BF%E7%94%A8-nodemon-%E4%BE%86%E5%95%9F%E5%8B%95-node-server-c6293260278e)
+- [ ] [後端基礎：資安細節隨手筆記](https://hugh-program-learning-diary-js.medium.com/%E5%BE%8C%E7%AB%AF%E5%9F%BA%E7%A4%8E-%E8%B3%87%E5%AE%89%E7%B4%B0%E7%AF%80%E9%9A%A8%E6%89%8B%E7%AD%86%E8%A8%98-deb1e6252944)
+
 ## nodemon
 > 檢測你的程式碼是否有任何更改並自動重新啟動服務，這時只要重整你的瀏覽器就能看到更動
 - 自動重啟應用程式
