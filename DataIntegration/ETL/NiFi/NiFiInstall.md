@@ -2,7 +2,7 @@
 title: NiFi Install
 description: NiFi 安裝
 published: true
-date: 2023-07-24T06:12:15.651Z
+date: 2023-09-28T00:31:13.076Z
 tags: nifi
 editor: markdown
 dateCreated: 2023-07-06T00:50:19.373Z
@@ -29,6 +29,9 @@ NiFi 有本地部署（Running NiFi locally）和 Docker 部署（Running NiFi i
 
 ## apache/nifi
 - 目前使用 v1.20.0
+>  使用最新版會有資料庫連接的問題( `Connection timed out` )，需降版處理
+{.is-warning}
+
 
 # 安裝
 ## 專案資料夾

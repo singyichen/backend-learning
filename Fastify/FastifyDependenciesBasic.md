@@ -2,7 +2,7 @@
 title: Fastify Dependencies ( Basic )
 description: 基本套件
 published: true
-date: 2023-09-23T08:07:34.243Z
+date: 2023-09-26T09:09:37.022Z
 tags: fastify, framework
 editor: markdown
 dateCreated: 2022-08-09T05:57:34.299Z
@@ -288,3 +288,162 @@ npm install dotenv --save-dev
 在 fastify 專案中，已使用套件 `@fastify/env` 取得 `.env` 的資訊，這此使用 `dotenv` 是為了使用 jest 進行測試時能取得 `.env ` 的設定檔
 
 - 參考資料：[Using .env files for unit testing with jest](https://stackoverflow.com/questions/50259025/using-env-files-for-unit-testing-with-jest)
+
+
+## bcrypt
+> 一種專門用於生成密碼雜湊的密碼雜湊函數。它使用鹽和雜湊演算法來產生一個唯一的雜湊值，該雜湊值很難被破解。它非常安全和高效，常用於密碼的加密和驗證。
+
+> [reference](https://www.npmjs.com/package/bcrypt) 
+{.is-info}
+
+### Install
+```shell
+npm install bcrypt --save
+```
+
+### Usage
+> - [reference](https://github.com/kelektiv/node.bcrypt.js)
+
+
+## crypto-js
+> 一個功能強大的 JavaScript 加密函式庫，提供了多種加密和解密算法。包括 AES、RSA、SHA-256 和 MD5。它支援各種加密演算法，但可能不如 Bcrypt 安全或高效。
+
+> [reference](https://www.npmjs.com/package/crypto-js) 
+{.is-info}
+
+### Install
+```shell
+npm install crypto-js --save
+```
+
+### Usage
+> - [reference](https://github.com/brix/crypto-js)
+
+| 功能 | CryptoJS | Bcrypt | 
+|--|:--:|:--:|
+| 類型 | 加密庫 | 密碼雜湊函數 | 
+| 支援的加密演算法 | AES、RSA、SHA-256、MD5 | 一種 |
+| 用途 | 加密和解密數據、生成密碼雜湊 | 生成密碼雜湊 |
+| 安全性 |	可能不如 Bcrypt 安全 | 非常安全 |
+| 效率 | 可能不如 Bcrypt 高效 |	高效 |
+| 易用性 | 提供了易於使用的 API | 易於使用 |
+
+- 以下使用 Dropbox 的密碼加密流程實作
+
+Dropbox 把密碼先經過 `SHA512` 之後，在經過每個使用者加不同的鹽之後，再用難度為 10 的 `bcrypt` 處理過。 而 `bcrypt` 被設計成一種很慢，很難以通過字定義硬體或 GPUs 的方式去加速運算。最後再使用 `AES256` 加密
+
+![Multiple layers of protection for passwords.png](http://192.168.25.60:8000/files/file_storage/b93b3281.png)
+
+```js
+// verificationService.js
+  /**
+   * @description 使用 SHA512 對明文密碼進行雜湊並加鹽處理
+   * @param { string } password 密碼
+   * @returns { string } bcryptHash 加鹽過後的密碼
+   */
+  async encryptWithSHA512(password) {
+    try {
+      // 生成一個用於每個用戶的鹽
+      // 成本因子可以根據你的需求進行調整，鹽的複雜度，數字越高，加密強度越高，但處理時間也越長
+      const salt = bcrypt.genSaltSync(10);
+      // 使用 SHA512 對明文密碼進行雜湊
+      const sha512Hash = CryptoJS.SHA512(password).toString();
+      // 將明文密碼的 SHA512 雜湊值和鹽值進行雜湊加密，得到加鹽過後的密碼
+      const bcryptHash = await bcrypt.hash(sha512Hash, salt);
+      return bcryptHash;
+    } catch (error) {
+      errorLogger.error(error);
+      console.log(error);
+    }
+  }
+
+  /**
+   * @description 使用 AES256 和一個密鑰 對 bcryptHash 進行加密
+   * @param { string } bcryptHash 加鹽過後的密碼
+   * @param { string } pepper 密鑰
+   * @returns { string } encryptedHash 加密過後的加鹽密碼
+   */
+  async encryptWithAES256(bcryptHash, pepper) {
+    try {
+      // 將 pepper 轉換為 key，key 用於加密過程中的金鑰
+      const key = CryptoJS.enc.Utf8.parse(pepper);
+      // 使用 key 對 bcryptHash 進行 AES256 加密，並指定加密模式為 ECB
+      const encryptedHash = CryptoJS.AES.encrypt(bcryptHash, key, {
+        mode: CryptoJS.mode.ECB,
+      }).toString();
+      return encryptedHash;
+    } catch (error) {
+      errorLogger.error(error);
+      console.log(error);
+    }
+  }
+
+  /**
+   * @description 對密碼進行加密
+   * @param { string } password 密碼
+   * @returns { string } encryptedPassword 加密後的密碼
+   */
+  async encryptPassword(password) {
+    try {
+      const bcryptHash = await this.encryptWithSHA512(password);
+      const encryptedPassword = await this.encryptWithAES256(
+        bcryptHash,
+        process.env.PEPPER,
+      );
+      return encryptedPassword;
+    } catch (error) {
+      errorLogger.error(error);
+      console.log(error);
+    }
+  }
+
+  /**
+   * @description 使用密鑰對 bcryptHash 進行解密
+   * @param { string } encryptedHash 加密過後的加鹽密碼
+   * @param { string } pepper 密鑰
+   * @returns { string } decryptedHash 解密過後的加鹽密碼
+   */
+  decryptWithAES256(encryptedHash, pepper) {
+    try {
+      // 將 pepper 轉換為 key，key 用於解密過程中的金鑰
+      const key = CryptoJS.enc.Utf8.parse(pepper);
+      // 使用 key 對 bcryptHash 進行 AES256 解密，並指定解密模式為 ECB
+      const decrypted = CryptoJS.AES.decrypt(encryptedHash, key, {
+        mode: CryptoJS.mode.ECB,
+      });
+      const decryptedHash = CryptoJS.enc.Utf8.stringify(decrypted);
+      return decryptedHash;
+    } catch (error) {
+      errorLogger.error(error);
+      console.log(error);
+    }
+  }
+  /**
+   * @description 驗證密碼
+   * @param { string } email 電郵
+   * @param { string } password 密碼
+   * @returns { Boolean } 密碼是否相符
+   */
+  async verifyPassword(email, password) {
+    try {
+      const userData = await prismaClientService.prisma.user.findUnique({
+        where: {
+          email: email,
+        },
+      });
+      // 解密過後的雜湊值（從 DB 中取得的加密密碼）
+      const decryptedHash = this.decryptWithAES256(
+        userData.password,
+        process.env.PEPPER,
+      );
+      // 將明文密碼轉換為 SHA512 雜湊值
+      const sha512Hash = CryptoJS.SHA512(password).toString();
+      // 將使用者輸入的雜湊值與解密後的雜湊值進行比較
+      const isMatch = bcrypt.compareSync(sha512Hash, decryptedHash);
+      return isMatch;
+    } catch (error) {
+      errorLogger.error(error);
+      console.log(error);
+    }
+  }
+```

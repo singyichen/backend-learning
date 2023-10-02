@@ -2,7 +2,7 @@
 title: Docker Usage
 description: Docker學習筆記
 published: true
-date: 2023-09-18T00:00:40.619Z
+date: 2023-09-25T08:52:31.718Z
 tags: docker, devops
 editor: markdown
 dateCreated: 2022-07-21T06:34:46.172Z
@@ -64,7 +64,9 @@ docker build -t e_board_api:0.1.0 --no-cache .
 ```bash
 docker run -p <app-port>:<docker-port> --restart=always  -v <本機實體絕對路徑>：<container 資料夾絕對路徑> <image-name:tag>
 ```
-- 跑在背景
+
+- `-d`：跑在背景執行
+
 ```bash
 docker run -d --name <app-name> -p <app-port>:<docker-port> --restart=<policy> -v <本機實體絕對路徑>：<container 資料夾絕對路徑>  <image-name:tag>
 ```

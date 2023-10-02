@@ -2,7 +2,7 @@
 title: Airflow Install
 description: Airflow 安裝
 published: true
-date: 2023-07-24T03:58:29.160Z
+date: 2023-09-28T00:31:44.255Z
 tags: airflow
 editor: markdown
 dateCreated: 2023-05-23T09:18:19.253Z
@@ -35,6 +35,8 @@ Airflow 有本地部署（Running Airflow locally）和 Docker 部署（Running 
 
 ## apache/airflow
 - 目前使用 v2.6.1
+>  使用最新版會有資料庫連接的問題( `Connection timed out` )，需降版處理
+{.is-warning}
 
 # 安裝
 ## 專案資料夾

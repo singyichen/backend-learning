@@ -2,7 +2,7 @@
 title: Docker Install
 description: Docker 安裝
 published: true
-date: 2023-08-18T01:40:22.365Z
+date: 2023-09-25T08:54:09.352Z
 tags: docker, devops
 editor: markdown
 dateCreated: 2022-04-29T01:11:05.872Z
@@ -11,8 +11,10 @@ dateCreated: 2022-04-29T01:11:05.872Z
 # Docker Install
  
 # 環境說明
-**作業系統**：Ubuntu 20.04 Server LTS
-**安裝套件**：除了 OpenSSH 外，其餘套件不需要安裝，以便維持系統的乾淨。
+## 作業系統
+- Ubuntu 20.04 Server LTS
+## 安裝套件
+- 除了 OpenSSH 外，其餘套件不需要安裝，以便維持系統的乾淨。
 
 # 安裝環境
 ## 下載 VirtualBox
