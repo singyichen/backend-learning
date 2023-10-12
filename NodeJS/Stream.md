@@ -2,7 +2,7 @@
 title: Stream
 description: 
 published: true
-date: 2023-09-01T03:52:17.576Z
+date: 2023-10-06T00:09:15.813Z
 tags: nodejs
 editor: markdown
 dateCreated: 2023-09-01T02:50:49.816Z
@@ -11,6 +11,7 @@ dateCreated: 2023-09-01T02:50:49.816Z
 # Stream
 - [ ] [Day9 NodeJS-Buffer與Stream](https://ithelp.ithome.com.tw/articles/10271443)
 
+![Buffer and Streams.png](http://192.168.25.60:8000/files/file_storage/d18223ca.png)
 
 # Stream 概念
 > `Stream` (串流)指的是資料傳遞資料的序列流，用具體一點的物質來說明的話，資料和串流就像河流上漂著的東西和河流，資料會順著串流移動，移動至處理資料的目標，在許多情況下也可能會藉由緩衝先暫存部分順著串流移動的資料，再一併傳遞進行資料處理。

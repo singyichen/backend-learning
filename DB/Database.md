@@ -2,7 +2,7 @@
 title: Database
 description: 
 published: true
-date: 2023-08-28T08:40:12.816Z
+date: 2023-10-05T23:50:55.649Z
 tags: db, database
 editor: markdown
 dateCreated: 2023-05-15T00:29:55.477Z
@@ -21,7 +21,7 @@ dateCreated: 2023-05-15T00:29:55.477Z
 - [ ] [Factors to Consider in Database Selection](https://blog.bytebytego.com/p/factors-to-consider-in-database-selection?utm_source=profile&utm_medium=reader2)
 - [ ] [Key Steps in the Database Selection Process](https://blog.bytebytego.com/p/key-steps-in-the-database-selection?utm_source=profile&utm_medium=reader2)
 - [ ] [MongoDB vs PostgreSQL: What to consider when choosing a database](https://learningdaily.dev/mongodb-vs-postgresql-what-to-consider-when-choosing-a-database-2392d110feaa)
-
+- [ ] [System Design Interview: Mastering Databases](https://levelup.gitconnected.com/system-design-interview-mastering-databases-9fb40bb561cd)
 
 ## Database Components
 ![Database Components.png](http://192.168.25.60:8000/files/file_storage/09d2de10.png)

@@ -2,7 +2,7 @@
 title: Migration
 description: 
 published: true
-date: 2023-07-17T06:25:10.511Z
+date: 2023-10-04T01:24:10.929Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-07T01:47:56.437Z
@@ -180,4 +180,42 @@ SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE' AND TABLE_
 -- 計算 DB 中的 table 數量
 SELECT (*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE' AND TABLE_SCHEMA='public' ORDER BY TABLE_NAME;
 ```
+
+# 在 PostgreSQL 匯入資料
+## 用 SSMS 中的匯出資料功能
+- 選取匯出 DB 按右鍵 ➔ 工作 ➔ 匯出資料
+
+![ssms 匯出資料精靈.png](http://192.168.25.60:8000/files/file_storage/494255b7.png)
+
+## 選擇資料來源
+- 資料來源：`SQL Server Native Client 11.0`
+- 使用 SQL Server 驗證
+
+![ssms 匯出資料精靈 選擇資料來源.png](http://192.168.25.60:8000/files/file_storage/67822480.png)
+
+## 選擇目的地
+- 目的地： .NET Framework Data Provider for Odbc
+- ConnectingSring：`Driver={PostgreSQL UNICODE};Server=192.168.25.59;Port=5432;Database=signin;UID=11542;PWD=自己的密碼`
+
+![ssms 匯出資料精靈 選擇目的地.png](http://192.168.25.60:8000/files/file_storage/07cfb66f.png)
+
+## 選取來源資料表和檢視
+- 選取要匯出的表格 ➔ 編輯對應 ➔ 可調整欄位資料型態
+- 若目的地已經有表格可勾選 `卸除並重新建立目的地資料表` 這個選項
+
+![ssms 匯出資料精靈 選取來源資料表和檢視.png](http://192.168.25.60:8000/files/file_storage/2a4348e7.png)
+
+- 可修改成自定義的建表格語法，自動生成的 SQL 不見得正確
+
+![ssms 匯出資料精靈 選取來源資料表和檢視 編輯對應 編輯 SQL.png](http://192.168.25.60:8000/files/file_storage/48c0bc3c.png)
+
+## 成功執行
+
+![ssms 匯出資料精靈 已成功執行.png](http://192.168.25.60:8000/files/file_storage/f58e9023.png)
+
+
+
+
+
+
 

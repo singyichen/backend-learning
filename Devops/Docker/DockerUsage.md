@@ -2,7 +2,7 @@
 title: Docker Usage
 description: Docker學習筆記
 published: true
-date: 2023-09-25T08:52:31.718Z
+date: 2023-10-02T01:19:52.346Z
 tags: docker, devops
 editor: markdown
 dateCreated: 2022-07-21T06:34:46.172Z
@@ -51,8 +51,12 @@ dateCreated: 2022-07-21T06:34:46.172Z
 ```bash
 docker build -t <image-name> --no-cache . 
 ```
-> - image-name 需全部**小寫**
+- `-t`：指定映像檔的名稱
+- `.`： `dockerfile` 所在的路徑
+
+> - `image-name` 需全部**小寫**
 > - 最後一定要記得加 **.** 
+
 
 - example
 

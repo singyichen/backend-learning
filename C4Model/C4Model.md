@@ -2,7 +2,7 @@
 title: C4 Model
 description: 
 published: true
-date: 2023-09-14T23:49:40.714Z
+date: 2023-10-02T01:31:15.590Z
 tags: c4 model
 editor: markdown
 dateCreated: 2022-05-06T00:45:59.610Z
@@ -17,12 +17,15 @@ dateCreated: 2022-05-06T00:45:59.610Z
 - [ ] [[Other][Tools]畫軟體系統圖- C4 Model 軟體系統建模的圖形表示技巧](https://stevenjhu.com/2022/04/28/othertools%E5%B7%A5%E7%A8%8B%E5%B8%AB%E7%95%AB%E5%9C%96-c4-model-%E8%BB%9F%E9%AB%94%E7%B3%BB%E7%B5%B1%E5%BB%BA%E6%A8%A1%E7%9A%84%E5%9C%96%E5%BD%A2%E8%A1%A8%E7%A4%BA%E6%8A%80%E5%B7%A7/)
 - [ ] [7 modelling languages for software architecture](https://icepanel.medium.com/7-modelling-languages-for-software-architecture-2ed3a9f75343)
 - [ ] [How to create interactive zoomable software architecture diagrams](https://icepanel.medium.com/how-to-create-interactive-zoomable-software-architecture-diagrams-6724f1d087ac)
+- [ ] [C4 model for system architecture design](https://icepanel.io/blog/2022-10-03-c4-model-for-system-architecture-design?utm_source=onboarding&utm_medium=email&utm_campaign=onboarding_c4_model)
 # Concept  
 - 用來描述軟體架構的概念
 - 架構圖的視野由高至低分為四個等級，第一等級是最上層也是最粗略的。
 - 主要有 4 層，像地圖一樣可以縮放，可以給不同的人看自己想關注的部分，一般可做前三層即可
 - 低層的架構圖應顯示特定模組的細節，而高層的架構圖應隱藏細節，提供較宏觀的概覽
 - C4 模型是軟體系統建模的圖形表示技巧。同時市面上還有其他的工具、做法方式，比較知名的就是 UML、ArchiMate 和 SysML，但是 UML ..這類本身過於複雜，說實話，9成的人看圖都只是看個大概而已，過於複雜的圖難以傳承以外，耗時又耗力，所以基本上大部分的狀況下是不需要過於複雜的圖形表示，可能只要線和盒子就好。故 C4Model 就是一個很好的呈現方式。
+
+![C4Model cheat sheet.png](http://192.168.25.60:8000/files/file_storage/72e0c36a.png)
 
 ![C4Model why 4 layers.png](http://192.168.25.60:8000/files/file_storage/5fca3ff2.png)
 

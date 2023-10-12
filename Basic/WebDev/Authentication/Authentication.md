@@ -2,7 +2,7 @@
 title: Authentication
 description: 
 published: true
-date: 2023-09-11T00:32:06.583Z
+date: 2023-10-02T01:12:19.504Z
 tags: authentication, 認證
 editor: markdown
 dateCreated: 2023-05-18T03:22:11.625Z
@@ -35,6 +35,8 @@ dateCreated: 2023-05-18T03:22:11.625Z
 ![API keys vs tokens.png](http://192.168.25.60:8000/files/file_storage/f429ade5.png)
 
 # Basics of Authentication
+
+![Explaining Sessions Token JWT SSO and OAuth in One Diagram.png](http://192.168.25.60:8000/files/file_storage/b6461645.png)
 
 ![roadmap-basic-authentication.png](http://192.168.25.60:8000/files/file_storage/dcedea3c.png)
 

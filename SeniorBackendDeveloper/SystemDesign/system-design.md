@@ -2,7 +2,7 @@
 title: System Design
 description: 
 published: true
-date: 2023-09-25T00:39:33.896Z
+date: 2023-10-06T00:00:47.249Z
 tags: 
 editor: markdown
 dateCreated: 2023-05-18T00:22:34.726Z
@@ -36,6 +36,7 @@ dateCreated: 2023-05-18T00:22:34.726Z
 - [ ] [Architecting a Scalable and Fault-Tolerant System for a Million Users](https://levelup.gitconnected.com/building-a-fault-tolerant-system-architecting-for-scalability-d56c5426d5db)
 - [ ] [前端開發者也可以懂的基礎 System Design](https://medium.com/starbugs/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC%E8%80%85%E4%B9%9F%E5%8F%AF%E4%BB%A5%E6%87%82%E7%9A%84%E5%9F%BA%E7%A4%8E-system-design-5468e0f43033)
 - [ ] [EP78: How to Crack Any System Design Interview](https://blog.bytebytego.com/p/ep78-how-to-crack-any-system-design?utm_source=profile&utm_medium=reader2)
+- [ ] [Modern System Architecture. Qualitative and quantitative analysis. Study case for analyzing Architecture tradeoffs.](https://medium.com/@asom_igor/modern-system-architecture-trade-offs-analysis-45d4338d7c2)
 ## Example
 - [ ] [Payment system](https://blog.bytebytego.com/p/payment-system?utm_source=profile&utm_medium=reader2)
 - [ ] [Low Latency Stock Exchange Design](https://blog.bytebytego.com/p/low-latency-stock-exchange?utm_source=profile&utm_medium=reader2)
@@ -68,6 +69,8 @@ dateCreated: 2023-05-18T00:22:34.726Z
 - [ ] [How did Uber solve data consistency problem?](https://medium.com/@dmosyan/how-did-uber-solve-data-consistency-problem-dcdd39bd3ed6)
 - [ ] [EP76: Netflix's Tech Stack](https://blog.bytebytego.com/p/ep76-netflixs-tech-stack?utm_source=profile&utm_medium=reader2)
 - [ ] [System Design: Uber](https://mail.google.com/mail/u/0/#inbox/FMfcgzGtxKXLtxjSvBQZqDTrdJVQmHJM)
+- [ ] [system-design-twitter](https://medium.com/@karan99/system-design-twitter-793ab06c9355)
+- [ ] [How Discord Stores Trillions of Messages — Curious Case of System Design](https://levelup.gitconnected.com/how-discord-stores-trillions-of-messages-curious-case-of-system-design-b6328f387196)
 ## Problem
 - [ ] [How to avoid double payment?](https://blog.bytebytego.com/p/how-to-avoid-double-payment?utm_source=profile&utm_medium=reader2)
 - [ ] [Payment reconciliation](https://blog.bytebytego.com/p/payment-reconciliation?utm_source=profile&utm_medium=reader2)
