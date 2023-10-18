@@ -2,7 +2,7 @@
 title: Database
 description: 
 published: true
-date: 2023-10-05T23:50:55.649Z
+date: 2023-10-16T00:58:10.033Z
 tags: db, database
 editor: markdown
 dateCreated: 2023-05-15T00:29:55.477Z
@@ -22,6 +22,7 @@ dateCreated: 2023-05-15T00:29:55.477Z
 - [ ] [Key Steps in the Database Selection Process](https://blog.bytebytego.com/p/key-steps-in-the-database-selection?utm_source=profile&utm_medium=reader2)
 - [ ] [MongoDB vs PostgreSQL: What to consider when choosing a database](https://learningdaily.dev/mongodb-vs-postgresql-what-to-consider-when-choosing-a-database-2392d110feaa)
 - [ ] [System Design Interview: Mastering Databases](https://levelup.gitconnected.com/system-design-interview-mastering-databases-9fb40bb561cd)
+- [ ] [CRUD猴的一生(上)](https://ithelp.ithome.com.tw/articles/10318902)
 
 ## Database Components
 ![Database Components.png](http://192.168.25.60:8000/files/file_storage/09d2de10.png)
@@ -37,6 +38,9 @@ dateCreated: 2023-05-15T00:29:55.477Z
 
 ## cloud database cheat sheet
 ![cloud database cheat sheet.png](http://192.168.25.60:8000/files/file_storage/6d682be8.png)
+
+## What are some common types of databases
+![What are some common types of databases.png](http://192.168.25.60:8000/files/file_storage/e2d3b815.png)
 
 ## Database Deciding Factors
 ![Database Deciding Factors.png](http://192.168.25.60:8000/files/file_storage/47b61729.png)

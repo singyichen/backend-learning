@@ -2,7 +2,7 @@
 title: Devops
 description: 
 published: true
-date: 2023-08-25T05:49:38.952Z
+date: 2023-10-16T00:04:46.928Z
 tags: devops
 editor: markdown
 dateCreated: 2023-05-19T02:36:31.464Z
@@ -10,6 +10,7 @@ dateCreated: 2023-05-19T02:36:31.464Z
 
 # Devops
 - [ ] [From 0 to Millions: A Guide to Scaling Your App - Final Part](https://blog.bytebytego.com/p/ep-52-devops-vs-sre-vs-platform-engineering?utm_source=profile&utm_medium=reader2)
+- [ ] [EP81: How Companies Ship Code to Production](https://blog.bytebytego.com/p/ep81-how-companies-ship-code-to-production?utm_source=profile&utm_medium=reader2)
 
 ![6 components of DevOps.gif](http://192.168.25.60:8000/files/file_storage/2fcffc5c.gif)
 

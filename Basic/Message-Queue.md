@@ -2,7 +2,7 @@
 title: Message Queue
 description: 
 published: true
-date: 2023-09-18T08:55:04.082Z
+date: 2023-10-13T00:06:02.027Z
 tags: 
 editor: markdown
 dateCreated: 2023-08-28T00:23:14.368Z
@@ -17,3 +17,4 @@ dateCreated: 2023-08-28T00:23:14.368Z
 - [ ] [[基礎觀念系列] 讓任務排隊吧：Message Queue — (3)](https://medium.com/starbugs/%E8%AE%93%E4%BB%BB%E5%8B%99%E6%8E%92%E9%9A%8A%E5%90%A7-message-queue-3-251b25bf0b22)
 - [ ] [How many message queues do you know?](https://blog.bytebytego.com/p/ep77-my-recommended-materials-for?utm_source=profile&utm_medium=reader2)
 
+![how do message queues evolve.gif](http://192.168.25.60:8000/files/file_storage/68b8c69c.gif)
