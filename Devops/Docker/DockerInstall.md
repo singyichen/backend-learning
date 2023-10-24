@@ -2,14 +2,15 @@
 title: Docker Install
 description: Docker 安裝
 published: true
-date: 2023-09-25T08:54:09.352Z
+date: 2023-10-20T00:14:39.333Z
 tags: docker, devops
 editor: markdown
 dateCreated: 2022-04-29T01:11:05.872Z
 ---
 
 # Docker Install
- 
+- [ ] [在 Ubuntu 上加入 Docker 環境並部署 Node.js 專案](https://www.casper.tw/development/2023/10/08/ubuntu-docker/)
+- [ ] [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
 # 環境說明
 ## 作業系統
 - Ubuntu 20.04 Server LTS
@@ -18,19 +19,19 @@ dateCreated: 2022-04-29T01:11:05.872Z
 
 # 安裝環境
 ## 下載 VirtualBox
-> [VirtualBox download info](https://www.virtualbox.org/wiki/Downloads)
+> [VirtualBox download info](https://www.oracle.com/tw/virtualization/technologies/vm/downloads/virtualbox-downloads.html)
 {.is-info}
 
 ## 下載並安裝 OS : Ubuntu 20.04 Server LTS 
 > [Ubuntu download info](https://ubuntu.com/download/server)
 {.is-info}
-- wait for few minutes until [ Reboot Now ] appear 
+- 等待幾分鐘直到重新開機按鈕出現 ( wait for few minutes until [ Reboot Now ] appear )
 - :wq! => save and exit
 
 > [Ubuntu install info](https://sofree.cc/virtualbox-os/)
 {.is-info}
 
-- 新建虛擬磁碟：設定為 100 g
+- 新建虛擬磁碟：記憶體設定為1024 MB，磁碟的大小設定為 100 g
 
 ![vm 新建虛擬磁碟.png](http://192.168.25.60:8000/files/file_storage/67261425.png)
 
