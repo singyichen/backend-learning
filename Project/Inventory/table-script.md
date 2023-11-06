@@ -2,7 +2,7 @@
 title: Table
 description: 
 published: true
-date: 2023-10-24T01:00:04.496Z
+date: 2023-11-03T09:07:38.379Z
 tags: project
 editor: markdown
 dateCreated: 2023-10-23T02:44:08.739Z
@@ -157,7 +157,7 @@ COMMENT ON COLUMN public.hardware_data.static_ip
 ```
 
 ## user
-- 使用者資料表
+- 員工資料表
 ```sql
 -- Table: public.user
 
@@ -178,7 +178,7 @@ ALTER TABLE IF EXISTS public."user"
     OWNER to "11542";
 
 COMMENT ON TABLE public."user"
-    IS '使用者資料表';
+    IS '員工資料表';
 
 COMMENT ON COLUMN public."user".user_id
     IS '員工編號';

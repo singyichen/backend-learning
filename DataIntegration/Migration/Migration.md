@@ -2,7 +2,7 @@
 title: Migration
 description: 
 published: true
-date: 2023-10-04T01:24:10.929Z
+date: 2023-10-26T08:27:01.051Z
 tags: 
 editor: markdown
 dateCreated: 2023-06-07T01:47:56.437Z
@@ -200,8 +200,9 @@ SELECT (*) FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE='BASE TABLE' AND TABL
 ![ssms 匯出資料精靈 選擇目的地.png](http://192.168.25.60:8000/files/file_storage/07cfb66f.png)
 
 ## 選取來源資料表和檢視
-- 選取要匯出的表格 ➔ 編輯對應 ➔ 可調整欄位資料型態
+- 選取要匯出的表格 ➔ 編輯對應 ➔ 可調整目的地欄位 ➔ 可調整欄位資料型態
 - 若目的地已經有表格可勾選 `卸除並重新建立目的地資料表` 這個選項
+- back 修改目的地資料表
 
 ![ssms 匯出資料精靈 選取來源資料表和檢視.png](http://192.168.25.60:8000/files/file_storage/2a4348e7.png)
 

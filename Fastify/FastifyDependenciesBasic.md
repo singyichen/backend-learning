@@ -2,7 +2,7 @@
 title: Fastify Dependencies ( Basic )
 description: 基本套件
 published: true
-date: 2023-09-26T09:09:37.022Z
+date: 2023-11-02T09:01:09.219Z
 tags: fastify, framework
 editor: markdown
 dateCreated: 2022-08-09T05:57:34.299Z
@@ -286,6 +286,34 @@ npm install dotenv --save-dev
 ```
 ### Usage
 在 fastify 專案中，已使用套件 `@fastify/env` 取得 `.env` 的資訊，這此使用 `dotenv` 是為了使用 jest 進行測試時能取得 `.env ` 的設定檔
+
+- 在 `jest.config.js` 中進行設定
+```js
+module.exports = {
+  testEnvironment: 'node',
+  moduleFileExtensions: ['js', 'jsx', 'json', 'ts', 'tsx'],
+  collectCoverage: true,
+  collectCoverageFrom: [
+    '**/*.{ts,js}',
+    '!**/node_modules/**',
+    '!**/build/**',
+    '!**/coverage/**',
+  ],
+  coverageThreshold: {
+    global: {
+      branches: 100,
+      functions: 100,
+      lines: 100,
+      statements: 100,
+    },
+  },
+  coverageReporters: ['text', 'text-summary'],
+  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(js|ts)x?$',
+  testPathIgnorePatterns: ['/node_modules/', '/build/', '/coverage/'],
+  setupFilesAfterEnv: ['./test/config.js'], // 放置 config.js 的路徑
+  setupFiles: ['dotenv/config'], // 此設定可讓 .env 在 jest 中使用
+};
+```
 
 - 參考資料：[Using .env files for unit testing with jest](https://stackoverflow.com/questions/50259025/using-env-files-for-unit-testing-with-jest)
 

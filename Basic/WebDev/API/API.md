@@ -2,7 +2,7 @@
 title: API
 description: 
 published: true
-date: 2023-10-13T00:09:01.721Z
+date: 2023-10-30T03:49:29.964Z
 tags: api
 editor: markdown
 dateCreated: 2022-11-17T05:44:26.014Z
@@ -152,6 +152,9 @@ Released in 2016, gRPC is used for communications among microservices. gRPC libr
 
 ## SOAP
 SOAP stands for Simple Object Access Protocol. Its payload is XML only, suitable for communications between internal systems.
+
+# API Vs SDK
+![API Vs SDK.png](http://192.168.25.60:8000/files/file_storage/64966d2c.png)
 
 # API Platform Landscape
 

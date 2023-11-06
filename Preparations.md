@@ -2,7 +2,7 @@
 title: Preparations
 description: 準備事項(技能樹、軟體安裝、環境建置)
 published: true
-date: 2023-09-13T00:03:19.850Z
+date: 2023-11-03T01:40:52.483Z
 tags: 
 editor: markdown
 dateCreated: 2022-04-28T00:51:37.605Z
@@ -189,7 +189,14 @@ https://a7ab-122-147-204-116.jp.ngrok.io/swagger/WebSignin_API
 
 
 # Build Environment
+| 工具 | 功能|
+|---|:--:|
+|nvm|管理 Node.js 版本|
+|npm|管理 Node.js 套件|
+|node|Node.js 執行程式|
+
 ## nvm
+> nvm 是用來管理 Node.js 版本的工具。它可以讓我們在同一台電腦上安裝和切換不同的 Node.js 版本。
 
 > [nvm download info](https://github.com/coreybutler/nvm-windows)
 {.is-info}
@@ -204,21 +211,43 @@ https://a7ab-122-147-204-116.jp.ngrok.io/swagger/WebSignin_API
 ```bash
 nvm install
 ```
+- get nvm version list
+```
+nvm list
+```
 - show now using node.js version
 ```bash
 nvm version
 ```
 - location：D:\SDK
+
+## npm
+> npm 是用來管理 Node.js 套件的工具。npm 可以讓我們下載、安裝、更新和卸載 Node.js 套件。
+
+- install
+```
+npm install -g npm
+npm install -g npm@10.2.2
+```
+- get package list
+```
+npm list
+```
 ## node
+> node 是 Node.js 的執行程式。當我們執行 node 命令時，它將啟動 Node.js 執行環境，並允許我們執行 JavaScript 程式碼。
+> [node releases](https://nodejs.org/en/about/previous-releases)
+
 - install this node.js version
 ```bash
 nvm install 14.18.0
 nvm install 18.17.0
+nvm install 20.9.0
 ```
 - use this node.js version
 ```bash
 nvm use 14.18.0
 nvm use 18.17.0
+nvm use 20.9.0
 ```
 - check node.js version
 ```bash

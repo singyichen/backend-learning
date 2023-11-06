@@ -2,7 +2,7 @@
 title: UnitTest
 description: 單元測試
 published: true
-date: 2023-08-25T03:59:55.967Z
+date: 2023-10-30T03:50:12.790Z
 tags: unit test
 editor: markdown
 dateCreated: 2022-05-11T01:13:18.392Z
@@ -28,6 +28,9 @@ dateCreated: 2022-05-11T01:13:18.392Z
 - [ ] [Paradigm Shift: How Developer to Tester Ratio Changed From 1:1 to 100:1](https://blog.bytebytego.com/p/ep68-top-architectural-styles?utm_source=profile&utm_medium=reader2)
 - [ ] [A compilation of outstanding testing articles (with JavaScript)](https://practica.dev/blog/a-compilation-of-outstanding-testing-articles-with-javaScript/)
 - [ ] [Testing in software development: A practical guide](https://learningdaily.dev/testing-in-software-development-a-practical-guide-f2b4d9d51cae)
+- [ ] [Best ways to test system functionality](https://blog.bytebytego.com/p/ep82-open-sourcing-over-100-byte?utm_source=profile&utm_medium=reader2)
+- [ ] [EP83: Explaining 9 Types of API Testing](https://blog.bytebytego.com/p/ep83-explaining-9-types-of-api-testing?utm_source=profile&utm_medium=reader2)
+
 ### Online Video
 - https://www.udemy.com/course/nodejs-unit-testing-in-depth/
 - https://www.udemy.com/course/nodejs-unit-testing-and-integration-testing-with-express-and-jest/
@@ -70,6 +73,8 @@ PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8v
 ![UnitTest three types of test.png](http://192.168.25.60:8000/files/file_storage/e4908507.png)
 
 ![The 9 Testing Types.gif](http://192.168.25.60:8000/files/file_storage/dbb38a1d.gif)
+
+![Explaining 9 types of API testing.gif](http://192.168.25.60:8000/files/file_storage/0d56d76e.gif)
 
 ## 在不同的測試類型中，所需要保護的面向不太相同，以下是不同測試類型的大致介紹：
 ### 1. 單元測試 ( Unit testing )
