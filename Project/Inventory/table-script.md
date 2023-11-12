@@ -2,13 +2,16 @@
 title: Table
 description: 
 published: true
-date: 2023-11-03T09:07:38.379Z
+date: 2023-11-10T01:19:55.815Z
 tags: project
 editor: markdown
 dateCreated: 2023-10-23T02:44:08.739Z
 ---
 
 # Table
+
+[ERD](https://dbdiagram.io/d/654c926b7d8bbd6465d357f4)
+
 ## hardware_attribute
 - 資產類別資料表
 ```sql
@@ -315,12 +318,12 @@ CREATE TABLE IF NOT EXISTS public.inventory_list_detail
     inventory_id character(9) COLLATE pg_catalog."default" NOT NULL DEFAULT ''::bpchar,
     attr_id character(2) COLLATE pg_catalog."default" NOT NULL DEFAULT '00'::bpchar,
     brand character(10) COLLATE pg_catalog."default" DEFAULT ''::bpchar,
-    style_no character(50) COLLATE pg_catalog."default" DEFAULT ''::bpchar,
-    serial_no character(50) COLLATE pg_catalog."default" DEFAULT ''::bpchar,
+    style_no character(20) COLLATE pg_catalog."default" DEFAULT ''::bpchar,
+    serial_no character varying(50) COLLATE pg_catalog."default" DEFAULT ''::bpchar,
     area_id character(2) COLLATE pg_catalog."default" NOT NULL DEFAULT '00'::bpchar,
-    area_name character(20) COLLATE pg_catalog."default" NOT NULL DEFAULT ''::bpchar,
+    area_name character varying(20) COLLATE pg_catalog."default" NOT NULL DEFAULT ''::bpchar,
     location_id character(2) COLLATE pg_catalog."default" NOT NULL DEFAULT '00'::bpchar,
-    location_name character(20) COLLATE pg_catalog."default" NOT NULL DEFAULT ''::bpchar,
+    location_name character varying(20) COLLATE pg_catalog."default" NOT NULL DEFAULT ''::bpchar,
     parts character varying(255) COLLATE pg_catalog."default" DEFAULT ''::character varying,
     created_date timestamp with time zone NOT NULL DEFAULT now(),
     created_id character(5) COLLATE pg_catalog."default" NOT NULL DEFAULT ''::bpchar,
@@ -377,18 +380,6 @@ COMMENT ON COLUMN public.inventory_list_detail.location_name
 
 COMMENT ON COLUMN public.inventory_list_detail.parts
     IS '零配件';
-
-COMMENT ON COLUMN public.inventory_list_detail.created_date
-    IS '建立日期';
-
-COMMENT ON COLUMN public.inventory_list_detail.created_id
-    IS '建立者';
-
-COMMENT ON COLUMN public.inventory_list_detail.modify_date
-    IS '修改日期';
-
-COMMENT ON COLUMN public.inventory_list_detail.modify_id
-    IS '修改者';
 ```
 
 ## inventory_record

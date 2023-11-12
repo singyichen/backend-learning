@@ -2,7 +2,7 @@
 title: 軟體開發生命週期
 description: 
 published: true
-date: 2023-10-30T03:56:44.012Z
+date: 2023-11-10T05:38:13.106Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-26T00:55:11.411Z
@@ -67,6 +67,7 @@ dateCreated: 2023-10-26T00:55:11.411Z
 - 功能開發的可行性評估
 #### 系統文件
 - 資料字典
+- 繪製 ERD
 - 前後端資料交換表
 - API：模組分類、API 名稱、Method、URL、呼叫時機、錯誤訊息
 

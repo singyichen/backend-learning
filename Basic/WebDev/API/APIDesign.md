@@ -2,7 +2,7 @@
 title: API Design
 description: 
 published: true
-date: 2023-09-11T00:37:23.639Z
+date: 2023-11-06T00:53:02.755Z
 tags: api
 editor: markdown
 dateCreated: 2023-07-07T00:43:03.191Z
@@ -24,6 +24,7 @@ dateCreated: 2023-07-07T00:43:03.191Z
 - [ ] [Crafting Effective API Design with Node.js and Express](https://smit90.medium.com/crafting-effective-api-design-with-node-js-and-express-65c2bb16845c)
 - [ ] [API Architecture - Synchronous, Asynchronous, and Parallel calls](https://abdulrwahab.medium.com/api-architecture-synchronous-asynchronous-and-parallel-calls-e85b9c08fe51)
 - [ ] [REST-Based API explained](https://medium.com/@dmosyan/rest-based-api-explained-8940af50f545)
+- [ ] [EP84: Top 12 Tips for API Security](https://blog.bytebytego.com/p/ep84-top-12-tips-for-api-security?utm_source=profile&utm_medium=reader2)
 
 
 ![api slogan.png](http://192.168.25.60:8000/files/file_storage/dbe158de.png)
@@ -259,6 +260,17 @@ test('POST /users should create a new user', async () => {
 
 ![Top 16 API Security Practices.gif](http://192.168.25.60:8000/files/file_storage/9458aead.gif)
 
+![Top 12 Tips for API Security.png](http://192.168.25.60:8000/files/file_storage/6188b10f.png)
 
-
-
+- Use HTTPS
+- Use OAuth2
+- Use WebAuthn
+- Use Leveled API Keys
+- Authorization
+- Rate Limiting
+- API Versioning
+- Whitelisting
+- Check OWASP API Security Risks
+- Use API Gateway
+- Error Handling
+- Input Validation

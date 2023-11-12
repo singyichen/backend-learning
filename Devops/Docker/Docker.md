@@ -2,7 +2,7 @@
 title: Docker
 description: Docker學習筆記
 published: true
-date: 2023-09-26T00:47:46.790Z
+date: 2023-11-12T23:35:26.530Z
 tags: docker, devops
 editor: markdown
 dateCreated: 2022-07-19T06:36:20.283Z
@@ -29,6 +29,7 @@ dateCreated: 2022-07-19T06:36:20.283Z
 - [ ] [Streamline Application Shipping with Docker: Linux and Windows Made Easy!](https://medium.com/@adarsh_d/streamline-application-shipping-with-docker-linux-and-windows-made-easy-78195361887)
 - [ ] [【Docker 容器化】初探微服務時代的虛擬化技術](https://vocus.cc/article/64dab182fd89780001252c70)
 - [ ] [Day11 認識Docker](https://ithelp.ithome.com.tw/articles/10237261)
+- [ ] [A Crash Course in Docker](https://blog.bytebytego.com/p/a-crash-course-in-docker?utm_source=profile&utm_medium=reader2)
 
 # Docker 簡介
 > 2013 年，dotCloud 公司將內部開發的 Docker 開源，基於上面提到的 LXC 技術基礎，將系統設計容器轉為微服務（Micro-service）的容器！因為很火熱，dotCloud 後來索性改名叫做 Docker Inc 現在成熟的 Docker 已經不是以 LXC 為架構，而是自己開發的 Libcontainer 作為底層的技術。
