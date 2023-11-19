@@ -2,7 +2,7 @@
 title: Fastify Init
 description: Fastify 專案初始化步驟
 published: true
-date: 2023-09-12T02:48:40.397Z
+date: 2023-11-13T01:04:46.420Z
 tags: fastify, framework
 editor: markdown
 dateCreated: 2022-09-20T01:12:00.943Z
@@ -139,7 +139,7 @@ feat：remove useless folder and files
 
 ## 新增套件 ( Basic、Database、Others、Log )
 ```shell
-npm i @fastify/env @fastify/cors @prisma/client@4.0.0 prisma@4.1.0 moment pino http-status-codes rotating-file-stream --save
+npm i @fastify/env @fastify/cors @prisma/client@5.2.0 prisma@5.2.0 moment pino http-status-codes rotating-file-stream --save
 ```
 ```
 feat：add dependencies
@@ -150,8 +150,8 @@ feat：add dependencies
 1. package.json
     - 新增 @fastify/env：抓取 .env 檔案
     - 新增 @fastify/cors：配置跨網域設定
-    - 新增 @prisma/client@4.0.0：DB ORM prisma client
-    - 新增 prisma@4.1.0：DB ORM prisma
+    - 新增 @prisma/client@5.2.0：DB ORM prisma client
+    - 新增 prisma@5.2.0：DB ORM prisma
     - 新增 moment：時間套件
     - 新增 pino：日誌套件
 	  - 新增 http-status-codes：HTTP 狀態碼套件
@@ -595,18 +595,4 @@ feat：add dependencies @fastify/auth 、 fast-jwt 、 ldapjs 、 ramda
     - 新增 ramda：FP 函式庫
 ```
 
-## 新增套件 ( Basic )
-```
-npm i http-status-codes --save
-```
-- 新增 `errorInfo.js` 在資料夾 `utils` 中
 
-```
-feat：add dependency http-status-codes
-
-原因：新增套件 http-status-codes
-
-調整項目：
-1. package.json：
-    - 新增套件 http-status-codes：取得 HTTP status code 轉換
-```

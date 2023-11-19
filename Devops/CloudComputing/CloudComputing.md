@@ -2,7 +2,7 @@
 title: Cloud Computing
 description: Cloud Computing 簡介
 published: true
-date: 2023-08-25T05:37:32.082Z
+date: 2023-11-17T00:43:24.171Z
 tags: 
 editor: markdown
 dateCreated: 2023-07-06T03:20:26.986Z
@@ -11,6 +11,7 @@ dateCreated: 2023-07-06T03:20:26.986Z
 # Cloud Computing
 - [ ] [What is Cloud Computing](https://www.sitesbay.com/cloud-computing/cloud-computing-introduction)
 - [ ] [Pros and Cons of Different Cloud Computing Models](https://www.heptabit.at/blog/cloud-migration/pros-and-cons-of-different-cloud-computing-models)
+- [ ] [Does Serverless Have Servers?](https://blog.bytebytego.com/p/serverless-has-servers?utm_source=profile&utm_medium=reader2)
 
 ![types-of-cloud-computing.png](http://192.168.25.60:8000/files/file_storage/5a9194a8.png)
 
