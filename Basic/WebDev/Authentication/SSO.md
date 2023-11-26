@@ -2,7 +2,7 @@
 title: SSO
 description: 
 published: true
-date: 2023-05-19T00:31:09.354Z
+date: 2023-11-20T01:46:39.477Z
 tags: authentication
 editor: markdown
 dateCreated: 2023-05-18T05:49:45.259Z
@@ -16,6 +16,8 @@ dateCreated: 2023-05-18T05:49:45.259Z
 ## Single Sign On (SSO)
 
 ![roadmap-sso.png](http://192.168.25.60:8000/files/file_storage/c326ca39.png)
+
+![Single Sign-On (SSO) explained in simple terms.png](http://192.168.25.60:8000/files/file_storage/7d384631.png)
 
 ## SSO 如何運作
 

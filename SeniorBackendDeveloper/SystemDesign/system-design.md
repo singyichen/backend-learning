@@ -2,7 +2,7 @@
 title: System Design
 description: 
 published: true
-date: 2023-10-06T00:00:47.249Z
+date: 2023-11-20T01:07:57.906Z
 tags: 
 editor: markdown
 dateCreated: 2023-05-18T00:22:34.726Z
@@ -37,6 +37,7 @@ dateCreated: 2023-05-18T00:22:34.726Z
 - [ ] [前端開發者也可以懂的基礎 System Design](https://medium.com/starbugs/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC%E8%80%85%E4%B9%9F%E5%8F%AF%E4%BB%A5%E6%87%82%E7%9A%84%E5%9F%BA%E7%A4%8E-system-design-5468e0f43033)
 - [ ] [EP78: How to Crack Any System Design Interview](https://blog.bytebytego.com/p/ep78-how-to-crack-any-system-design?utm_source=profile&utm_medium=reader2)
 - [ ] [Modern System Architecture. Qualitative and quantitative analysis. Study case for analyzing Architecture tradeoffs.](https://medium.com/@asom_igor/modern-system-architecture-trade-offs-analysis-45d4338d7c2)
+- [ ] [EP86: CAP, BASE, SOLID, KISS, What do these acronyms mean?](https://blog.bytebytego.com/p/ep86-cap-base-solid-kiss-what-do?utm_source=profile&utm_medium=reader2)
 ## Example
 - [ ] [Payment system](https://blog.bytebytego.com/p/payment-system?utm_source=profile&utm_medium=reader2)
 - [ ] [Low Latency Stock Exchange Design](https://blog.bytebytego.com/p/low-latency-stock-exchange?utm_source=profile&utm_medium=reader2)
@@ -97,3 +98,6 @@ dateCreated: 2023-05-18T00:22:34.726Z
 
 ![System design interview cheatsheet.png](http://192.168.25.60:8000/files/file_storage/4f32d7a0.png)
 
+## System Design Acronyms
+
+![System Design Acronyms.png](http://192.168.25.60:8000/files/file_storage/cae217a8.png)

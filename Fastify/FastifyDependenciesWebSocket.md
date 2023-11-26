@@ -2,7 +2,7 @@
 title: Fastify Dependencies ( WebSocket )
 description: WebSocket 套件
 published: true
-date: 2023-08-24T09:14:20.913Z
+date: 2023-11-21T05:04:15.614Z
 tags: fastify, framework
 editor: markdown
 dateCreated: 2023-08-16T07:37:07.904Z
@@ -21,6 +21,10 @@ dateCreated: 2023-08-16T07:37:07.904Z
 ### Install
 ```shell
 npm i socket.io --save
+```
+- 單元測試使用
+```shell
+npm i socket.io-client --save-dev
 ```
 > [reference](https://www.npmjs.com/package/socket.io)
 {.is-info}
