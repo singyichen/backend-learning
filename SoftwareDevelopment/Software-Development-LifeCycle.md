@@ -2,7 +2,7 @@
 title: 軟體開發生命週期
 description: 
 published: true
-date: 2023-11-10T05:38:13.106Z
+date: 2023-11-30T09:18:24.890Z
 tags: 
 editor: markdown
 dateCreated: 2023-10-26T00:55:11.411Z
@@ -90,10 +90,12 @@ dateCreated: 2023-10-26T00:55:11.411Z
 - 初始化專案
 - 建置 Postman 環境
 - 產製 migration 建立表格
-- 撰寫 dockerfile、.env
+- 撰寫 dockerfile
+- 撰寫 .env
 - docker 部屬：log 資料夾建立及資料寫入權限設定、一個自測使用、一個給前端使用
 - 撰寫專案說明書 README.md
 - 產製 swagger 檔案
+- 使用 postman 測試 API 效能
 - 模組功能開發
 - 繪製 C4 Model
 
