@@ -2,7 +2,7 @@
 title: Docker Usage
 description: Docker學習筆記
 published: true
-date: 2023-10-02T01:19:52.346Z
+date: 2023-12-11T08:52:06.688Z
 tags: docker, devops
 editor: markdown
 dateCreated: 2022-07-21T06:34:46.172Z
@@ -28,7 +28,7 @@ dateCreated: 2022-07-21T06:34:46.172Z
 - [ ] [Docker Compose Tutorial: advanced Docker made simple](https://learningdaily.dev/docker-compose-tutorial-advanced-docker-made-simple-d5f8ba43c388)
 - [ ] [How To Reduce Docker Image Size by 81%](https://betterprogramming.pub/how-to-reduce-docker-image-size-by-81-frontend-next-js-practice-8680bda50fee)
 - [ ] [【Docker】如何掛載遠端主機目錄？ NFS Volume](https://vocus.cc/article/64ec8909fd89780001dcb754)
-
+- [ ] [實測有效！手把手帶你將 Docker Image 體積減少 90%](https://medium.com/dean-lin/%E5%AF%A6%E6%B8%AC%E6%9C%89%E6%95%88-%E6%89%8B%E6%8A%8A%E6%89%8B%E5%B8%B6%E4%BD%A0%E6%B8%9B%E5%B0%91-90-%E7%9A%84-docker-image-%E9%AB%94%E7%A9%8D-10b8e43159ff)
 # Docker Cheat Cheet
 ## [docker cheat sheet 1.pdf](http://192.168.25.60:8000/files/file_storage/ec6c1788.pdf)
 
@@ -142,9 +142,6 @@ df -h
 ```
 ## 刪除所有停止的容器、無用的網路、無用的卷以及無用的構建快取
 ```bash
-docker system prune
-```
-```bash
 docker system prune --all --force --volumes
 ```
 ## 清理所有快取，包括停止的容器、無用的網路、無用的卷以及無用的構建快取
@@ -171,7 +168,12 @@ docker volume prune
 ```bash
 docker build cache prune
 ```
-
+```bash
+docker system prune -f
+```
+```bash
+docker buildx prune -f
+```
 ## 進入到 container
 ```bash
 docker exec -it <container-name> /bin/bash

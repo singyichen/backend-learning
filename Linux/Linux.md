@@ -2,7 +2,7 @@
 title: Linux
 description: 
 published: true
-date: 2023-08-25T03:48:55.162Z
+date: 2023-12-11T06:16:42.884Z
 tags: linux
 editor: markdown
 dateCreated: 2022-10-31T01:17:39.079Z
@@ -11,6 +11,7 @@ dateCreated: 2022-10-31T01:17:39.079Z
 # Linux
 - [ ] [Linux commands illustrated on one page!](https://xmind.app/m/WwtB/)
 - [ ] [How do processes talk to each other on Linux?](https://blog.bytebytego.com/p/ep70-cloud-services-cheat-sheet?utm_source=profile&utm_medium=reader2)
+- [ ] [EP88: Linux Boot Process Explained](https://blog.bytebytego.com/p/ep88-linux-boot-process-explained?utm_source=profile&utm_medium=reader2)
 
 ## Linux commands
 ![Linux commands.png](http://192.168.25.60:8000/files/file_storage/cf698df8.png)

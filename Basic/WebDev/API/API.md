@@ -2,7 +2,7 @@
 title: API
 description: 
 published: true
-date: 2023-10-30T03:49:29.964Z
+date: 2023-12-11T06:12:51.585Z
 tags: api
 editor: markdown
 dateCreated: 2022-11-17T05:44:26.014Z
@@ -21,6 +21,7 @@ dateCreated: 2022-11-17T05:44:26.014Z
 - [ ] [Top 6 Most Popular API Architecture Styles](https://www.youtube.com/watch?v=4vLxWqE94l4&ab_channel=ByteByteGo&loop=0)
 - [ ] [Top 7 Ways to 10x Your API Performance](https://www.youtube.com/watch?v=zvWKqUiovAM&ab_channel=ByteByteGo&loop=0)
 - [ ] [EP80: Explaining 8 Popular Network Protocols in 1 Diagram](https://blog.bytebytego.com/p/ep80-explaining-8-popular-network?utm_source=profile&utm_medium=reader2)
+- [ ] [The evolving landscape of API protocols in 2023](https://blog.postman.com/api-protocols-in-2023/)
 # API ( Application Programming Interface ) 應用程式介面
 > - API（應用程式設計介面）是一種軟體介面，允許兩個不相關的應用程式相互通訊，它充當橋樑，從一個程式取得請求或訊息後，將其傳遞給另一個程式、翻譯訊息，及根據 API 程式設定的協議來執行指定動作
 > - API 的工作是讓 AB 兩端資料拋接，一端提供資料輸入、另一端依據資料回傳結果，其目的在於「不必了解對方的技術與邏輯即可加速開發的共識」
@@ -132,6 +133,8 @@ JSON 是最常用的回應格式之一，各種程式語言都可以產生或解
 ![The Top 8 API Architectural Styles.png](http://192.168.25.60:8000/files/file_storage/2288e901.png)
 
 ![8 popular Network protocols.png](http://192.168.25.60:8000/files/file_storage/0f4f5265.png)
+
+![The Evolving Landscape of API Protocols in 2023.png](http://192.168.25.60:8000/files/file_storage/7f2a7580.png)
 
 ## REST
 Proposed in 2000, REST is the most used style. It is often used between front-end clients and back-end services. It is compliant with 6 architectural constraints. The payload format can be JSON, XML, HTML, or plain text.

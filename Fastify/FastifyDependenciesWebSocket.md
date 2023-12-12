@@ -2,7 +2,7 @@
 title: Fastify Dependencies ( WebSocket )
 description: WebSocket 套件
 published: true
-date: 2023-11-21T05:04:15.614Z
+date: 2023-12-08T06:22:46.670Z
 tags: fastify, framework
 editor: markdown
 dateCreated: 2023-08-16T07:37:07.904Z
@@ -10,6 +10,7 @@ dateCreated: 2023-08-16T07:37:07.904Z
 
 # WebSocket 套件介紹 ( WebSocket Dependencies )
 - [ ] [How to test Socket.io with Jest on backend (Node.js)?](https://medium.com/@tozwierz/testing-socket-io-with-jest-on-backend-node-js-f71f7ec7010f)
+- [ ] [負載測試](https://socket.io/zh-CN/docs/v4/load-testing/)
 
 ## socket.io
 > - Socket.io 是一個現成的 WebSocket 套件
@@ -165,10 +166,20 @@ EXPOSE 8117
 const fastify = require('fastify');
 const fastifyPlugin = require('fastify-plugin');
 const http = require('http');
+// const { readFileSync } = require('fs');
+// const { createServer } = require('https');
 // socket io api
 const socketIO = require('./socketIOApi');
 // 將 fastify 放進 http 中開啟 Server 的 SOCKET_IO_PORT
 const server = http.Server(fastify);
+// // 將 fastify 放進 https 中開啟 Server 的 SOCKET_IO_PORT
+// const server = createServer(
+//   {
+//     key: readFileSync('./src/ssl/192.168.25.149.key'),
+//     cert: readFileSync('./src/ssl/192.168.25.149.crt'),
+//   },
+//   fastify,
+// );
 // 將啟動的 Server 送給 socket.io 處理
 const io = new socketIO(server, {
   cors: {
@@ -279,7 +290,7 @@ module.exports = { userSocket };
 - 新增 `socketIOServer.js` 的單元測試 `socketIOServer.test.js`
 - 測試從 server 到 client
 - 測試從 client 到 server：server 中需有此測試監聽 event ，最後監聽 clientSocket ，因若有得到訊息表示是由 server 監聽到並回傳過來的
-
+- server 為 http 版本
 ```js
 // socketIOServer.test.js
 const io = require('socket.io-client');
@@ -319,6 +330,101 @@ describe('Test socket io server plugin', () => {
         'reconnection delay': 0,
         'reopen delay': 0,
         'force new connection': true,
+        transports: ['websocket'],
+      },
+    );
+    clientSocket.on('connect', () => {
+      done();
+    });
+  });
+
+  afterEach((done) => {
+    // Cleanup
+    if (clientSocket.connected) {
+      clientSocket.disconnect();
+    }
+    done();
+  });
+  /**
+   * @description unit test for socket io server
+   */
+  describe(`Test socket io server plugin should have a socket io server`, () => {
+    test(`Test socket io server should communicate when Server emit event echo with eventMessageFromServer Hello World, Client should listen event echo with eventMessageFromServer Hello World`, (done) => {
+      // Arrange
+      const event = 'echo';
+      const eventMessageFromServer = 'Hello World';
+
+      // Act
+      serverSocket.emit(event, eventMessageFromServer);
+
+      // Assert
+      clientSocket.once(event, (message) => {
+        expect(message).toBe(eventMessageFromServer);
+        done();
+      });
+    });
+    test(`Test socket io server should communicate when Client emit event echo with eventMessageFromClient Hello World, Client should listen event echo with eventMessageFromServer Hello World`, (done) => {
+      // Arrange
+      const event = 'echo';
+      const eventMessageFromClient = 'Hello World';
+      const eventMessageFromServer = 'Hello World';
+
+      // Act
+      clientSocket.emit(event, eventMessageFromClient);
+
+      // Assert
+      clientSocket.once(event, (message) => {
+        expect(message).toBe(eventMessageFromServer);
+        done();
+      });
+    });
+  });
+});
+
+```
+- server 為 https 版本
+```js
+// socketIOServer.test.js
+const io = require('socket.io-client');
+// server
+const server = require('../../../src/plugin/socketIOServer').server;
+const serverSocket = require('../../../src/plugin/socketIOServer').io;
+let serverAddr;
+// client
+let clientSocket;
+/**
+ * @description unit test for socket io server plugin
+ */
+describe('Test socket io server plugin', () => {
+  /**
+   * Setup WS & HTTP servers
+   */
+  beforeAll((done) => {
+    serverAddr = server.address();
+    done();
+  });
+
+  /**
+   *  Cleanup WS & HTTP servers
+   */
+  afterAll((done) => {
+    serverSocket.close();
+    server.close();
+    done();
+  });
+
+  beforeEach((done) => {
+    // Setup
+    // Do not hardcode server port and address, square brackets are used for IPv6
+    clientSocket = io.connect(
+      `https://[${serverAddr.address}]:${serverAddr.port}`,
+      {
+        'reconnection delay': 0,
+        'reopen delay': 0,
+        'force new connection': true,
+        secure: true,
+        reconnect: true,
+        rejectUnauthorized: false,
         transports: ['websocket'],
       },
     );
@@ -470,6 +576,93 @@ describe('Test UserSocket', () => {
 
 ```
 
+- socket io api 壓力測試
+
+```js
+const { io } = require('socket.io-client');
+/**
+ * @description 壓力測試：建立自定義個數量的 Socket.IO 客戶端並監控每秒接收的封包數量
+ */
+// 測試 socket io url
+const URL = 'http://192.168.25.149:8020/';
+// 最大客戶端數量
+const MAX_CLIENTS = 300;
+// 客戶端創建的間隔時間(毫秒)
+const CLIENT_CREATION_INTERVAL_IN_MS = 10;
+// 每秒發送封包的間隔時間(毫秒)
+const EMIT_INTERVAL_IN_MS = 1000;
+
+let clientCount = 0;
+let lastReport = new Date().getTime();
+let packetsSinceLastReport = 0;
+
+const createClient = () => {
+  const transports = ['websocket'];
+  const socket = io(URL, {
+    'reconnection delay': 0,
+    'reopen delay': 0,
+    'force new connection': true, // 強制連線
+    reconnect: true, //  斷線時自動重新連線
+    rejectUnauthorized: false, // 不驗證
+    transports,
+  });
+
+  setInterval(() => {
+    socket.emit('client to server event');
+  }, EMIT_INTERVAL_IN_MS);
+
+  socket.on('server to client event', () => {
+    // packetsSinceLastReport++;
+    console.log(`server to client event`);
+  });
+  // 測試 socket io server 某個監聽事件
+  const token = {
+    token_id:
+      'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMTE1NDIiLCJpYXQiOjE3MDIwMTM0MjR9.f3Db26m2x7Y-3gPh_02ejsMOZMRF6L_NFgxmPxj_GW0',
+  };
+  const event = '/api/public/raffle/findOneWin';
+  socket.emit(event, token);
+  socket.on(event, (message) => {
+    // console.log(message);
+    // 當接收到該事件時，計算收到的封包數量。
+    packetsSinceLastReport++;
+  });
+  // 測試 socket io server 建立的測試監聽事件
+  // socket.emit('echo');
+  // socket.on('echo', (message) => {
+  //   // console.log(message);
+  //   packetsSinceLastReport++;
+  // });
+  socket.on('disconnect', (reason) => {
+    console.log(`disconnect due to ${reason}`);
+  });
+
+  if (++clientCount < MAX_CLIENTS) {
+    setTimeout(createClient, CLIENT_CREATION_INTERVAL_IN_MS);
+  }
+};
+
+createClient();
+
+const printReport = () => {
+  const now = new Date().getTime();
+  const durationSinceLastReport = (now - lastReport) / 1000;
+  // 監控每秒收到的封包數量
+  const packetsPerSeconds = (
+    packetsSinceLastReport / durationSinceLastReport
+  ).toFixed(2);
+
+  console.log(
+    `client count: ${clientCount} ; average packets received per second: ${packetsPerSeconds}`,
+  );
+
+  packetsSinceLastReport = 0;
+  lastReport = now;
+};
+
+setInterval(printReport, 5000);
+
+```
 
 
 

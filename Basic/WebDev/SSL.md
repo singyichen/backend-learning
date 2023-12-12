@@ -2,7 +2,7 @@
 title: SSL
 description: 
 published: true
-date: 2023-05-17T01:53:50.792Z
+date: 2023-12-08T03:12:51.931Z
 tags: ssl, 憑證
 editor: markdown
 dateCreated: 2022-08-08T00:52:01.350Z
@@ -240,7 +240,18 @@ Verifying - Enter Export Password:確認密碼(在此設定 qaz123)
 ## 12. 於程式中設定 fastify.cert、fastify.key
 - fastify.cert：192.168.25.180-net
 - fastify.key：192.168.25.180-net.key
-
+```js
+const { readFileSync } = require('fs');
+const path = require('path');
+  const app = fastify({
+    // 使用 logger plugin
+    logger: fastifyLoggerPlugin,
+    https: {
+      key: readFileSync(path.join(__dirname, 'src/ssl', '192.168.25.180-net.key')),
+      cert: readFileSync(path.join(__dirname, 'src/ssl', '192.168.25.180-net')),
+    },
+  });
+```
 ## 13. 使用 Chrome 實測
 
 https://192.168.25.180:10001/swagger/WebSignin_API/static/index.html
