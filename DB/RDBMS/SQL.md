@@ -2,7 +2,7 @@
 title: SQL
 description: 
 published: true
-date: 2023-08-28T08:44:50.531Z
+date: 2023-12-18T23:50:18.813Z
 tags: sql
 editor: markdown
 dateCreated: 2023-05-18T06:23:37.172Z
@@ -15,6 +15,7 @@ dateCreated: 2023-05-18T06:23:37.172Z
 - [ ] [SQL Query Execution Order](https://www.youtube.com/watch?v=BHwzDmr6d7s&ab_channel=ByteByteGo&loop=0)
 - [ ] [Advanced SQL Techniques You Should Know](https://medium.com/@atakankorez/advanced-sql-techniques-you-should-know-66f7d3ac638f)
 - [ ] [10 Best Practices for T-SQL that Every Developer Should Know](https://medium.com/@atakankorez/10-best-practices-for-t-sql-that-every-developer-should-know-5177e1548274)
+- [ ] [EP90: How do SQL Joins Work?](https://blog.bytebytego.com/p/ep90-how-do-sql-joins-work?utm_source=profile&utm_medium=reader2)
 
 ## SQL 如何學習
 ![how to learn sql.png](http://192.168.25.60:8000/files/file_storage/96c405cf.png)
