@@ -2,7 +2,7 @@
 title: API Gateway
 description: 
 published: true
-date: 2023-09-01T00:35:50.849Z
+date: 2023-12-24T23:59:37.506Z
 tags: 
 editor: markdown
 dateCreated: 2023-05-18T07:19:40.997Z
@@ -16,6 +16,7 @@ dateCreated: 2023-05-18T07:19:40.997Z
 - [ ] [API Gateway vs Load Balancer — Ultimate Guide](https://awstip.com/api-gateway-vs-load-balancer-the-ultimate-guide-3810dddacfa1)
 - [ ] [System Design Interview Basics: Difference Between API Gateway and Load Balancer](https://levelup.gitconnected.com/system-design-interview-basics-difference-between-api-gateway-and-load-balancer-60260b568121)
 - [ ] [前端開發者該負責寫 API Endpoints 嗎？The Backend For Frontend Pattern (BFF) In Microservices World](https://medium.com/starbugs/%E5%89%8D%E7%AB%AF%E9%96%8B%E7%99%BC%E8%80%85%E8%A9%B2%E8%B2%A0%E8%B2%AC%E5%AF%AB-api-endpoints-%E5%97%8E-the-backend-for-frontend-pattern-bff-in-microservices-world-1368362c141c)
+- [ ] [6 More Microservices Interview Questions](https://blog.bytebytego.com/p/6-more-microservices-interview-questions?utm_source=profile&utm_medium=reader2)
 
 ![Uber’s API gateway.png](http://192.168.25.60:8000/files/file_storage/8f385f7e.png)
 
