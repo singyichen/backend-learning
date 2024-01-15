@@ -2,7 +2,7 @@
 title: Socket.io
 description: Socket.io
 published: true
-date: 2023-08-28T02:41:43.615Z
+date: 2024-01-10T01:26:28.443Z
 tags: websocket
 editor: markdown
 dateCreated: 2023-08-28T02:39:24.888Z
@@ -18,6 +18,7 @@ dateCreated: 2023-08-28T02:39:24.888Z
 - [ ] [使用 Node.js 與 Socket.IO 建立即時性（Realtime）網頁應用程式 App](https://blog.gtwang.org/programming/socket-io-node-js-realtime-app/)
 - [ ] [Socket.io 的架構](https://mark-lin.com/posts/20170913/)
 - [ ] [Socket.io 的說話島](https://mark-lin.com/posts/20170914/)
+- [ ] [【筆記】Socket，Websocket，Socket.io的差異](https://leesonhsu.blogspot.com/2018/07/socketwebsocketsocketio.html)
 
 # Socket.IO 簡介
 > - Socket.IO 是一個用於建立即時性通訊網頁應用程式（realtime web applications）的跨平台 JavaScript 函式庫，可以消除不同平台上傳輸方式的差異性，讓開發者更容易發展即時性的網頁應用程式。

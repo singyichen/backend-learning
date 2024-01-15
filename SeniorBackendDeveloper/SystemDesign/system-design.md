@@ -2,7 +2,7 @@
 title: System Design
 description: 
 published: true
-date: 2023-11-20T01:07:57.906Z
+date: 2024-01-14T23:52:22.880Z
 tags: 
 editor: markdown
 dateCreated: 2023-05-18T00:22:34.726Z
@@ -72,6 +72,7 @@ dateCreated: 2023-05-18T00:22:34.726Z
 - [ ] [System Design: Uber](https://mail.google.com/mail/u/0/#inbox/FMfcgzGtxKXLtxjSvBQZqDTrdJVQmHJM)
 - [ ] [system-design-twitter](https://medium.com/@karan99/system-design-twitter-793ab06c9355)
 - [ ] [How Discord Stores Trillions of Messages — Curious Case of System Design](https://levelup.gitconnected.com/how-discord-stores-trillions-of-messages-curious-case-of-system-design-b6328f387196)
+- [ ] [How Discord Serves 15-Million Users on One Server](https://blog.bytebytego.com/p/how-discord-serves-15-million-users?utm_source=profile&utm_medium=reader2)
 ## Problem
 - [ ] [How to avoid double payment?](https://blog.bytebytego.com/p/how-to-avoid-double-payment?utm_source=profile&utm_medium=reader2)
 - [ ] [Payment reconciliation](https://blog.bytebytego.com/p/payment-reconciliation?utm_source=profile&utm_medium=reader2)

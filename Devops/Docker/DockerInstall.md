@@ -2,7 +2,7 @@
 title: Docker Install
 description: Docker 安裝
 published: true
-date: 2023-10-20T00:14:39.333Z
+date: 2024-01-12T00:58:26.986Z
 tags: docker, devops
 editor: markdown
 dateCreated: 2022-04-29T01:11:05.872Z
@@ -11,6 +11,8 @@ dateCreated: 2022-04-29T01:11:05.872Z
 # Docker Install
 - [ ] [在 Ubuntu 上加入 Docker 環境並部署 Node.js 專案](https://www.casper.tw/development/2023/10/08/ubuntu-docker/)
 - [ ] [Install Docker Engine on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+- [ ] [如何安裝Ubuntu Server 22.04來架設伺服器？](https://magiclen.org/ubuntu-server-22-04/)
+
 # 環境說明
 ## 作業系統
 - Ubuntu 20.04 Server LTS

@@ -2,7 +2,7 @@
 title: Authentication
 description: 
 published: true
-date: 2023-12-25T00:07:48.371Z
+date: 2024-01-15T01:06:51.151Z
 tags: authentication, 認證
 editor: markdown
 dateCreated: 2023-05-18T03:22:11.625Z
@@ -32,6 +32,8 @@ dateCreated: 2023-05-18T03:22:11.625Z
 - [ ] [Add Authentication to Any Web Page in 10 Minutes](https://medium.com/@bumurzaqov2/add-authentication-to-any-web-page-in-10-minutes-ecf3171269cb)
 - [ ] [EP75: How Does A Password Manager Work](https://blog.bytebytego.com/p/ep75-how-does-a-password-manager?utm_source=profile&utm_medium=reader2)
 - [ ] [EP91: REST API Authentication Methods](https://blog.bytebytego.com/p/ep91-rest-api-authentication-methods?utm_source=profile&utm_medium=reader2)
+- [ ] [EP93: Is Passkey Shaping a Passwordless Future?](https://blog.bytebytego.com/p/ep93-is-passkey-shaping-a-passwordless?utm_source=profile&utm_medium=reader2)
+- [ ] [Netflix: What Happens When You Press Play - Part 2](https://blog.bytebytego.com/p/netflix-what-happens-when-you-press-288?utm_source=profile&utm_medium=reader2)
 
 ![API keys vs tokens.png](http://192.168.25.60:8000/files/file_storage/f429ade5.png)
 
