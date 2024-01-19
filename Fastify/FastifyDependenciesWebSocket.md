@@ -2,7 +2,7 @@
 title: Fastify Dependencies ( WebSocket )
 description: WebSocket 套件
 published: true
-date: 2023-12-08T06:22:46.670Z
+date: 2024-01-18T06:03:55.017Z
 tags: fastify, framework
 editor: markdown
 dateCreated: 2023-08-16T07:37:07.904Z
@@ -157,7 +157,7 @@ EXPOSE 8117
 - 須分別 export `io` 與 `server`，以利進行單元測試
 - 須分別 export `fastifyPlugin`，可於 `app.js` 中 import
 - server 直接監聽 `port` 即可，不需要 `host` `'0.0.0.0'` 部屬到 docker 上仍可使用，若仍監聽 `host` 於單元測試時會有問題
-
+- server 為 http 版本
 ```js
 /**
  * @description socket io server plugin
@@ -166,20 +166,10 @@ EXPOSE 8117
 const fastify = require('fastify');
 const fastifyPlugin = require('fastify-plugin');
 const http = require('http');
-// const { readFileSync } = require('fs');
-// const { createServer } = require('https');
 // socket io api
 const socketIO = require('./socketIOApi');
 // 將 fastify 放進 http 中開啟 Server 的 SOCKET_IO_PORT
 const server = http.Server(fastify);
-// // 將 fastify 放進 https 中開啟 Server 的 SOCKET_IO_PORT
-// const server = createServer(
-//   {
-//     key: readFileSync('./src/ssl/192.168.25.149.key'),
-//     cert: readFileSync('./src/ssl/192.168.25.149.crt'),
-//   },
-//   fastify,
-// );
 // 將啟動的 Server 送給 socket.io 處理
 const io = new socketIO(server, {
   cors: {
@@ -212,6 +202,61 @@ module.exports.io = io;
 module.exports.server = server;
 module.exports.fastifyPlugin = fastifyPlugin(socketIOServerConnector);
 ```
+
+- server 為 https 版本
+
+```js
+/**
+ * @description socket io server plugin
+ */
+
+const fastify = require('fastify');
+const fastifyPlugin = require('fastify-plugin');
+const { readFileSync } = require('fs');
+const { createServer } = require('https');
+// socket io api
+const socketIO = require('./socketIOApi');
+// 將 fastify 放進 https 中開啟 Server 的 SOCKET_IO_PORT
+const server = createServer(
+  {
+    key: readFileSync('./src/ssl/192.168.25.149.key'),
+    cert: readFileSync('./src/ssl/192.168.25.149.crt'),
+  },
+  fastify,
+);
+// 將啟動的 Server 送給 socket.io 處理
+const io = new socketIO(server, {
+  cors: {
+    origin: [
+      process.env.BACKEND_IP || 'http://192.168.25.180',
+      process.env.BACKEND_TEAM_LEADER_IP || 'http://192.168.25.140',
+      process.env.FRONTEND_IP || 'http://192.168.25.100:3000',
+      process.env.FRONTEND_PC_IP || 'http://192.168.240.197:3000',
+      process.env.DOCKER01_SRV,
+      process.env.DOCKER02_SRV,
+      process.env.DOCKER03_SRV || 'http://192.168.25.60:8000',
+      process.env.DOCKER03_ESERVICE || 'http://eservice.hokia.com.tw:8000',
+    ],
+  },
+});
+// 直接監聽 port 即可，不需要 host '0.0.0.0' 部屬到 docker 上仍可使用
+server.listen(process.env.SOCKET_IO_PORT, function (err) {
+  console.log(
+    `Welcome to e_board_API socket io server listening at https://${process.env.IP_ADDRESS}:${process.env.SOCKET_IO_PORT}`,
+  );
+  if (err) {
+    console.log(err);
+  }
+});
+async function socketIOServerConnector(fastify, opts, done) {
+  done();
+}
+
+module.exports.io = io;
+module.exports.server = server;
+module.exports.fastifyPlugin = fastifyPlugin(socketIOServerConnector);
+```
+
 
 - 調整 `app.js` 中的 `fastifySocketIOServerPlugin` 引用方式
 

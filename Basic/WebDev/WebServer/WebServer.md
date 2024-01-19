@@ -2,7 +2,7 @@
 title: Web Server
 description: 
 published: true
-date: 2024-01-12T00:05:21.800Z
+date: 2024-01-19T03:14:48.714Z
 tags: web server
 editor: markdown
 dateCreated: 2023-05-18T07:36:51.367Z
@@ -12,8 +12,9 @@ dateCreated: 2023-05-18T07:36:51.367Z
 - [ ] [[網際網路] Web Server 是什麼](https://pjchender.dev/internet/internet-webserver/)
 - [ ] [Day4– 前端小字典三十天【每日一字】– Web Server](https://ithelp.ithome.com.tw/articles/10158054)
 - [ ] [何謂網路伺服器？](https://developer.mozilla.org/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
-
-## 比較表
+- [ ] [Comparing Caddy to Nginx and Apache](https://dev.to/shingaiz/comparing-caddy-to-nginx-and-apache-iok)
+- [ ] [Protect Multiple NAS Devices with HTTPS Security](https://www.asustor.com/admv2?type=2&subject=8&sub=153&lan=en)
+## 比較表 (Web Server 和 Application Server)
 > Web Server 和 Application Server 是兩種重要的伺服器軟體，用於提供網站和應用程式的服務。
 
 | 特徵 | Web Server | Application Server |
@@ -31,6 +32,24 @@ dateCreated: 2023-05-18T07:36:51.367Z
 | 可靠性和擴展性 | 可以通過反向代理和負載平衡提高可靠性和擴展性 | 可以通過叢集和分佈式部署提高可靠性和擴展性 |
 | 部署位置 | 通常運行在前端，處理請求的第一層 | 通常運行在後端，處理請求的第二層 |
 | 常見用途 | 架設網站、部落格、線上商店 | 電子商務平台、內容管理系統、線上學習平台 |
+
+
+## 比較表 (Caddy、Nginx、Apache)
+| Web Server | Caddy | Nginx | Apache |
+|:--:|:--:|:--:|:--:|
+| 開發語言 | Go | C | C |
+| 授權條款 | Apache 2.0 | 2-Clause BSD-like | Apache 2.0 |
+| 自動 HTTPS | 是（預設支援） | 需要額外模組和設定 | 需要額外模組和設定 |
+| HTTP/2 和 HTTP/3 支援 | 支援 | 支援 | 支援 |
+| 設定方法 | Caddyfile | nginx.conf | .htaccess 和 httpd.conf |
+| 反向代理 | 原生支援 | 原生支援 | 需要 mod_proxy 模組 |
+| 負載平衡 | 原生支援 | 原生支援 | 需要 mod_proxy_balancer 模組 |
+| 模組/外掛系統 | 支援（動態載入） | 支援（通常靜態編譯） | 支援（動態載入） |
+| 效能 | 高（特別是在預設設定下） | 高 | 中等（但可以優化） |
+| 安全性 | 以安全為設計目標（預設啟用 HTTPS） | 安全，但需要注意設定和模組 | 安全，但需要注意設定和模組 |
+| 易用性 | 高（自動 HTTPS，簡單設定）| 中等（設定較為複雜）| 低（設定和模組管理較為複雜） |
+| 初學者友善 | 是（自動 HTTPS，簡單設定） | 否 | 否 |
+| 跨平台 | 是 | 是 | 是 |
 
 ## Nginx
 這是一套開源的 web server 服務，其中包含了反向代理、負載平衡、郵件代理（mail proxy）、HTTP 快取等功能，知名的使用者包括 Dropbox, Netflix 和 Zynga。
