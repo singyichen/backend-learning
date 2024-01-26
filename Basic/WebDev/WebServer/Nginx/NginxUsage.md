@@ -2,7 +2,7 @@
 title: Nginx Usage
 description: Nginx 使用
 published: true
-date: 2024-01-19T03:16:39.646Z
+date: 2024-01-26T03:54:56.964Z
 tags: web server
 editor: markdown
 dateCreated: 2024-01-18T00:23:12.057Z
@@ -19,6 +19,12 @@ dateCreated: 2024-01-18T00:23:12.057Z
 - [ ] [advanced-nginx-cheatsheet](https://virtubox.github.io/advanced-nginx-cheatsheet/)
 - [ ] [[Nginx] 設定](https://hackmd.io/@winnienotes/SymsGlMfj)
 - [ ] [用Nginx架設local端https應用](https://hackmd.io/@warrenpig/create-self-signed-https-nginx-app)
+- [ ] [GET http://localhost/api/v1 404 nginx springboot](https://stackoverflow.com/questions/75805902/get-http-localhost-api-v1-404-nginx-springboot)
+- [ ] [Reverse Proxies](https://www.asustor.com/admv2?type=2&subject=8&sub=153&lan=en)
+- [ ] [NGINXConfig](https://www.digitalocean.com/community/tools/nginx?global.app.lang=zhTW)
+- [ ] [用 Nginx 伺服器建立反向代理](https://ithelp.ithome.com.tw/articles/10221704)
+- [ ] [Configure nginx as HTTPS proxy with subdomains](https://opensource.hcltechsw.com/Domino-rest-api/howto/web/httpsproxy.html)
+- [ ] [NGINX 設定 HTTPS 網頁加密連線，建立自行簽署的 SSL 憑證](https://blog.gtwang.org/linux/nginx-create-and-install-ssl-certificate-on-ubuntu-linux/)
 
 # Nginx 資料夾結構
 ## Nginx 檔案和目錄
@@ -40,7 +46,7 @@ nginx 重要的伺服器配置檔案會放在 `/etc/nginx` 底下
 
 在 conf.d 目錄中，您可以創建多個以 .conf 為後綴的配置檔案，例如 example.conf 。這些檔案可以包含獨立的服務器塊或其他配置項，並且它們將被Nginx自動載入並應用。
 
-請注意，`/etc/nginx/conf.d` 目錄中的配置檔案不會自動載入，您需要在主要的 Nginx 配置檔案(/etc/nginx/nginx.conf)中包含相應的 include 語句，以將這些配置檔案包含進來。
+請注意，`/etc/nginx/conf.d` 目錄中的配置檔案不會自動載入，您需要在主要的 Nginx 配置檔案(`/etc/nginx/nginx.conf`)中包含相應的 include 語句，以將這些配置檔案包含進來。
 
 以下是一個示例，演示如何在 nginx.conf 中包含 conf.d 目錄下的配置檔案：這樣，Nginx 將在啟動時自動載入和應用 conf.d 目錄中的所有 .conf 檔案中的配置項。
 
@@ -286,10 +292,22 @@ http {
 }
 ```
 
+- 在主設定檔調整 nginx 使用者為 root，將原本的 `www-data` 註解
+
+```
+#user www-data;
+user root;
+```
+
+
 - 測試 Nginx 檔案中沒有語法錯誤
 
 ```shell
 sudo nginx -t
+```
+
+```shell
+sudo nginx -T
 ```
 
 - 驗證成功
@@ -311,9 +329,9 @@ sudo lsof -i :10000
 ```
 
 ```
-COMMAND   PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
-nginx   20909 root    6u  IPv4 154702      0t0  TCP *:webmin (LISTEN)
-nginx   20910 root    6u  IPv4 154702      0t0  TCP *:webmin (LISTEN)
+COMMAND  PID  USER    FD  TYPE DEVICE   SIZE/OFF   NODE NAME
+nginx   20909 root    6u  IPv4 154702      0t0   TCP *:webmin (LISTEN)
+nginx   20910 root    6u  IPv4 154702      0t0   TCP *:webmin (LISTEN)
 ```
 
 ## 檢查網絡連接是否正常
@@ -432,9 +450,113 @@ const createClient = () => {
 ![nginx with http socket io api socket io client test successfully.png](http://192.168.25.60:8000/files/file_storage/e517cd2b.png)
 
 
+# Nginx 代理 https api
+## 建立自簽憑證
+- 產製憑證並將檔案建置於資料夾 `/etc/nginx/ssl` 中
+- 公鑰：`192.168.25.180.crt`
+- 私鑰：`192.168.25.180.key`
 
 
+## 檢查文件權限
+- 使用以下命令檢查證書和私鑰文件的權限是否正確
 
+```bash
+ls -l /etc/nginx/ssl/192.168.25.180.crt
+ls -l /etc/nginx/ssl/192.168.25.180.key
+```
 
+## 若權限不足，使用命令授予讀取權限
+- 設定只有使用者有讀寫權限
 
+```bash
+sudo chmod 644 /etc/nginx/ssl/192.168.25.180.crt 
+sudo chmod 644 /etc/nginx/ssl/192.168.25.180.key
+```
+
+## 檢查檔案完整性
+- 使用命令檢查證書檔案是否損壞。若損壞，需重新生成證書。
+
+```bash
+openssl x509 -in /etc/nginx/ssl/192.168.25.180.crt -text -noout 
+```
+
+- 使用命令檢查密鑰檔案
+
+```bash
+openssl rsa -in /etc/nginx/ssl/192.168.25.180.key -check 
+```
+
+## 檢查伺服器的 SSL 憑證設定
+
+```bash
+openssl s_client -connect 192.168.25.180:443
+```
+
+## Nginx 設定檔
+- 設定 Nginx 可使用 https 代理 https api
+
+```bash
+sudo nano /etc/nginx/conf.d/socketio.conf
+```
+
+```
+server {
+    listen 80;
+    listen [::]:80;
+    server_name 192.168.25.180;
+    root        /usr/share/nginx/html;
+    return 301 https://$host$request_uri;
+}
+
+server {
+  #listen      443 ssl;
+  listen       443 ssl proxy_protocol;
+  listen       [::]:443 ssl;
+  server_name 192.168.25.180;
+  root        /usr/share/nginx/html;
+
+  ssl_session_timeout 5m;
+  ssl_certificate     /etc/nginx/ssl/192.168.25.180.crt;
+  ssl_certificate_key /etc/nginx/ssl/192.168.25.180.key;
+  ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+  ssl_prefer_server_ciphers on;
+  ssl_verify_client off;
+  if ($scheme != "https") {
+     return 301 https://$host$request_uri;
+  }
+  location / {
+        index     index.html index.htm;
+        try_files $uri $uri/ /index.html;
+  }
+
+  error_page 404 /404.html;
+     location = /40x.html {
+  }
+  error_page 500 502 503 504 /50x.html;
+     location = /50x.html {
+  }
+
+  location /restful/ {
+        proxy_pass         https://192.168.25.180:3000/;
+        proxy_set_header   Host $host;
+        proxy_set_header   X-Real-IP $remote_addr;
+        proxy_set_header   X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header   X-Scheme $scheme;
+       # try_files $uri $uri/ =404;
+  }
+}
+
+```
+
+## 檢查防火牆設定
+- 須設定防火牆讓 port 443 允許訪問
+- 可以使用以下命令檢查和添加規則
+
+```
+sudo ufw allow 443
+```
+
+```shell
+sudo ufw status
+```
 

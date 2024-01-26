@@ -2,7 +2,7 @@
 title: Web Server
 description: 
 published: true
-date: 2024-01-19T03:14:48.714Z
+date: 2024-01-19T06:02:57.846Z
 tags: web server
 editor: markdown
 dateCreated: 2023-05-18T07:36:51.367Z
@@ -14,6 +14,8 @@ dateCreated: 2023-05-18T07:36:51.367Z
 - [ ] [何謂網路伺服器？](https://developer.mozilla.org/zh-TW/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
 - [ ] [Comparing Caddy to Nginx and Apache](https://dev.to/shingaiz/comparing-caddy-to-nginx-and-apache-iok)
 - [ ] [Protect Multiple NAS Devices with HTTPS Security](https://www.asustor.com/admv2?type=2&subject=8&sub=153&lan=en)
+- [ ] [比較最好的網路伺服器——Caddy、Apache和Nginx](https://juejin.cn/post/7067818573883932685)
+
 ## 比較表 (Web Server 和 Application Server)
 > Web Server 和 Application Server 是兩種重要的伺服器軟體，用於提供網站和應用程式的服務。
 

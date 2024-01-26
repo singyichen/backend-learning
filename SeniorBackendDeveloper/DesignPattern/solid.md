@@ -2,7 +2,7 @@
 title: 什麼是 SOLID 原則？
 description: 
 published: true
-date: 2023-08-28T00:07:44.430Z
+date: 2024-01-25T23:49:22.053Z
 tags: 
 editor: markdown
 dateCreated: 2023-05-17T08:45:40.933Z
@@ -13,6 +13,7 @@ dateCreated: 2023-05-17T08:45:40.933Z
 - [ ] [SOLID Design Principles](https://devopedia.org/solid-design-principles)
 - [ ] [The SOLID Principles: Writing Scalable & Maintainable Code](https://forreya.medium.com/the-solid-principles-writing-scalable-maintainable-code-13040ada3bca)
 - [ ] [Mastering SOLID Principles in Just 8 Minutes!](https://medium.com/@arulvalananto/mastering-solid-principles-in-just-8-minutes-1df3425c6fff)
+- [ ] [Mastering Design Principles - SOLID](https://blog.bytebytego.com/p/mastering-design-principles-solid?utm_source=profile&utm_medium=reader2)
 
 ![A summary of the five SOLID principles. Source.png](http://192.168.25.60:8000/files/file_storage/fd2aa26a.png)
 

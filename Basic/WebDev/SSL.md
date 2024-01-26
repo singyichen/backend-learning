@@ -2,7 +2,7 @@
 title: SSL
 description: 
 published: true
-date: 2024-01-19T00:15:02.548Z
+date: 2024-01-26T00:15:10.501Z
 tags: ssl, 憑證
 editor: markdown
 dateCreated: 2022-08-08T00:52:01.350Z
@@ -18,6 +18,12 @@ dateCreated: 2022-08-08T00:52:01.350Z
 - [ ] [SSL 與 TLS：您需要知道的一切](https://nordvpn.com/zh-tw/blog/ssl-tls-bijiao/)
 - [ ] [[week 4] 網路基礎概論 - HTTP 協定、TCP/IP、API](https://hackmd.io/@Heidi-Liu/note-net101)
 - [ ] [HTTP 教學](https://notfalse.net/http-series)
+- [ ] [用Nginx架設local端https應用](https://hackmd.io/@warrenpig/create-self-signed-https-nginx-app)
+- [ ] [如何使用 OpenSSL 建立開發測試用途的自簽憑證 (Self-Signed Certificate)](https://blog.miniasp.com/post/2019/02/25/Creating-Self-signed-Certificate-using-OpenSSL)
+- [ ] [如何使用 PowerShell 建立開發測試用途的自簽憑證 (Self-Signed Certificate)](https://blog.miniasp.com/post/2018/04/24/Using-PowerShell-to-build-Self-Signed-Certificate)
+- [ ] [使用證書（Certificates）](https://postman.xiniushu.com/docs/sending-requests/certificates)
+- [ ] [什麼是 SSL？ | SSL 定義](https://www.cloudflare.com/zh-tw/learning/ssl/what-is-ssl/)
+- [ ] [Linux 自簽名 CA 本地主機 IP，安全 SSL 證書 for HTTPS](https://footmark.com.tw/news/linux/ca-localip-ssl-https/)
 
 # HTTP 與 HTTPS
 
@@ -88,6 +94,8 @@ SSL 憑證還具有不同的驗證級別。驗證級別就像背景檢查一樣�
 - 組織驗證：這是一個需要親手操作的過程：CA 直接聯繫請求憑證的人員或企業。這些憑證更受使用者信賴。
 - 擴展驗證：在發出 SSL 憑證之前，需要對組織進行全面的後台檢查。
 
+![generate ssl flow.png](http://192.168.25.60:8000/files/file_storage/b50eb706.png)
+
 # 在 Windows 主機使用 OpenSSL 建立 CA 憑證並簽發萬用字元憑證
 ```bash
 cd /d D:
@@ -129,11 +137,11 @@ For some fields there will be a default value,
 If you enter '.', the field will be left blank.
 -----
 Country Name (2 letter code) [AU]:TW
-State or Province Name (full name) [Some-State]:Taiwan
+State or Province Name (full name) [Some-State]:Sanmin
 Locality Name (eg, city) []:Kaohsiung
-Organization Name (eg, company) [Internet Widgits Pty Ltd]:WHISBIH
+Organization Name (eg, company) [Internet Widgits Pty Ltd]:hokia
 Organizational Unit Name (eg, section) []:IT
-Common Name (e.g. server FQDN or YOUR name) []:hokia.com.tw
+Common Name (e.g. server FQDN or YOUR name) []:192.168.25.180
 Email Address []:mandy.chen@hokia.com.tw
 ```
 
@@ -147,7 +155,7 @@ Email Address []:mandy.chen@hokia.com.tw
 
 ## 5. 產生萬用字元的憑證金鑰
 ```bash
-openssl genrsa -out 192.168.25.180-net.key 2048
+openssl genrsa -out 192.168.25.180.key 2048
 ```
 ```
 Generating RSA private key, 2048 bit long modulus (2 primes)
@@ -158,12 +166,12 @@ e is 65537 (0x010001)
 
 ![SSL 產生萬用字元的憑證金鑰.png](http://192.168.25.60:8000/files/file_storage/bfb9ee4f.png)
 
-- 產生 192.168.25.180-net.key
+- 產生 192.168.25.180.key
 
 ## 6. 準備憑證要求的設定檔
-建立 192.168.25.180-net.cnf
+建立 192.168.25.180.cnf
 ```bash
-touch 192.168.25.180-net.cnf
+touch 192.168.25.180.cnf
 ```
 新增設定如下
 ```
@@ -175,27 +183,27 @@ distinguished_name = dn
 
 [dn]
 C=TW
-ST=Taiwan
+ST=Sanmin
 L=Kaohsiung
-O=WHISBIH
+O=hokia
 OU=IT
 emailAddress=mandy.chen@hokia.com.tw
-CN=192.168.25.180-net
+CN=192.168.25.180
 ```
 ## 7. 建立憑證請求 
-建立 192.168.25.180-net.csr
+建立 192.168.25.180.csr
 ```bash
-openssl req -new -sha256 -nodes -key 192.168.25.180-net.key -out 192.168.25.180-net.csr -config 192.168.25.180-net.cnf
+openssl req -new -sha256 -nodes -key 192.168.25.180.key -out 192.168.25.180.csr -config 192.168.25.180.cnf
 ```
 
 ![SSL 建立憑證請求.png](http://192.168.25.60:8000/files/file_storage/4d923927.png)
 
-- 產生 192.168.25.180-net.csr
+- 產生 192.168.25.180.csr
 
 ## 8. 準備 V3 設定檔
-建立 192.168.25.180-net-v3.ext
+建立 192.168.25.180-v3.ext
 ```bash
-touch 192.168.25.180-net-v3.ext
+touch 192.168.25.180-v3.ext
 ```
 新增設定如下
 ```
@@ -205,17 +213,17 @@ keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
 subjectAltName = @alt_names
 
 [alt_names]
-DNS.1 = 192.168.25.180.net
+DNS.1 = 192.168.25.180
 ```
 
 ## 9. 建立憑證 
-建立憑證 192.168.25.180-net.crt，過程需要使用步驟 2 設定的密碼
+建立憑證 192.168.25.180.crt，過程需要使用步驟 2 設定的密碼
 ```bash
-openssl x509 -req -in 192.168.25.180-net.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateserial -out 192.168.25.180-net.crt -days 36500 -sha256 -extfile 192.168.25.180-net-v3.ext
+openssl x509 -req -in 192.168.25.180.csr -CA rootCA.crt -CAkey rootCA.key -CAcreateserial -out 192.168.25.180.crt -days 36500 -sha256 -extfile 192.168.25.180-v3.ext
 ```
 ```
 Signature ok
-subject=C = TW, ST = Taiwan, L = Kaohsiung, O = WHISBIH, OU = IT, emailAddress = mandy.chen@hokia.com.tw, CN = 192.168.25.180-net
+subject=C = TW, ST = Sanmin, L = Kaohsiung, O = hokia, OU = IT, emailAddress = mandy.chen@hokia.com.tw, CN = 192.168.25.180
 Getting CA Private Key
 Enter pass phrase for rootCA.key:輸入密碼(在此設定 qaz123)
 ```
@@ -224,10 +232,10 @@ Enter pass phrase for rootCA.key:輸入密碼(在此設定 qaz123)
 
 ## 10. 要使用於 IIS，需將 .crt 轉為包含私鑰的 .pfx 格式
 ```bash
-openssl pkcs12 -export -out 192.168.25.180-net.pfx -inkey 192.168.25.180-net.key -in 192.168.25.180-net.crt -certfile rootCA.crt
+openssl pkcs12 -export -out 192.168.25.180.pfx -inkey 192.168.25.180.key -in 192.168.25.180.crt -certfile rootCA.crt
 ```
 
-執行後得到 192.168.25.180-net.pfx，過程需要設定一組密碼，稍後在 IIS 安裝憑證時會用到。
+執行後得到 192.168.25.180.pfx，過程需要設定一組密碼，稍後在 IIS 安裝憑證時會用到。
 
 ```
 Enter Export Password:輸入密碼(在此設定 qaz123)
@@ -241,8 +249,8 @@ Verifying - Enter Export Password:確認密碼(在此設定 qaz123)
 ![SSL 檔案.png](http://192.168.25.60:8000/files/file_storage/5274c293.png)
 
 ## 12. 於程式中設定 fastify.cert、fastify.key
-- fastify.cert：192.168.25.180-net
-- fastify.key：192.168.25.180-net.key
+- fastify.cert：192.168.25.180.crt
+- fastify.key：192.168.25.180.key
 ```js
 const { readFileSync } = require('fs');
 const path = require('path');
@@ -250,8 +258,8 @@ const path = require('path');
     // 使用 logger plugin
     logger: fastifyLoggerPlugin,
     https: {
-      key: readFileSync(path.join(__dirname, 'src/ssl', '192.168.25.180-net.key')),
-      cert: readFileSync(path.join(__dirname, 'src/ssl', '192.168.25.180-net')),
+      key: readFileSync(path.join(__dirname, 'src/ssl', '192.168.25.180.key')),
+      cert: readFileSync(path.join(__dirname, 'src/ssl', '192.168.25.180.crt')),
     },
   });
 ```
@@ -269,23 +277,23 @@ https://192.168.25.180:10001/swagger/WebSignin_API/static/index.html
 請以「**系統管理員身分**」執行以下命令，即可將憑證匯入到 Windows 的憑證儲存區之中：
 ```bash
 // D:\mandy\Project\SSL
-certutil -addstore -f "ROOT" 192.168.25.180-net.crt
+certutil -addstore -f "ROOT" 192.168.25.180.crt
 ```
 ```
 ROOT "受信任的根憑證授權單位"
 相關的憑證:
 
 完全相符:
-元素 6:
-序號: 4f5f59506affec0687dfd081a158b28213920142
-簽發者: E=mandy.chen@hokia.com.tw, CN=hokia.com.tw, OU=IT, O=WHISBIH, L=Kaohsiung, S=Taiwan, C=TW
- NotBefore: 2022/8/8 上午 10:41
- NotAfter: 2122/7/15 上午 10:41
-主體: CN=192.168.25.180-net, E=mandy.chen@hokia.com.tw, OU=IT, O=WHISBIH, L=Kaohsiung, S=Taiwan, C=TW
+元素 10:
+序號: 43e6c4b50fdc28f1410b045cb4a0312dcf93563a
+簽發者: E=mandy.chen@hokia.com.tw, CN=192.168.25.180, OU=IT, O=hokia, L=Kaohsiung, S=Sanmin, C=TW
+ NotBefore: 2024/1/24 下午 03:22
+ NotAfter: 2123/12/31 下午 03:22
+主體: CN=192.168.25.180, E=mandy.chen@hokia.com.tw, OU=IT, O=hokia, L=Kaohsiung, S=Sanmin, C=TW
 不是根憑證
-Cert 雜湊(sha1): 8a00bc0af1e2033207525ff6f44adbbc9327d9a2
+Cert 雜湊(sha1): 460135c3398cca4b914b2c2b8a77a66e699f3048
 
-憑證 "192.168.25.180-net" 已在存放區中。
+憑證 "192.168.25.180" 已在存放區中。
 CertUtil: -addstore 命令成功完成。
 ```
 
